@@ -22,6 +22,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -33,7 +34,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1641145856200</updated>
-      <workItem from="1641145857982" duration="1269000" />
+      <workItem from="1641145857982" duration="3434000" />
+      <workItem from="1641149608569" duration="2849000" />
     </task>
     <servers />
   </component>
@@ -41,9 +43,9 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1641147170182">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1641147359878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1641147170182" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1641147359878" />
   </component>
 </project>

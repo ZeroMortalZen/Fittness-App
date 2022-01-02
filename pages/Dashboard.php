@@ -1,4 +1,6 @@
 <?php
+require '../layout/header.php';
+?>
 
 //input Age
 
