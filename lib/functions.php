@@ -28,12 +28,14 @@ function get_accounts()
     return $accounts;
 }
 
-function set_account($user,$password,$email){
+function set_account($username,$password,$email){
     $pdo = get_connection();
-    $query = "insert into account(username, password, email) values ('$user','$password','$email');";
+    $query = "insert into account(username, password, email) values ('$username','$password','$email');";
     $stmt = $pdo->prepare($query);
     $stmt->execute();
 }
+
+
 
 
 function get_users()
@@ -50,29 +52,13 @@ function get_users()
     $data = $stmt->fetchAll();
     return $data;
 }
-function set_user($name,$lastname,$address, $country, $zip, $email){
+function set_user($firstname,$lastname,$email){
     $pdo = get_connection();
-    $query = "insert into user(name, last_name, address, country,zip,email) 
-                values ('$name','$lastname','$address','$country','$zip','$email');";
+    $query = "insert into user(first_name, last_name,email) 
+                values ('$firstname','$lastname','$email');";
     $stmt = $pdo->prepare($query);
     $stmt->execute();
 }
 
 
-/*
-function get_one_pet($id){
-    $pdo = get_connection();
-    $query = 'SELECT * FROM pets WHERE id = :idVal';
-    $stmt = $pdo->prepare($query);
-    $stmt->bindParam('idVal', $id);
-    $stmt->execute();
-    return $stmt->fetch();
-}
-
-function pets_to_save($newPet){
-
-    $json = json_encode($newPet, JSON_PRETTY_PRINT);
-    file_put_contents('data/pets.json', $json);
-}
-*/
 ?>

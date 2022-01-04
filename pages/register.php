@@ -1,10 +1,13 @@
 <?php
 include '../layout/header.php';
+require '../systems/log/account.php';
+require '../systems/log/user.php';
+require '../lib/functions.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'): //When user presses the add button
     //variable declaration
     $firstname;
-    $lastname;
+    $last_name;
     $password;
     $username;
     $email;
@@ -19,12 +22,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'): //When user presses the add button
     set_account($newAccount->username, $newAccount->password, $newAccount->email);
 
 //User Creation
-isset($_POST['firstname'])       ? $name = $_POST['firstname'] : $name = '';
-isset($_POST['lastname'])   ? $lastname = $_POST['lastname'] : $lastname = '';
+isset($_POST['firstname'])       ? $firstname = $_POST['firstname'] : $firstname = '';
+isset($_POST['lastname'])   ? $last_name = $_POST['lastname'] : $last_name = '';
 
 
-$newUser = new User($firstname, $lastname);
-set_user($newUser->first_name, $newUser->lastname);
+$newUser = new User($firstname, $last_name);
+set_user($newUser->first_name, $newUser->last_name);
 ?>
 <?php
 endif;
@@ -43,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'):
                     <div style="float:right; font-size: 85%; position: relative; top:-10px">GO TO LOGIN PAGE</a></div>
                 </div>
                 <div class="panel-body" >
-                    <form class="form-horizontal" role="form" method="post">
+                    <form class="form-horizontal" role="form" method="post" action="register.php">
 
                         <div id="signupalert" style="display:none" class="alert alert-danger">
                             <p>Error:</p>
@@ -52,32 +55,32 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'):
                         <div class="form-group">
                             <label for="first_name" class="col-md-3 control-label">First Name</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="first_name" placeholder="First Name">
+                                <input type="text" class="form-control" name="firstname" placeholder="First Name" id="firstname">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="surname" class="col-md-3 control-label">surname</label>
+                            <label for="surname" class="col-md-3 control-label">lastname</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="surname" placeholder="surname ">
+                                <input type="text" class="form-control" name="lastname" placeholder="lastname" id="lastname">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="first_name" class="col-md-3 control-label">Email</label>
+                            <label for="firstname" class="col-md-3 control-label">Email</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="email" placeholder="email.." id="roll-input">
+                                <input type="text" class="form-control" name="email" placeholder="email.." id="email">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="user_name" class="col-md-3 control-label">User Name</label>
+                            <label for="username" class="col-md-3 control-label">User Name</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="user_name" placeholder="User Name">
+                                <input type="text" class="form-control" name="username" placeholder="User Name" id="username">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="password" class="col-md-3 control-label">Password</label>
                             <div class="col-md-9">
-                                <input type="password" class="form-control" name="password" placeholder="Password">
+                                <input type="password" class="form-control" name="password" placeholder="Password" id="password">
                             </div>
                         </div>
 
