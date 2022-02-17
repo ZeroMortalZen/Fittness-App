@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+body{
+    font-size: 12px;
+    font-family: Montserrat;
+    background: #96DAF8;
+    font-weight: 600;
+}
+
+.container {
+    padding: 0 10px;
+}
+
+.header {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reg-log-buttons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.reg-log-buttons>a:not(:first-child) {
+    margin-left: 30px;
+}
+
+.line {
+    width: 25px;
+    background: #000;
+    height: 2px;
+}
+.line:not(:first-child){
+    margin-top: 5px;
+}
+
+.section {
+    margin: 50px auto;
+}
+
+.abs-section, .chest-section, .arms-section, .legs-section {
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.abs-title, .chest-title, .arms-title, .legs-title {
+    font-size: 12px;
+    font-family: Roboto;
+    margin-bottom: 10px;
+}
+
+.section>div:not(:first-child) {
+    margin-top: 30px;
+}
