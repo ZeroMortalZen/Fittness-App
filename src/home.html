@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="../css/home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     
     <div class="container">
         <header class="header">
-            <a href="" class="logo">Logo</a>
+            <a href="home.html" class="logo">Logo</a>
             <div class="reg-log-buttons">
                 <a href="" class="register-btn">Register</a>
                 <a href="" class="login">Login</a>
@@ -21,30 +22,36 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
+            <div class="pop-menu" id="pop-menu">
+                <span class="cross"></span>
+                <a href="home.html" class="home-page">Home</a>
+                <a href="account.html" class="account-page">Account</a>
+                <a href="graph.html" class="graph-page">Graph</a>
+            </div>
         </header>
     
         <div class="section">
-            <div class="abs-section">
+            <a href="abs.html" class="abs-section">
                 <h1 class="abs-title">Abs</h1>
                 <img src="../img/abs.png" alt="Abs Picture">
-            </div>
-    
-            <div class="chest-section">
+            </a>
+            <a href="chest.html" class="chest-section">
                 <h1 class="chest-title">Chest</h1>
                 <img src="../img/chest.png" alt="Chest Picture">
-            </div>
-    
-            <div class="arms-section">
+            </a>
+            <a href="arms.html" class="arms-section">
                 <h1 class="arms-title">Arms</h1>
                 <img src="../img/arms.png" alt="Arms Picture">
-            </div>
-    
-            <div class="legs-section">
+            </a>
+            <a href="legs.html" class="legs-section">
                 <h1 class="legs-title">Legs</h1>
                 <img src="../img/legs.png" alt="Legs Picture">
-            </div>
+            </a>
         </div>
     </div>
     
 </body>
+
+<script src="../src/scripts.js"></script>
+
 </html>
