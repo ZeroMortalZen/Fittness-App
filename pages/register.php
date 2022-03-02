@@ -1,121 +1,128 @@
-<?php
-include '../layout/header.php';
-require '../systems/log/account.php';
-require '../systems/log/user.php';
-require '../lib/functions.php';
+ <?php
+  include '../lib/model.php';
+ require "../layout/header.php";
+ $modelObj = new model();
+ $message = "";
+  $messageType = "";
+  $submit =  filter_input(INPUT_POST, 'submit');
+  create_DB();
+  if (isset($submit)){
+            $firstname = filter_input(INPUT_POST, 'firstname');
+            $lastname= filter_input(INPUT_POST, 'lastname');
+            $password = filter_input(INPUT_POST, 'pass');
+            $username = filter_input(INPUT_POST, 'username');
+            $email = filter_input(INPUT_POST, 'email');
+            
+            $emailValid = validateEmail($email);
+            if (strlen($password) < 4){
+                $message = "Please choose a stronger password of length 4 or more.";
+                $messageType = "error_msg";
+            }else if (!$emailValid){
+                $message = "Please enter a valid email address";
+                $messageType = "error_msg";
+            }else{
+                $userExists = $modelObj->check_user($username);
+                if($userExists){
+                    $message = "Username $username already exists, try another one";
+                    $messageType = "error_msg";
+                }else{
+                    $registered = $modelObj->register($firstname, $lastname, $password, $username, $email);
+                    if ($registered){
+                        $message = "User successfully registered. Please <a href='login.php'>login</a>";
+                        $messageType = "success_msg";
+                    }else{
+                        $message = "Some error occurred in registering user.";
+                        $messageType = "error_msg";
+                    }
+                }
+            }
+  }
+            function validateEmail($email){
+                  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                  return false;
+              }
+              else{
+                  return true;
+              }
+            }
+            function create_DB(){
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'): //When user presses the add button
-    //variable declaration
-    $firstname;
-    $last_name;
-    $password;
-    $username;
-    $email;
+                $conn = mysqli_connect($servername, $username, $password);
+                if (!$conn) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
 
-
-    //Account Creation
-
-    isset($_POST['username'])   ? $username = $_POST['username'] : $username = '';
-    isset($_POST['email'])      ? $email = $_POST['email']       : $email = '';
-    isset($_POST['password'])   ? $password = $_POST['password'] : $password = '';
-    $newAccount = new Account($username, $password, $email);
-    set_account($newAccount->username, $newAccount->password, $newAccount->email);
-
-//User Creation
-isset($_POST['firstname'])       ? $firstname = $_POST['firstname'] : $firstname = '';
-isset($_POST['lastname'])   ? $last_name = $_POST['lastname'] : $last_name = '';
-
-
-$newUser = new User($firstname, $last_name);
-set_user($newUser->first_name, $newUser->last_name);
-?>
-<?php
-endif;
-
-
-
-if($_SERVER['REQUEST_METHOD'] == 'GET'):
-?>
+                $sql = "CREATE DATABASE IF NOT EXISTS MyDatabase";
+                    if (mysqli_query($conn, $sql)) {
+                        } else {
+                            echo "Error creating database: " . mysqli_error($conn);
+                }
+                mysqli_close($conn);
+            }
+        ?>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Register</title>
+        <link rel="stylesheet" href="css.css" type="text/css">
+    </head>
     <body>
-    <div class="container col-sm-12" id="mainform">
-        <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    </body>
+    
+    <div class="main_body">
+        
+        <div class="logo">
+            Logo
+        </div>
 
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="panel-title">Sign Up</div>
-                    <div style="float:right; font-size: 85%; position: relative; top:-10px">GO TO LOGIN PAGE</a></div>
+                <div class="title">
+                      Register
                 </div>
-                <div class="panel-body" >
-                    <form class="form-horizontal" role="form" method="post" action="register.php">
 
-                        <div id="signupalert" style="display:none" class="alert alert-danger">
-                            <p>Error:</p>
-                            <span></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="first_name" class="col-md-3 control-label">First Name</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" name="firstname" placeholder="First Name" id="firstname">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="surname" class="col-md-3 control-label">lastname</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" name="lastname" placeholder="lastname" id="lastname">
-                            </div>
-                        </div>
+        <div class="frm">
 
-                        <div class="form-group">
-                            <label for="firstname" class="col-md-3 control-label">Email</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" name="email" placeholder="email.." id="email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="username" class="col-md-3 control-label">User Name</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" name="username" placeholder="User Name" id="username">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-md-3 control-label">Password</label>
-                            <div class="col-md-9">
-                                <input type="password" class="form-control" name="password" placeholder="Password" id="password">
-                            </div>
-                        </div>
+         <?php if (!empty($message)){ ?>
+        <div class="msg <?php echo $messageType; ?> ">
+            <?php echo $message; ?>
+        </div>
 
-                        <div class="form-group">
-                            <!-- Button -->
-                            <div class="col-md-offset-3 col-md-9">
-
-                                <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-
-                            </div>
-                        </div>
-
-
-
-
-                    </form>
-                </div>
-            </div>
-
-
+        <?php } ?>
+            <form name="submit_form" class="frm" action="" method="post">
+            <label>First Name: </label>
+            <input type="text" name="firstname" id="firstname" required />
+            
+            <label>Last Name: </label>
+            <input type="text" name="lastname" id="lastname" required />
+            
+            <label>Password: </label>
+            <input type="password" name="pass" id="pass" required />
+            
+            <label>Username: </label>
+            <input type="text" name="username" id="username" required />
+            <label>Email:  </label>
+            <input type ="text" name="email" id="email" required />
+          
+            <input type="button" value="Reset" class="button" id="reset_button" onclick="clear_values()" />
+            <input type="submit" name="submit" class="reg" value="Submit" />
+            </form>
         </div>
     </div>
-
-    </body>
-
-
-
-
-
-
-
-
-
-
-<?php
-endif;
-require '../layout/footer.php';
-?>
+</html>
+<script>
+       var firstname = document.getElementById("firstname");
+       var lastname = document.getElementById("lastname");
+       var pass = document.getElementById("pass");
+       var username = document.getElementById("username");
+       var email = document.getElementById("email");
+       
+       function clear_values(){
+           firstname.value = "";
+           lastname.value = "";
+           pass.value = "";
+           username.value = "";
+           email.value = "";
+       }
+</script>

@@ -21,10 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="51371c5b-c990-440c-ae7b-0fc4f5a3240e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/MainCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/MainCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/images/fitness app logo.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/layout/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/functions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - Technological University Dublin/Year 3/Semester 2/Web FrameWork/crud01_completed" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -63,7 +64,8 @@
       <workItem from="1641315634531" duration="1117000" />
       <workItem from="1641336475459" duration="3634000" />
       <workItem from="1643484943797" duration="116000" />
-      <workItem from="1645030354519" duration="5926000" />
+      <workItem from="1645030354519" duration="6520000" />
+      <workItem from="1646224313607" duration="856000" />
     </task>
     <servers />
   </component>
