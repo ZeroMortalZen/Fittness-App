@@ -21,7 +21,13 @@ password VARCHAR(30) NOT NULL,
 email VARCHAR(50),
 username VARCHAR(50)
 )";
-     if($stmt = $this->mysqli->prepare($sql)){
+       $sqlAdmin=" CREATE Table AdminPanel(
+     videoLink VARCHAR(100) not null ,
+     excirsename VARCHAR(100) not null ,
+     calories VARCHAR(100) not null 
+     
+ )";
+     if($stmt = $this->mysqli->prepare($sql,$sqlAdmin)){
            $stmt->execute();
            $stmt->close();
        }
