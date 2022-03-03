@@ -1,0 +1,89 @@
+
+     .main_body{
+         background-color: #96daf8;
+         font-family: sans-serif;
+         font-size: 16px;
+         width: auto;
+         height: 100%;
+     }
+     .logo{
+         font-size: 18px;
+         font-weight: bold;
+         float: left;
+         width: auto;
+         padding: 22px 11px;
+         background-color: #c4c4c4;
+         margin: 10px 0 0 6px;
+     }
+     .title{
+         float: left;
+         margin: 0 auto;
+         font-size: 18px;
+         font-weight: bold;
+         width: 100%;
+         text-align: center;
+     }
+
+      .msg{
+         width: 280px;
+         margin: 0 auto;
+         margin-top: 12px;
+         float: left;
+         font-size: 14px;
+         text-align: center;
+         padding: 3px;
+     }
+     .error_msg{
+         background-color: #ffcccc;
+         border: 1px solid #ff9999;
+     }
+     .success_msg{
+         background-color: #a9f3a9;
+         border: 1px solid #76cb76;
+     }
+     .frm{
+         width: 300px;
+         margin: 0 auto;
+     }
+     .frm form{
+         float: left;
+         width: 280px;
+         margin: 15px 0 0 0;
+     }
+     .frm label{
+         width: 100px;
+         float: left;
+         padding: 6px 0;
+         margin: 5px 10px 5px 0;
+     }
+     .frm input[type="text"], .frm input[type="password"]{
+         width: 170px;
+         float: left;
+         margin: 5px 0;
+         padding: 7px 3px;
+     }
+     .frm input[type="button"], .frm input[type="submit"]{
+           background-color: #21a9e3;
+           width: 120px;
+           padding:12px 0;
+           font-size: 18px;
+           font-weight: bold;
+           border: none;
+     }
+     .frm input[type="button"]{
+         margin: 25px 0 0 0;
+     }
+     .frm input[type="submit"]{
+         margin: 25px 0 0 0;
+         float: right;
+     }
+     .frm .loginBtn{
+         width: 120px;
+         margin: 0 auto;
+         margin-top: 25px;
+         vertical-align: middle;
+     }
+     .frm a{
+         font-weight: bold;
+         text-decoration: none;
+     }
