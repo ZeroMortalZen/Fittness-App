@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <header class="header">
-            <a href="home.html" class="logo">Logo</a>
+            <a href="../home.php" class="logo">Logo</a>
             <div class="burger">
                 <div class="line"></div>
                 <div class="line"></div>
@@ -19,9 +19,9 @@
             </div>
             <div class="pop-menu" id="pop-menu">
                 <span class="cross"></span>
-                <a href="home.html" class="home-page">Home</a>
-                <a href="account.html" class="account-page">Account</a>
-                <a href="graph.html" class="graph-page">Graph</a>
+                <a href="../home.php" class="home-page">Home</a>
+                <a href="" class="account-page">Account</a>
+                <a href="" class="graph-page">Graph</a>
             </div>
         </header>
     </div>
