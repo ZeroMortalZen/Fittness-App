@@ -266,6 +266,13 @@ body{
 
 
 
-/* TAMI CSS */
+/* Tami CSS */
+.login-title {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+}
 
-
+.username {
+    font-size: 13px;
+}

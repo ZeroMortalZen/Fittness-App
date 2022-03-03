@@ -34,16 +34,24 @@
     </head>
     <body>
     </body>
+
+    <header class="header">
+        <a href="../home.php" class="logo">Logo</a>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="pop-menu" id="pop-menu">
+            <span class="cross"></span>
+            <a href="../home.php" class="home-page">Home</a>
+            <a href="" class="account-page">Account</a>
+            <a href="" class="graph-page">Graph</a>
+        </div>
+    </header>
     
     <div class="main_body">
-        
-        <div class="logo">
-            Logo
-        </div>
-
-                <div class="title">
-                      Login
-                </div>
+        <h1 class="login-title">Login</h1>
 
         <div class="frm">
 
@@ -54,13 +62,13 @@
 
         <?php } ?>
             <form name="submit_form" class="frm" action="" method="post">
-            <label>Username: </label>
+            <h2 class="username">Username:</h2>
             <input type="text" name="username" id="username" required />
             
-            <label>Password: </label>
+            <h2 class="password">Password:</h2>
             <input type="password" name="password" id="password" required />
             <div class = "loginBtn">
-            <input type="submit" name="submit" value="Login" />
+                <input type="submit" name="submit" value="Login" />
             </div>
             </form>
         </div>
