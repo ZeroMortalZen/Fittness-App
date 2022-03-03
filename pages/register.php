@@ -115,8 +115,8 @@
                         <input class="emailInput" type="email" name="password" id="email" required />
                     </div>
                     <div class="buttons">
-                        <a href="" class="reset-btn">Reset</a>
-                        <a href="" class="submit-btn">Submit</a>
+                        <a href="" class="reset-btn" type="reset" class="button" id="reset_button">Reset</a>
+                        <a href="" class="submit-btn" type="submit" name="submit" class="reg">Submit</a>
                     </div>
                     
                 </form>
