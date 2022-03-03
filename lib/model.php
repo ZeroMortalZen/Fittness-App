@@ -3,7 +3,7 @@ include '../lib/connection.php';
 
 class model {
    var $mysqli;
-   
+
    function __construct() {
        $con = new Connection();
        $this->mysqli = $con->getConnection();
@@ -21,22 +21,16 @@ password VARCHAR(30) NOT NULL,
 email VARCHAR(50),
 username VARCHAR(50)
 )";
-       $sqlAdmin=" CREATE Table AdminPanel(
-     videoLink VARCHAR(100) not null ,
-     excirsename VARCHAR(100) not null ,
-     calories VARCHAR(100) not null 
-     
- )";
-     if($stmt = $this->mysqli->prepare($sql,$sqlAdmin)){
+       if($stmt = $this->mysqli->prepare($sql)){
            $stmt->execute();
-           $stmt->close();
+
+
        }
    }
 
 
    function checkTable(){
        $query = "select 1 from users LIMIT 1";
-       
        $id = 0;
        if($stmt = $this->mysqli->prepare($query)){
            $stmt->execute();

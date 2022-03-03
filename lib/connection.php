@@ -4,7 +4,7 @@ class Connection {
    var $server = "localhost";
    var $user = "root";
    var $pass = "";
-   var $dbname = "MyDatabase";
+   var $dbname ="MyDatabase";
    
    function getConnection(){
       $this->connection = new mysqli($this->server, $this->user, $this->pass, $this->dbname);
