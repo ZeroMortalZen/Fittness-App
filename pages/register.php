@@ -67,50 +67,64 @@
     <head>
         <meta charset="UTF-8">
         <title>Register</title>
-        <link rel="stylesheet" href="css.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-    </body>
-    
-    <div class="main_body">
-        
-        <div class="logo">
-            Logo
-        </div>
-
-                <div class="title">
-                      Register
+        <header class="header">
+            <a href="../home.php" class="logo">Logo</a>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="pop-menu" id="pop-menu">
+                <span class="cross"></span>
+                <a href="../home.php" class="home-page">Home</a>
+                <a href="" class="account-page">Account</a>
+                <a href="" class="graph-page">Graph</a>
+            </div>
+        </header>
+        <section class="register-section">
+            <h1 class="register-title">Register</h1>
+            <div class="frm">
+                <?php if (!empty($message)){ ?>
+                <div class="msg <?php echo $messageType; ?> ">
+                    <?php echo $message; ?>
                 </div>
+                <?php } ?>
 
-        <div class="frm">
-
-         <?php if (!empty($message)){ ?>
-        <div class="msg <?php echo $messageType; ?> ">
-            <?php echo $message; ?>
-        </div>
-
-        <?php } ?>
-            <form name="submit_form" class="frm" action="" method="post">
-            <label>First Name: </label>
-            <input type="text" name="firstname" id="firstname" required />
-            
-            <label>Last Name: </label>
-            <input type="text" name="lastname" id="lastname" required />
-            
-            <label>Password: </label>
-            <input type="password" name="pass" id="pass" required />
-            
-            <label>Username: </label>
-            <input type="text" name="username" id="username" required />
-            <label>Email:  </label>
-            <input type ="text" name="email" id="email" required />
-          
-            <input type="button" value="Reset" class="button" id="reset_button" onclick="clear_values()" />
-            <input type="submit" name="submit" class="reg" value="Submit" />
-            </form>
-        </div>
-    </div>
+                <form name="submit_form" class="frm" action="" method="post">
+                    <div class="firstname-section">
+                        <h2 class="firstname">First Name:</h2>
+                        <input class="firstnameInput" type="text" name="username" id="username" required/>
+                    </div>
+                    <div class="lastname-section">
+                        <h2 class="lastname">Last Name:</h2>
+                        <input class="lastnameInput" type="password" name="password" id="password" required />
+                    </div>
+                    <div class="password-section">
+                        <h2 class="password">Password:</h2>
+                        <input class="passwordInput" type="password" name="password" id="password" required />
+                    </div>
+                    <div class="username-section">
+                        <h2 class="username">Username:</h2>
+                        <input class="usernameInput" type="password" name="password" id="password" required />
+                    </div>
+                    <div class="email-section">
+                        <h2 class="email">Email:</h2>
+                        <input class="emailInput" type="password" name="password" id="password" required />
+                    </div>
+                    <div class="buttons">
+                        <a href="" class="reset-btn">Reset</a>
+                        <a href="" class="submit-btn">Submit</a>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+    </body>
 </html>
+<script src="../src/scripts.js"></script>
 <script>
        var firstname = document.getElementById("firstname");
        var lastname = document.getElementById("lastname");

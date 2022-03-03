@@ -18,6 +18,12 @@ a{
     color: #000;
 }
 
+input {
+    outline: none;
+    border: none;
+    height: 25px;
+}
+
 body{
     font-size: 12px;
     font-family: Montserrat;
@@ -267,12 +273,62 @@ body{
 
 
 /* Tami CSS */
-.login-title {
+.login-title, .register-title {
     text-align: center;
     font-size: 15px;
     margin-top: 25px;
 }
+.username-section, .firstname-section {
+    margin-top: 30px;
+}
 
-.username {
+.username-section, .password-section, .firstname-section, .lastname-section, .email-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lastname-section, .password-section, .username-section, .email-section {
+    margin-top: 15px;
+}
+
+.username, .password, .firstname, .lastname, .email {
     font-size: 13px;
+}
+
+.firstnameInput {
+    margin-left: 15px;
+}
+.lastnameInput {
+    margin-left: 16.5px;
+}
+.passwordInput {
+    margin-left: 22.5px;
+}
+.usernameInput {
+    margin-left: 20px;
+}
+.emailInput {
+    margin-left: 43px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.login-btn, .reset-btn, .submit-btn {
+    display: block;
+    max-width: 100px;
+    width: 100%;
+    height: 30px;
+    padding: 7px 31px;
+    background-color: #21A9E3;
+    margin: 20px auto 0px;
+    text-align: center;
+    transition: 0.5s ease-in;
+}
+
+.login-btn:hover {
+    background-color: #169CD6;
 }
