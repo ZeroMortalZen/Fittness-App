@@ -12,7 +12,7 @@
     
     <div class="container">
         <header class="header">
-            <a href="home.html" class="logo">Logo</a>
+            <a href="home.php" class="logo">Logo</a>
             <div class="reg-log-buttons">
                 <a href="src/register.php" class="register-btn">Register</a>
                 <a href="src/login.php" class="login">Login</a>
@@ -24,7 +24,7 @@
             </div>
             <div class="pop-menu" id="pop-menu">
                 <span class="cross"></span>
-                <a href="home.html" class="home-page">Home</a>
+                <a href="home.php" class="home-page">Home</a>
                 <a href="" class="account-page">Account</a>
                 <a href="" class="graph-page">Graph</a>
             </div>
