@@ -31,19 +31,19 @@
         </header>
     
         <div class="section">
-            <a href="src/abs.html" class="abs-section">
+            <a href="src/abs.php" class="abs-section">
                 <h1 class="abs-title">Abs</h1>
                 <img src="img/abs.png" alt="Abs Picture">
             </a>
-            <a href="src/chest.html" class="chest-section">
+            <a href="src/chest.php" class="chest-section">
                 <h1 class="chest-title">Chest</h1>
                 <img src="img/chest.png" alt="Chest Picture">
             </a>
-            <a href="src/arms.html" class="arms-section">
+            <a href="src/arms.php" class="arms-section">
                 <h1 class="arms-title">Arms</h1>
                 <img src="img/arms.png" alt="Arms Picture">
             </a>
-            <a href="src/legs.html" class="legs-section">
+            <a href="src/legs.php" class="legs-section">
                 <h1 class="legs-title">Legs</h1>
                 <img src="img/legs.png" alt="Legs Picture">
             </a>
