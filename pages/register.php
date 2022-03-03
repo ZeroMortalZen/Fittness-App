@@ -1,6 +1,6 @@
  <?php
   include '../lib/model.php';
- require "../layout/header.php";
+ require "../layout/header.php" ;
  $modelObj = new model();
  $message = "";
   $messageType = "";

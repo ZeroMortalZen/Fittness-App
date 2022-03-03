@@ -21,10 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="51371c5b-c990-440c-ae7b-0fc4f5a3240e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/layout/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/functions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +61,8 @@
       <workItem from="1641336475459" duration="3634000" />
       <workItem from="1643484943797" duration="116000" />
       <workItem from="1645030354519" duration="6520000" />
-      <workItem from="1646224313607" duration="856000" />
+      <workItem from="1646224313607" duration="7465000" />
+      <workItem from="1646310521611" duration="624000" />
     </task>
     <servers />
   </component>
