@@ -96,23 +96,23 @@
                 <form name="submit_form" class="frm" action="" method="post">
                     <div class="firstname-section">
                         <h2 class="firstname">First Name:</h2>
-                        <input class="firstnameInput" type="text" name="username" id="username" required/>
+                        <input class="firstnameInput" type="text" name="username" id="firstname" required/>
                     </div>
                     <div class="lastname-section">
                         <h2 class="lastname">Last Name:</h2>
-                        <input class="lastnameInput" type="password" name="password" id="password" required />
+                        <input class="lastnameInput" type="text" name="password" id="lastname" required />
                     </div>
                     <div class="password-section">
                         <h2 class="password">Password:</h2>
-                        <input class="passwordInput" type="password" name="password" id="password" required />
+                        <input class="passwordInput" type="password" name="password" id="pass" required />
                     </div>
                     <div class="username-section">
                         <h2 class="username">Username:</h2>
-                        <input class="usernameInput" type="password" name="password" id="password" required />
+                        <input class="usernameInput" type="text" name="password" id="username" required />
                     </div>
                     <div class="email-section">
                         <h2 class="email">Email:</h2>
-                        <input class="emailInput" type="password" name="password" id="password" required />
+                        <input class="emailInput" type="email" name="password" id="email" required />
                     </div>
                     <div class="buttons">
                         <a href="" class="reset-btn">Reset</a>
