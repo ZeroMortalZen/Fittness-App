@@ -14,8 +14,8 @@
         <header class="header">
             <a href="home.html" class="logo">Logo</a>
             <div class="reg-log-buttons">
-                <a href="" class="register-btn">Register</a>
-                <a href="" class="login">Login</a>
+                <a href="src/register.php" class="register-btn">Register</a>
+                <a href="src/login.php" class="login">Login</a>
             </div>
             <div class="burger">
                 <div class="line"></div>
