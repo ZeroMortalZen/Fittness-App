@@ -32,6 +32,10 @@
             <div class="triceps-dips-section-text">
                 <h2 class="triceps-dips-section-title">Triceps Dips</h2>
                 <h2 class="triceps-dips-section-cal">1 rep = 2.3 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -40,6 +44,10 @@
             <div class="diamond-push-ups-section-text">
                 <h2 class="diamond-push-ups-section-title">Diamond Push-Ups</h2>
                 <h2 class="diamond-push-ups-section-cal">1 rep = 2.9 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -48,6 +56,10 @@
             <div class="diagonal-plank-section-text">
                 <h2 class="diagonal-plank-section-title">Diagonal Plank</h2>
                 <h2 class="diagonal-plank-section-cal">1 rep = 3.7 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -56,6 +68,10 @@
             <div class="inch-worms-section-text">
                 <h2 class="inch-worms-section-title">Inch-Worms</h2>
                 <h2 class="inch-worms-section-cal">1 rep = 2.1 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -64,6 +80,10 @@
             <div class="mountain-climber-section-text">
                 <h2 class="push-ups-section-title">Push-Ups</h2>
                 <h2 class="push-ups-section-cal">1 rep = 2.8 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -72,6 +92,10 @@
             <div class="wall-push-ups-section-text">
                 <h2 class="wall-push-ups-section-title">Wall Push-Ups</h2>
                 <h2 class="wall-push-ups-section-cal">1 rep = 0.6 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 

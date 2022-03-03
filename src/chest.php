@@ -32,6 +32,10 @@
             <div class="incline-push-ups-section-text">
                 <h2 class="incline-push-ups-section-title">Incline Push-Ups</h2>
                 <h2 class="incline-push-ups-section-cal">1 rep = 1.6 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -40,6 +44,10 @@
             <div class="knee-push-ups-section-text">
                 <h2 class="knee-push-ups-section-title">Knee Push-Ups</h2>
                 <h2 class="knee-push-ups-section-cal">1 rep = 1.3 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -48,6 +56,10 @@
             <div class="mountain-climber-section-text">
                 <h2 class="push-ups-section-title">Push-Ups</h2>
                 <h2 class="push-ups-section-cal">1 rep = 2.8 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -56,6 +68,10 @@
             <div class="wide-arm-push-ups-section-text">
                 <h2 class="wide-arm-push-ups-section-title">Wide Arm Push-Ups</h2>
                 <h2 class="wide-arm-push-ups-section-cal">1 rep = 1.4 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -64,6 +80,10 @@
             <div class="cobra-stretch-section-text">
                 <h2 class="cobra-stretch-section-title">Cobra Stretch</h2>
                 <h2 class="cobra-stretch-section-cal">1 rep = 0.5 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -72,6 +92,10 @@
             <div class="chest-stretch-section-text">
                 <h2 class="chest-stretch-section-title">Chest Stretch</h2>
                 <h2 class="chest-stretch-section-cal">1 rep = 0.7 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 

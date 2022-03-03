@@ -32,6 +32,10 @@
             <div class="side-hop-section-text">
                 <h2 class="side-hop-section-title">Side Hop</h2>
                 <h2 class="side-hop-section-cal">1 rep = 2.2 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -40,6 +44,10 @@
             <div class="squats-section-text">
                 <h2 class="squats-section-title">Squats</h2>
                 <h2 class="squats-section-cal">1 rep = 3.3 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -48,6 +56,10 @@
             <div class="backward-lunge-section-text">
                 <h2 class="backward-lunge-section-title">Backward Lunge</h2>
                 <h2 class="backward-lunge-section-cal">1 rep = 1.7 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -56,6 +68,10 @@
             <div class="donkey-kicks-left-section-text">
                 <h2 class="donkey-kicks-left-section-title">Donkey Kicks Left</h2>
                 <h2 class="donkey-kicks-left-section-cal">1 rep = 1.1 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -64,6 +80,10 @@
             <div class="donkey-kicks-right-section-text">
                 <h2 class="donkey-kicks-right-section-title">Donkey Kicks Right</h2>
                 <h2 class="donkey-kicks-right-section-cal">1 rep = 1.1 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 
@@ -72,6 +92,10 @@
             <div class="wall-calf-raises-section-text">
                 <h2 class="wall-calf-raises-section-title">Wall Calf Raises</h2>
                 <h2 class="wall-calf-raises-section-cal">1 rep = 2.1 calories</h2>
+                <div class="update-delete-buttons">
+                    <a href="" class="update-btn btn">Update</a>
+                    <a href="" class="delete-btn btn">Delete</a>
+                </div>
             </div>
         </div>
 

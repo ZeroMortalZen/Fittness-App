@@ -258,7 +258,6 @@ body{
 .wall-calf-raises-section-cal {
     margin-top: 10px;
 }
-
 .start-btn {
     display: block;
     max-width: 180px;
@@ -270,6 +269,26 @@ body{
     padding: 10px 0px;
 }
 
+.update-delete-buttons {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.btn {
+    display: block;
+    max-width: 100px;
+    width: 100%;
+    background-color: #21A9E3;
+    padding: 5px 10px;
+    text-align: center;
+    transition: 0.5s ease-in;
+}
+.btn:hover {
+    background-color: #169CD6;
+}
+.delete-btn {
+    margin-left: 5px;
+}
 
 
 /* Tami CSS */

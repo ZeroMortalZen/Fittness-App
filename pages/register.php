@@ -1,6 +1,6 @@
  <?php
-  include '../lib/model.php';
- require "../layout/header.php" ;
+include '../lib/model.php';
+require "../layout/header.php" ;
  $modelObj = new model();
  $message = "";
   $messageType = "";
@@ -118,7 +118,6 @@
                         <a href="" class="reset-btn" type="reset" class="button" id="reset_button">Reset</a>
                         <a href="" class="submit-btn" type="submit" name="submit" class="reg">Submit</a>
                     </div>
-                    
                 </form>
             </div>
         </section>
