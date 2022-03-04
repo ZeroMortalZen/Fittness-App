@@ -1,31 +1,34 @@
  <?php
-  include '../lib/model.php';
- require "../layout/header.php";
- $modelObj = new model();
+ require "../layout/header.php" ;
+ include '../lib/model.php';
+ $model = new Model();
+ $insert = $model->insert();
  $message = "";
-  $messageType = "";
-  if (!empty($_SESSION['user_id'])){
-      header("localhost/login_register/logout.php");
-  }
-  $submit =  filter_input(INPUT_POST, 'submit');
-    
-  if (isset($submit)){
-            $username = filter_input(INPUT_POST, 'username');
-            $password= filter_input(INPUT_POST, 'password');
-           
-            $user_id = $modelObj->validate_login($username, $password);
-            if($user_id){
-                session_start();
-                $_SESSION['user_id'] = $user_id;
-                $message = "You are successfully logged in <a href='logout.php?id=$user_id'>Logout</a>.";
-                $messageType = "success_msg";
-            }else{
-                $message = "Incorrect username or password.";
-                $messageType = "error_msg";
-            }
-  }
+ $messageType = "";
+ if (!empty($_SESSION['user_id'])){
+     header("localhost/login_register/logout.php");
+ }
+ $submit =  filter_input(INPUT_POST, 'submit');
 
-        ?>
+ if (isset($submit)){
+     $username = filter_input(INPUT_POST, 'username');
+     $password= filter_input(INPUT_POST, 'password');
+
+     $id = $model->validate_login($username, $password);
+     if($id){
+         session_start();
+         $_SESSION['id'] = $id;
+         $message = "You are successfully logged in <a href='logout.php?id=$id'>Logout</a>.";
+         $messageType = "success_msg";
+     }else{
+         $message = "Incorrect username or password.";
+         $messageType = "error_msg";
+     }
+ }
+
+ ?>
+
+
 
 <html>
     <head>
@@ -66,7 +69,7 @@
                         <h2 class="password">Password:</h2>
                         <input class="passwordInput" type="password" name="password" id="password" required />
                     </div>
-                    <a href="" class="login-btn">Login</a>
+                    <button type="submit" name="submit" class="btn btn-primary">Login</button>
                 </form>
             </div>
         </section>
