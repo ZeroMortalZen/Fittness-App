@@ -35,7 +35,7 @@ class model
 
                     $query = "INSERT INTO records (firstname,lastname,username,password,email) VALUES ('$firstname','$lastname','$username','$password','$email')";
                     if ($sql = $this->conn->query($query)) {
-                        echo "<script>alert('records added successfully');</script>";
+                        echo "<script>alert('You Have successfully Register');</script>";
                         //echo "<script>window.location.href = 'index.php';</script>";
                     }else{
                         echo "<script>alert('failed');</script>";
@@ -50,10 +50,13 @@ class model
         }
     }
     //CRUD For AdminPanel
+
+
+    //Fetch Abs Data from Abs table
     public function fetch(){
         $data = null;
 
-        $query = "SELECT * FROM records";
+        $query = "SELECT * FROM abs_data";
         if ($sql = $this->conn->query($query)) {
             while ($row = mysqli_fetch_assoc($sql)) {
                 $data[] = $row;
@@ -61,6 +64,47 @@ class model
         }
         return $data;
     }
+
+    //Fetch Arms Data from Arms Table
+    public function fetchArms(){
+        $data = null;
+
+        $query = "SELECT * FROM arms_data";
+        if ($sql = $this->conn->query($query)) {
+            while ($row = mysqli_fetch_assoc($sql)) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+
+    //Fetch Chest Data from Chest Table
+    public function fetchChest(){
+        $data = null;
+
+        $query = "SELECT * FROM chest_data";
+        if ($sql = $this->conn->query($query)) {
+            while ($row = mysqli_fetch_assoc($sql)) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+
+   //Fetch Legs Data from Legs Table
+    public function fetchLegs(){
+        $data = null;
+
+        $query = "SELECT * FROM legs_data";
+        if ($sql = $this->conn->query($query)) {
+            while ($row = mysqli_fetch_assoc($sql)) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+
+
 
     public function delete($id){
 
@@ -89,7 +133,7 @@ class model
 
         $data = null;
 
-        $query = "SELECT * FROM records WHERE id = '$id'";
+        $query = "SELECT * FROM recordsAdmin WHERE id = '$id'";
         if ($sql = $this->conn->query($query)) {
             while($row = $sql->fetch_assoc()){
                 $data = $row;

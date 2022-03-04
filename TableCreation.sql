@@ -29,7 +29,7 @@ CREATE TABLE `records` (
 
 CREATE TABLE `recordsAdmin` (
                                 `id` int  NOT NULL AUTO_INCREMENT,
-                                `Videolink` varchar(30) NOT NULL,
+                                `Videolink` varchar(225) NOT NULL,
                                 `exercise` varchar(30) NOT NULL,
                                 `calories` varchar(30) NOT NULL,
                                 PRIMARY KEY (id)
