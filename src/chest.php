@@ -20,7 +20,7 @@
             <div class="pop-menu" id="pop-menu">
                 <span class="cross"></span>
                 <a href="../home.php" class="home-page">Home</a>
-                <a href="" class="account-page">Account</a>
+                <a href="../pages/Dashboard.php" class="account-page">Account</a>
                 <a href="" class="graph-page">Graph</a>
             </div>
         </header>
