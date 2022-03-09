@@ -27,77 +27,42 @@
     </div>
     <section class="chest-section-page">
         <h1 class="chest-section__title">Chest</h1>
-        <div class="incline-push-ups-section">
-            <iframe width="80" height="80" src="https://www.youtube.com/embed/UT03_KPhoR8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            <div class="incline-push-ups-section-text">
-                <h2 class="incline-push-ups-section-title">Incline Push-Ups</h2>
-                <h2 class="incline-push-ups-section-cal">1 rep = 1.6 calories</h2>
-                <div class="update-delete-buttons">
-                    <a href="" class="update-btn btn">Update</a>
-                    <a href="" class="delete-btn btn">Delete</a>
-                </div>
-            </div>
-        </div>
+        <?php
+        include '../lib/model.php';
+        $model = new Model();
+        $rows = $model->fetchChest();
+        $i = 1;
 
-        <div class="knee-push-ups-section">
-            <iframe width="80" height="80" src="https://www.youtube.com/embed/KFxW5amBbsw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            <div class="knee-push-ups-section-text">
-                <h2 class="knee-push-ups-section-title">Knee Push-Ups</h2>
-                <h2 class="knee-push-ups-section-cal">1 rep = 1.3 calories</h2>
-                <div class="update-delete-buttons">
-                    <a href="" class="update-btn btn">Update</a>
-                    <a href="" class="delete-btn btn">Delete</a>
-                </div>
-            </div>
-        </div>
+        if(!empty($rows)){
+            foreach($rows as $row){
+                ?>
 
-        <div class="push-ups-section">
-            <iframe width="80" height="80" src="https://www.youtube.com/embed/eMQuAjuPCV0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            <div class="mountain-climber-section-text">
-                <h2 class="push-ups-section-title">Push-Ups</h2>
-                <h2 class="push-ups-section-cal">1 rep = 2.8 calories</h2>
-                <div class="update-delete-buttons">
-                    <a href="" class="update-btn btn">Update</a>
-                    <a href="" class="delete-btn btn">Delete</a>
-                </div>
-            </div>
-        </div>
 
-        <div class="wide-arm-push-ups-section">
-            <iframe width="80" height="80" src="https://www.youtube.com/embed/kBREQ4OSds8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            <div class="wide-arm-push-ups-section-text">
-                <h2 class="wide-arm-push-ups-section-title">Wide Arm Push-Ups</h2>
-                <h2 class="wide-arm-push-ups-section-cal">1 rep = 1.4 calories</h2>
-                <div class="update-delete-buttons">
-                    <a href="" class="update-btn btn">Update</a>
-                    <a href="" class="delete-btn btn">Delete</a>
-                </div>
-            </div>
-        </div>
 
-        <div class="cobra-stretch-section">
-            <iframe width="80" height="80" src="https://www.youtube.com/embed/z21McHHOpAg" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            <div class="cobra-stretch-section-text">
-                <h2 class="cobra-stretch-section-title">Cobra Stretch</h2>
-                <h2 class="cobra-stretch-section-cal">1 rep = 0.5 calories</h2>
-                <div class="update-delete-buttons">
-                    <a href="" class="update-btn btn">Update</a>
-                    <a href="" class="delete-btn btn">Delete</a>
+                <div class="Excrise Section">
+                    <iframe width="80" height="80" src=<?php echo $row['Videolink']; ?> title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    <div class="excises-section-text">
+                        <h2 class="excises-section-title"><?php echo $row['exercise'];?></h2>
+                        <h2 class="excises-section-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
+                        <div class="update-delete-buttons">
+                            <a href="" class="update-btn btn">Update</a>
+                            <a href="" class="delete-btn btn">Delete</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                </div>
 
-        <div class="chest-stretch-section">
-            <iframe width="80" height="80" src="https://www.youtube.com/embed/DzYbKoktWao" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            <div class="chest-stretch-section-text">
-                <h2 class="chest-stretch-section-title">Chest Stretch</h2>
-                <h2 class="chest-stretch-section-cal">1 rep = 0.7 calories</h2>
-                <div class="update-delete-buttons">
-                    <a href="" class="update-btn btn">Update</a>
-                    <a href="" class="delete-btn btn">Delete</a>
-                </div>
-            </div>
-        </div>
+
+
+
+
+                <?php
+            }
+        }else{
+            echo "no data";
+        }
+
+        ?>
 
         <a href="" class="start-btn">Start</a>
     </section>
