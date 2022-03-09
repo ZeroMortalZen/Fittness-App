@@ -131,22 +131,43 @@ body{
 
 
 /* ABS SECTION */
+.main-section-title {
+    margin: 30px auto 0px;
+    text-align: center;
+}
+.excrise-section {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.excises-section-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.exercise-title {
+    margin-left: 15px;
 
+}
+.exercise-cal {
+    margin-left: 15px;
+    margin-top: 5px;
+}
 
 .start-btn {
     display: block;
     max-width: 180px;
-    margin: 15px auto;
     width: 100%;
     background: #21A9E3;
     text-align: center;
     font-size: 16px;
     padding: 10px 0px;
+    margin: 15px auto 0px;
 }
 
 .update-delete-buttons {
     display: flex;
-    margin-left: 20px;
+    margin-left: 15px;
     margin-top: 5px;
 }
 .btn {
@@ -158,7 +179,6 @@ body{
     text-align: center;
     transition: 0.5s ease-in;
     border: none;
-    margin: 15px auto;
 }
 .btn:hover {
     background-color: #169CD6;

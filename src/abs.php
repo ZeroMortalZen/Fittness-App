@@ -28,7 +28,7 @@
     </header>
 </div>
 <section class="abs-section-page">
-    <h1 class="abs-section__title">Abs</h1>
+    <h1 class="main-section-title">Abs</h1>
 <?php
 include '../lib/model.php';
 $model = new Model();
@@ -43,9 +43,9 @@ if(!empty($rows)){
 
     <div class="excrise-section">
         <iframe width="80" height="80" src=<?php echo $row['Videolink']; ?> title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-        <div class="excises-section">
-            <h2 class="excises-section-title"><?php echo $row['exercise'];?></h2>
-            <h2 class="excises-section-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
+        <div class="excises-section-inner">
+            <h2 class="exercise-title"><?php echo $row['exercise'];?></h2>
+            <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
             <div class="update-delete-buttons">
                 <a href="" class="update-btn btn">Update</a>
                 <a href="" class="delete-btn btn">Delete</a>
