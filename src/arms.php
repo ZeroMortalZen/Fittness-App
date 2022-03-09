@@ -42,8 +42,8 @@
                 <div class="Excrise Section">
                     <iframe width="80" height="80" src=<?php echo $row['Videolink']; ?> title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                     <div class="excises-section">
-                        <h2 class="exercise-name"><?php echo $row['exercise'];?></h2>
-                        <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
+                        <h2 class="exercise-section-title"><?php echo $row['exercise'];?></h2>
+                        <h2 class="exercise-section-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
                         <div class="update-delete-buttons">
                             <a href="" class="update-btn btn">Update</a>
                             <a href="" class="delete-btn btn">Delete</a>
