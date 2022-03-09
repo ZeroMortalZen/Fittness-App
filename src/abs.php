@@ -41,9 +41,9 @@ if(!empty($rows)){
 
 
 
-    <div class="Excrise Section">
+    <div class="excrise-section">
         <iframe width="80" height="80" src=<?php echo $row['Videolink']; ?> title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-        <div class="excises-section-text">
+        <div class="excises-section">
             <h2 class="excises-section-title"><?php echo $row['exercise'];?></h2>
             <h2 class="excises-section-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
             <div class="update-delete-buttons">
