@@ -275,7 +275,7 @@ body{
     margin-top: 5px;
 }
 .btn {
-    display: block;
+    /* display: block; */
     max-width: 100px;
     width: 100%;
     background-color: #21A9E3;
@@ -284,6 +284,8 @@ body{
     transition: 0.5s ease-in;
     border: none;
     margin: 15px auto;
+    display: flex;
+    justify-content: center;
 }
 .btn:hover {
     background-color: #169CD6;
