@@ -24,6 +24,7 @@
     <div class="row">
         <div class="col-md-12">
             <table class="table">
+                <h2>Abs Data</h2>
                 <thead>
                 <tr>
                     <th>ID</th>
@@ -41,8 +42,10 @@
                 $rows = $model->fetch();
                 $i = 1;
                 if(!empty($rows)){
+
                     foreach($rows as $row){
                         ?>
+
                         <tr>
                             <td><?php echo $i++; ?></td>
                             <td><?php echo $row['Videolink']; ?></td>
@@ -62,10 +65,172 @@
                 }
 
                 ?>
+
                 </tbody>
             </table>
         </div>
     </div>
+    <h2>Arms Data</h2>
+    <!----Arms  DATA  ----->
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>VideoLink</th>
+                    <th>excrise</th>
+                    <th>Calories</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+
+
+                $Arm_model = new Model();
+                $rows = $Arm_model->fetchArms();
+                $i = 1;
+                if(!empty($rows)){
+
+                    foreach($rows as $row){
+                        ?>
+
+                        <tr>
+                            <td><?php echo $i++; ?></td>
+                            <td><?php echo $row['Videolink']; ?></td>
+                            <td><?php echo $row['exercise']; ?></td>
+                            <td><?php echo $row['calories']; ?></td>
+                            <td>
+                                <a href="read.php?id=<?php echo $row['id']; ?>" class="badge badge-info">Read</a>
+                                <a href="delete.php?id=<?php echo $row['id']; ?>" class="badge badge-danger">Delete</a>
+                                <a href="edit.php?id=<?php echo $row['id']; ?>" class="badge badge-success">Edit</a>
+                            </td>
+                        </tr>
+
+                        <?php
+                    }
+                }else{
+                    echo "no data";
+                }
+
+                ?>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h2>Chest Data</h2>
+    <!----Chest  DATA  ----->
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>VideoLink</th>
+                    <th>excrise</th>
+                    <th>Calories</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+
+
+                $Chest_model = new Model();
+                $rows = $Chest_model->fetchChest();
+                $i = 1;
+                if(!empty($rows)){
+
+                    foreach($rows as $row){
+                        ?>
+
+                        <tr>
+                            <td><?php echo $i++; ?></td>
+                            <td><?php echo $row['Videolink']; ?></td>
+                            <td><?php echo $row['exercise']; ?></td>
+                            <td><?php echo $row['calories']; ?></td>
+                            <td>
+                                <a href="read.php?id=<?php echo $row['id']; ?>" class="badge badge-info">Read</a>
+                                <a href="delete.php?id=<?php echo $row['id']; ?>" class="badge badge-danger">Delete</a>
+                                <a href="edit.php?id=<?php echo $row['id']; ?>" class="badge badge-success">Edit</a>
+                            </td>
+                        </tr>
+
+                        <?php
+                    }
+                }else{
+                    echo "no data";
+                }
+
+                ?>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h2>Legs Data</h2>
+    <!----Legs  DATA  ----->
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>VideoLink</th>
+                    <th>excrise</th>
+                    <th>Calories</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+
+
+                $Legs_model = new Model();
+                $rows = $Legs_model->fetchLegs();
+                $i = 1;
+                if(!empty($rows)){
+
+                    foreach($rows as $row){
+                        ?>
+
+                        <tr>
+                            <td><?php echo $i++; ?></td>
+                            <td><?php echo $row['Videolink']; ?></td>
+                            <td><?php echo $row['exercise']; ?></td>
+                            <td><?php echo $row['calories']; ?></td>
+                            <td>
+                                <a href="read.php?id=<?php echo $row['id']; ?>" class="badge badge-info">Read</a>
+                                <a href="delete.php?id=<?php echo $row['id']; ?>" class="badge badge-danger">Delete</a>
+                                <a href="edit.php?id=<?php echo $row['id']; ?>" class="badge badge-success">Edit</a>
+                            </td>
+                        </tr>
+
+                        <?php
+                    }
+                }else{
+                    echo "no data";
+                }
+
+                ?>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 </div>
 
 <!-- Optional JavaScript -->
