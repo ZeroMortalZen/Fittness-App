@@ -23,6 +23,10 @@ input {
     border: none;
     height: 25px;
 }
+button{
+    outline: none;
+    border: none;
+}
 
 body{
     font-size: 12px;
