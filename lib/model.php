@@ -35,16 +35,13 @@ class model
 
                     $query = "INSERT INTO records (firstname,lastname,username,password,email) VALUES ('$firstname','$lastname','$username','$password','$email')";
                     if ($sql = $this->conn->query($query)) {
-                        echo "<script>alert('You Have successfully Register');</script>";
-                        //echo "<script>window.location.href = 'index.php';</script>";
+                        header("location: ../pages/login.php"); 
                     }else{
                         echo "<script>alert('failed');</script>";
-                        //echo "<script>window.location.href = 'index.php';</script>";
                     }
 
                 }else{
                     echo "<script>alert('empty');</script>";
-                    //echo "<script>window.location.href = 'index.php';</script>";
                 }
             }
         }

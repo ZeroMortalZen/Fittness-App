@@ -20,6 +20,7 @@
          $_SESSION['id'] = $id;
          $message = "You are successfully logged in <a href='logout.php?id=$id'>Logout</a>.";
          $messageType = "success_msg";
+         header("location: ../home.php"); 
      }else{
          $message = "Incorrect username or password.";
          $messageType = "error_msg";
