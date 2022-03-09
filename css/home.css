@@ -23,6 +23,10 @@ input {
     border: none;
     height: 25px;
 }
+button {
+    outline: none;
+    border: none;
+}
 
 body{
     font-size: 12px;
@@ -319,19 +323,19 @@ body{
 }
 
 .firstnameInput {
-    margin-left: 15px;
+    margin-left: 20px;
 }
 .lastnameInput {
-    margin-left: 16.5px;
+    margin-left: 22.5px;
 }
 .passwordInput {
     margin-left: 22.5px;
 }
 .usernameInput {
-    margin-left: 20px;
+    margin-left: 21.5px;
 }
 .emailInput {
-    margin-left: 43px;
+    margin-left: 42.5px;
 }
 
 .buttons {
