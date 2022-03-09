@@ -47,8 +47,7 @@ if(!empty($rows)){
             <h2 class="exercise-title"><?php echo $row['exercise'];?></h2>
             <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
             <div class="update-delete-buttons">
-                <a href="" class="update-btn btn">Update</a>
-                <a href="" class="delete-btn btn">Delete</a>
+                <a href="../pages/AdminPanel.php" class="btn">Control Panel</a>
             </div>
         </div>
     </div>

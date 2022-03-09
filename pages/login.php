@@ -69,7 +69,7 @@
                         <h2 class="password">Password:</h2>
                         <input class="passwordInput" type="password" name="password" id="password" required />
                     </div>
-                    <button type="submit" name="submit" class="btn">Login</button>
+                    <button type="submit" name="submit" class="btn center-btn">Login</button>
                 </form>
             </div>
         </section>

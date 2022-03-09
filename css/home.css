@@ -180,6 +180,9 @@ body{
     transition: 0.5s ease-in;
     border: none;
 }
+.center-btn {
+    margin: 15px auto 0px;
+}
 .btn:hover {
     background-color: #169CD6;
 }

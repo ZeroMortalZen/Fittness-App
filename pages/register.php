@@ -43,7 +43,7 @@ $insert = $model->insert();
                 </div>
                 <div class="form-group password-section">
                     <h2 class="password">Password</h2>
-                    <input type="text" name="password" class="form-control passwordInput">
+                    <input type="password" name="password" class="form-control passwordInput">
                 </div>
 
                 <div class="form-group email-section">
