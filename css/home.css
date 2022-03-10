@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, h6 {
 a{
     text-decoration: none;
     color: #fff;
+    transition: 0.5s ease-in;
+}
+a:hover {
+    color: #13B8F0;
 }
 p {
     color: #fff;
