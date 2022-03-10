@@ -45,7 +45,7 @@
                         <h2 class="exercise-title"><?php echo $row['exercise'];?></h2>
                         <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
                         <div class="update-delete-buttons">
-                            <a href="../pages/AdminPanel.php" class="btn">Control Panel</a>
+                            <a href="../pages/AdminPanel.php" class="btn">Admin Panel</a>
                         </div>
                     </div>
                 </div>
