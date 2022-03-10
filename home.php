@@ -9,28 +9,40 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    
     <div class="container">
-        <header class="header">
-            <a href="home.php" class="logo">Logo</a>
-            <div class="reg-log-buttons">
-                <a href="./pages/register.php" class="register-btn">Register</a>
-                <a href="./pages/login.php" class="login">Login</a>
+        <div class="main-page">
+            <?php 
+                require "layout/header.php";
+            ?>
+            <div class="offer">
+                <h1 class="offer__title">
+                    We provide a good fitness program with fast progress
+                </h1>
+                <p class="offer__text">
+                    Interesting app that allows to view your progress, with interactive exercises 
+                </p>
+                <a href="#section" class="offer__btn">Fitness</a>
             </div>
-            <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div class="pop-menu" id="pop-menu">
-                <span class="cross"></span>
-                <a href="home.php" class="home-page">Home</a>
-                <a href="pages/Dashboard.php" class="account-page">Account</a>
-                <a href="" class="graph-page">Graph</a>
-            </div>
-        </header>
-    
-        <div class="section">
+            <a href="#section" class="arrow-down"></a>
+            <nav class="mobile">
+                <ul class="mobile-menu">
+                    <li class="mobile-menu__list">
+                        <a href="../home.php" class="mobile-menu__link">Home</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="../pages/Dashboard.php" class="mobile-menu__link">Account</a>
+                    </li>
+                    <li class="mobile-menu__list">
+                        <a href="" class="mobile-menu__link">Graph</a>
+                    </li>
+                </ul>
+            </nav>
+            </header>
+        </div>
+        
+
+        <h1 class="main-home-title">Choose The Section you want</h1>
+        <div class="section" id="section">
             <a href="src/abs.php" class="abs-section">
                 <h1 class="abs-title">Abs</h1>
                 <img src="img/abs.png" alt="Abs Picture">
@@ -49,9 +61,10 @@
             </a>
         </div>
     </div>
-    
+    <?php 
+        require "layout/footer.php";
+    ?>
 </body>
 
 <script src="src/scripts.js"></script>
-
 </html>

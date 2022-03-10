@@ -1,5 +1,4 @@
  <?php
- require "../layout/header.php" ;
  include '../lib/model.php';
  $model = new Model();
  $insert = $model->insert();
@@ -36,22 +35,12 @@
         <meta charset="UTF-8">
         <title>Login</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="../css/home.css">
     </head>
     <body>
-        <header class="header">
-            <a href="../home.php" class="logo">Logo</a>
-            <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div class="pop-menu" id="pop-menu">
-                <span class="cross"></span>
-                <a href="../home.php" class="home-page">Home</a>
-                <a href="" class="account-page">Account</a>
-                <a href="" class="graph-page">Graph</a>
-            </div>
-        </header>
+        <?php 
+            require "../layout/header.php" ;
+        ?>
         <section class="login-section">
             <h1 class="login-title">Login</h1>
             <div class="frm">

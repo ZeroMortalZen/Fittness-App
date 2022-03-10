@@ -10,19 +10,22 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <a href="../home.php" class="logo">Logo</a>
-            <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div class="pop-menu" id="pop-menu">
-                <span class="cross"></span>
-                <a href="../home.php" class="home-page">Home</a>
-                <a href="../pages/Dashboard.php" class="account-page">Account</a>
-                <a href="" class="graph-page">Graph</a>
-            </div>
+        <?php 
+            require "../layout/header.php";
+        ?>
+        <nav class="mobile">
+            <ul class="mobile-menu">
+                <li class="mobile-menu__list">
+                    <a href="../home.php" class="mobile-menu__link">Home</a>
+                </li>
+                <li class="mobile-menu__list">
+                    <a href="../pages/Dashboard.php" class="mobile-menu__link">Account</a>
+                </li>
+                <li class="mobile-menu__list">
+                    <a href="" class="mobile-menu__link">Graph</a>
+                </li>
+            </ul>
+        </nav>
         </header>
     </div>
     <section class="arms-section-page">
@@ -44,7 +47,7 @@
                     <div class="excises-section-inner">
                         <h2 class="exercise-title"><?php echo $row['exercise'];?></h2>
                         <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
-                        <div class="update-delete-buttons">
+                        <div class="admin-panel-btn">
                             <a href="../pages/AdminPanel.php" class="btn">Admin Panel</a>
                         </div>
                     </div>
@@ -63,6 +66,9 @@
 
         <a href="" class="start-btn">Start</a>
     </section>
+    <?php 
+        require "../layout/footer.php";
+    ?>
 </body>
 
 <script src="../src/scripts.js"></script>
