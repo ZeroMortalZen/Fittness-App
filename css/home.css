@@ -78,12 +78,12 @@ button {
 .main-page {
     background: url("../img/main-img.png") no-repeat top / cover;
     height: 900px;
-    padding-top: 50px;
 }
 .header-inner {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 50px;
 }
 .top-logo {
     background: url('../img/logo.png') no-repeat;
