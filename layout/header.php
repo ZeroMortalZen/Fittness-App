@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../css/home.css">
 <header class="header">
     <section class="header-inner">
         <a href="../home.php" class="top-logo"></a>
