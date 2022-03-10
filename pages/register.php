@@ -1,5 +1,4 @@
 <?php
-require "../layout/header.php" ;
 include '../lib/model.php';
 $model = new Model();
 $insert = $model->insert();
@@ -9,22 +8,26 @@ $insert = $model->insert();
     <head>
         <meta charset="UTF-8">
         <title>Register</title>
+        <link rel="stylesheet" href="../css/home.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-        <header class="header">
-            <a href="../home.php" class="logo">Logo</a>
-            <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div class="pop-menu" id="pop-menu">
-                <span class="cross"></span>
-                <a href="../home.php" class="home-page">Home</a>
-                <a href="" class="account-page">Account</a>
-                <a href="" class="graph-page">Graph</a>
-            </div>
+        <?php 
+            require "../layout/header.php";
+        ?>
+        <nav class="mobile">
+            <ul class="mobile-menu">
+                <li class="mobile-menu__list">
+                    <a href="../home.php" class="mobile-menu__link">Home</a>
+                </li>
+                <li class="mobile-menu__list">
+                    <a href="../pages/Dashboard.php" class="mobile-menu__link">Account</a>
+                </li>
+                <li class="mobile-menu__list">
+                    <a href="" class="mobile-menu__link">Graph</a>
+                </li>
+            </ul>
+        </nav>
         </header>
         <section class="register-section">
             <h1 class="register-title">Register</h1>
@@ -53,7 +56,7 @@ $insert = $model->insert();
 
                 <div class="form-group buttons">
                     <button type="reset" class="button reset-btn" id="reset_button">Reset</button>
-                    <button type="submit" class="submit-btn" name="submit" >Submit</button>
+                    <button type="submit" class="submit-btn" name="submit" >Register</button>
                 </div>
             </form>
         </section>
