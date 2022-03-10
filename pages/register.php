@@ -53,7 +53,7 @@ $insert = $model->insert();
 
                 <div class="form-group buttons">
                     <button type="reset" class="button reset-btn" id="reset_button">Reset</button>
-                    <button type="submit" class="submit-btn" name="submit" >Submit</button>
+                    <button type="submit" class="submit-btn" name="submit" >Register</button>
                 </div>
             </form>
         </section>
