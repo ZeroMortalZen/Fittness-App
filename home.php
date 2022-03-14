@@ -45,19 +45,19 @@
         <div class="section" id="section">
             <a href="src/abs.php" class="abs-section">
                 <h1 class="abs-title">Abs</h1>
-                <img src="img/abs.png" alt="Abs Picture">
+                <img src="img/abs.png" alt="Abs Picture" class="abs-image">
             </a>
             <a href="src/chest.php" class="chest-section">
                 <h1 class="chest-title">Chest</h1>
-                <img src="img/chest.png" alt="Chest Picture">
+                <img src="img/chest.png" alt="Chest Picture" class="chest-image">
             </a>
             <a href="src/arms.php" class="arms-section">
                 <h1 class="arms-title">Arms</h1>
-                <img src="img/arms.png" alt="Arms Picture">
+                <img src="img/arms.png" alt="Arms Picture" class="arms-image">
             </a>
             <a href="src/legs.php" class="legs-section">
                 <h1 class="legs-title">Legs</h1>
-                <img src="img/legs.png" alt="Legs Picture">
+                <img src="img/legs.png" alt="Legs Picture" class="legs-image">
             </a>
         </div>
     </div>

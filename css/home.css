@@ -63,6 +63,7 @@ button {
     max-width: 250px;
     width: 100%;
     margin-top: 50px;
+    
 }
 .abs-title, .chest-title, .arms-title, .legs-title {
     font-size: 18px;
@@ -70,6 +71,16 @@ button {
     font-weight: 600;
     margin-bottom: 10px;
     color: #000;
+    transition: 0.5s ease-in;
+}
+.abs-section:hover>h1, .chest-section:hover>h1, .arms-section:hover>h1, .legs-section:hover>h1 {
+    color: #21A9E3;
+}
+.abs-image, .chest-image, .arms-image, .legs-image {
+    transition: 0.5s ease-in;
+}
+.abs-image:hover, .chest-image:hover, .arms-image:hover, .legs-image:hover {
+    transform : scale(1.0725);
 }
 /* HOME PAGE */
 
