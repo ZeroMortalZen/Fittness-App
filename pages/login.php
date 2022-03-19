@@ -41,6 +41,19 @@
         <?php 
             require "../layout/header.php" ;
         ?>
+        <nav class="mobile">
+            <ul class="mobile-menu">
+                <li class="mobile-menu__list">
+                    <a href="../home.php" class="mobile-menu__link">Home</a>
+                </li>
+                <li class="mobile-menu__list">
+                    <a href="../pages/Dashboard.php" class="mobile-menu__link">Account</a>
+                </li>
+                <li class="mobile-menu__list">
+                    <a href="" class="mobile-menu__link">Graph</a>
+                </li>
+            </ul>
+        </nav>
         <section class="login-section">
             <h1 class="login-title">Login</h1>
             <div class="frm">
