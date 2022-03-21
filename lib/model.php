@@ -49,6 +49,20 @@ class model
     //CRUD For AdminPanel
 
 
+    //User Data
+    public function fetchUserData(){
+        $data = null;
+
+        $query = "SELECT * FROM records WHERE username =:username";
+        if ($sql = $this->conn->query($query)) {
+            while ($row = mysqli_fetch_assoc($sql)) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+
+
     //Fetch Abs Data from Abs table
     public function fetch(){
         $data = null;

@@ -16,10 +16,12 @@
      $id = $model->validate_login($username, $password);
      if($id){
          session_start();
-         $_SESSION['id'] = $id;
+         session_regenerate_id();
+         $_SESSION['loggedin'] = TRUE;
+         $_SESSION['name'] = $_POST['username'];
          $message = "You are successfully logged in <a href='logout.php?id=$id'>Logout</a>.";
          $messageType = "success_msg";
-         header("location: ../home.php"); 
+         //header("location: Dashboard.php");
      }else{
          $message = "Incorrect username or password.";
          $messageType = "error_msg";

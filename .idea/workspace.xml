@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="92776477-17d9-4595-9f22-79ee2a21954d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/layout/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="26W2VGNL81bd4IWi7sMEZNSAaV8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - Technological University Dublin/Year 3/Semester 2/Web FrameWork/Temp--Agency" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92776477-17d9-4595-9f22-79ee2a21954d" name="Default Changelist" comment="" />
+      <created>1647525044062</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647525044062</updated>
+      <workItem from="1647525047955" duration="785000" />
+      <workItem from="1647698520308" duration="4347000" />
+      <workItem from="1647881277965" duration="769000" />
+      <workItem from="1647882056663" duration="12127000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="129" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647707729877">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="129" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1647707729877" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1647527514974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1647527514974" />
+    <state x="863" y="377" key="run.anything.popup" timestamp="1647891241600">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="863" y="377" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1647891241600" />
+    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1647888258322">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1647888258322" />
+  </component>
+</project>

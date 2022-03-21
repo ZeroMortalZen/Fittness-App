@@ -18,10 +18,22 @@
                 </li>
             </ul>
         </div>
+        <?php
+          if(!isset($_SESSION['username'])){
+        ?>
+
+
         <div class="top-reg-log-buttons">
-            <a href="../pages/register.php" class="top-register-btn">Register</a>
-            <a href="../pages/login.php" class="top-login-btn">Login</a>
+            <a href="./pages/register.php" class="top-register-btn">Register</a>
+            <a href="./pages/login.php" class="top-login-btn">Login</a>
         </div>
+        <?php
+        }else{
+        ?>
+        <a href="./pages/logout.php" class="top-login-btn">Logout</a>
+        <?php
+        }
+         ?>
         <a href="../pages/Dashboard.php" class="icons__acc" title="Login"></a>
         <div class="burger">
             <div class="lines line_one"></div>

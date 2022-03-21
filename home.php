@@ -30,7 +30,7 @@
                         <a href="../home.php" class="mobile-menu__link">Home</a>
                     </li>
                     <li class="mobile-menu__list">
-                        <a href="../pages/Dashboard.php" class="mobile-menu__link">Account</a>
+                        <a href="./pages/Dashboard.php" class="mobile-menu__link">Account</a>
                     </li>
                     <li class="mobile-menu__list">
                         <a href="" class="mobile-menu__link">Graph</a>
