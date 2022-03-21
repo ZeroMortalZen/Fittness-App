@@ -1,6 +1,7 @@
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
+require "../systems/Calorie calculator/BMICalaculator.php";
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
 header('Location: index.php');
@@ -70,6 +71,9 @@ $stmt->close();
 
                      <div class="input-group-append">
                      </div>
+    <h5>Current weight Status:<?php
+        echo $bmi
+        ?></h5>
                      <h5>Calories Burned:</h5>
 
 

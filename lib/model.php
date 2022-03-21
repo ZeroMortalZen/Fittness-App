@@ -116,7 +116,17 @@ class model
         }
         return $data;
     }
-
+   //Fetching  Low Calories excises
+    public function getAbsLowCal(){
+        $data = null;
+        $query= "SELECT abs.calories FROM abs_data WHERE abs.calories BETWEEN 0.1 and 1.0";
+           if ($sql = $this->conn->query($query)) {
+               while ($row = mysqli_fetch_assoc($sql)) {
+                   $data[] = $row;
+               }
+           }
+         return $data;
+    }
 
 
     public function delete($id){
