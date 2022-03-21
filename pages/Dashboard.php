@@ -16,11 +16,11 @@ if (mysqli_connect_errno()) {
 exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-$stmt = $con->prepare('SELECT password, email FROM records WHERE id = ?');
+$stmt = $con->prepare('SELECT password, email,height,weight FROM records WHERE id = ?');
 
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($password, $email);
+$stmt->bind_result($password, $email,$height,$weight);
 $stmt->fetch();
 $stmt->close();
 ?>
@@ -49,34 +49,30 @@ $stmt->close();
 
 
 
-    <form>
-             <h4>User Inputs<h4>
 
-            <div class="input-group-append">
-            </div>
-            <h5> Add Age :<input type="text" name="" class="form-control input_user" value="" placeholder="Age"> </h5>
-
-
-
-            <div class="input-group-append">
-            </div>
-            <h5> Add Height :<input type="text" name="" class="form-control input_user" value="" placeholder="Height"> </h5>
-
+             <h4>User Inputs</h4>
+    <div class="input-group mb-3">
+        <div class="input-group-append">
+        </div>
+        <h5> Current Height : <?=$height?></h5>
+        <p>Update Height<input type="text" name="" class="form-control input_user" value="" placeholder="Weight"></p>
+        <button type="button" name="button" class="btn login_btn">update</button>
+    </div>
 
 
         <div class="input-group mb-3">
             <div class="input-group-append">
             </div>
-            <h5> Add Weight :<input type="text" name="" class="form-control input_user" value="" placeholder="Weight"> </h5>
+            <h5> Current Weight : <?=$weight?></h5>
+            <p>Update Weight<input type="text" name="" class="form-control input_user" value="" placeholder="Weight"></p>
         </div>
-        <button type="button" name="button" class="btn login_btn">Add</button>
+        <button type="button" name="button" class="btn login_btn">update</button>
 
                      <div class="input-group-append">
                      </div>
                      <h5>Calories Burned:</h5>
 
 
-    </form>
 </div>
 
 
