@@ -29,6 +29,7 @@ a:hover {
 }
 p {
     color: #fff;
+    margin: 0px;
 }
 input {
     outline: none;
@@ -368,6 +369,20 @@ button {
 
 .login-btn:hover {
     background-color: #169CD6;
+}
+
+.no-account {
+    text-align: center;
+    margin-left: -50px;
+}
+.no-account-register {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+.register {
+    color: #6bf5d3;
+    margin-left: 20px;
 }
 
 

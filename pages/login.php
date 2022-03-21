@@ -41,7 +41,7 @@
     </head>
     <body>
         <?php 
-            require "../layout/header.php" ;
+            require "../layout/header.php";
         ?>
         <nav class="mobile">
             <ul class="mobile-menu">
@@ -73,6 +73,10 @@
                     <div class="password-section">
                         <h2 class="password">Password:</h2>
                         <input class="passwordInput" type="password" name="password" id="password" required />
+                    </div>
+                    <div class="no-account-register">
+                        <p class="no-account">Haven’t got an Account?</p>
+                        <a href="register.php" class="register">Register</a>
                     </div>
                     <button type="submit" name="submit" class="btn center-btn">Login</button>
                 </form>

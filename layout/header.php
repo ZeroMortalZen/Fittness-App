@@ -24,13 +24,13 @@
 
 
         <div class="top-reg-log-buttons">
-            <a href="./pages/register.php" class="top-register-btn">Register</a>
-            <a href="./pages/login.php" class="top-login-btn">Login</a>
+            <a href="../pages/register.php" class="top-register-btn">Register</a>
+            <a href="../pages/login.php" class="top-login-btn">Login</a>
         </div>
         <?php
         }else{
         ?>
-        <a href="./pages/logout.php" class="top-login-btn">Logout</a>
+        <a href="../pages/logout.php" class="top-login-btn">Logout</a>
         <?php
         }
          ?>
