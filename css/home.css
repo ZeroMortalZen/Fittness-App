@@ -225,7 +225,6 @@ button {
     transition: 0.5s ease;
     margin-left: auto;
     margin-right: 100px;
-    padding-bottom: 50px;
     margin-top: 232px;
 }
 /* HEADER */
@@ -383,6 +382,12 @@ button {
 .register {
     color: #6bf5d3;
     margin-left: 20px;
+}
+
+/* After Logged in Message */
+.success_msg {
+    text-align: center;
+    margin-top: 15px;
 }
 
 
