@@ -9,8 +9,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="main-page">
+    <div class="main-page">
+        <div class="container">
             <?php 
                 require "layout/header.php";
             ?>
@@ -38,27 +38,28 @@
                 </ul>
             </nav>
             </header>
-        </div>
-        
+            
+            
 
-        <h1 class="main-home-title">Choose The Section you want</h1>
-        <div class="section" id="section">
-            <a href="src/abs.php" class="abs-section">
-                <h1 class="abs-title">Abs</h1>
-                <img src="img/abs.png" alt="Abs Picture" class="abs-image">
-            </a>
-            <a href="src/chest.php" class="chest-section">
-                <h1 class="chest-title">Chest</h1>
-                <img src="img/chest.png" alt="Chest Picture" class="chest-image">
-            </a>
-            <a href="src/arms.php" class="arms-section">
-                <h1 class="arms-title">Arms</h1>
-                <img src="img/arms.png" alt="Arms Picture" class="arms-image">
-            </a>
-            <a href="src/legs.php" class="legs-section">
-                <h1 class="legs-title">Legs</h1>
-                <img src="img/legs.png" alt="Legs Picture" class="legs-image">
-            </a>
+            <h1 class="main-home-title">Choose The Section you want</h1>
+            <div class="section" id="section">
+                <a href="src/abs.php" class="abs-section">
+                    <h1 class="abs-title">Abs</h1>
+                    <img src="img/abs.png" alt="Abs Picture" class="abs-image">
+                </a>
+                <a href="src/chest.php" class="chest-section">
+                    <h1 class="chest-title">Chest</h1>
+                    <img src="img/chest.png" alt="Chest Picture" class="chest-image">
+                </a>
+                <a href="src/arms.php" class="arms-section">
+                    <h1 class="arms-title">Arms</h1>
+                    <img src="img/arms.png" alt="Arms Picture" class="arms-image">
+                </a>
+                <a href="src/legs.php" class="legs-section">
+                    <h1 class="legs-title">Legs</h1>
+                    <img src="img/legs.png" alt="Legs Picture" class="legs-image">
+                </a>
+            </div>
         </div>
     </div>
     <?php 

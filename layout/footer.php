@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer-inner">
             <a href="../home.php" class="top-logo"></a>
-            <div class="top-menu">
+            <div class="bottom-menu">
                 <ul class="menu">
                     <li class="menu__list">
                         <a href="../src/abs.php" class="menu__link">Abs</a>

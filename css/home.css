@@ -50,7 +50,7 @@ button {
     font-size: 24px;
     font-weight: 500;
     font-family: Montserrat;
-    margin-top: 30px;
+    margin-top: 63px;
     color: #000;
 }
 .section {
@@ -58,7 +58,7 @@ button {
     max-width: 1240px;
     width: 100%;
     justify-content: space-between;
-    margin: 50px auto 0px;
+    margin: 30px auto 0px;
 }
 .abs-section, .chest-section, .arms-section, .legs-section {
     max-width: 250px;
@@ -90,6 +90,7 @@ button {
 .main-page {
     background: url("../img/main-img.png") no-repeat top / cover;
     height: 900px;
+    
 }
 .header-inner {
     display: flex;
@@ -99,7 +100,7 @@ button {
 }
 .top-logo {
     background: url('../img/logo.png') no-repeat;
-    width: 140px;
+    width: 60px;
     height: 140px;
     display: block;
 }
@@ -232,11 +233,17 @@ button {
 /* FOOTER */
 .footer {
     background: #000;
-    margin-top: 130px;
+    margin-top: 522px;
 }
 .footer-inner {
     display: flex;
     align-items: center;
+    margin-left: 100px;
+}
+.bottom-menu {
+    display: flex;
+    max-width: 287px;
+    width: 100%;
     margin-left: 100px;
 }
 .copyright {
@@ -265,13 +272,11 @@ button {
 }
 .exercise-title {
     margin-left: 15px;
-
 }
 .exercise-cal {
     margin-left: 15px;
     margin-top: 5px;
 }
-
 .start-btn {
     display: block;
     max-width: 180px;
@@ -318,22 +323,17 @@ button {
 .username-section, .firstname-section {
     margin-top: 30px;
 }
-
 .username-section, .password-section, .firstname-section, .lastname-section, .email-section {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
 .lastname-section, .password-section, .username-section, .email-section {
     margin-top: 15px;
 }
-
 .username, .password, .firstname, .lastname, .email {
     font-size: 13px;
 }
-
 .firstnameInput {
     margin-left: 20px;
 }
@@ -344,16 +344,14 @@ button {
     margin-left: 22.5px;
 }
 .usernameInput {
-    margin-left: 21.5px;
+    margin-left: 20px;
 }
 .emailInput {
     margin-left: 42.5px;
 }
-
 .buttons {
     display: flex;
 }
-
 .login-btn, .reset-btn, .submit-btn {
     display: block;
     max-width: 100px;
@@ -365,11 +363,9 @@ button {
     text-align: center;
     transition: 0.5s ease-in;
 }
-
 .login-btn:hover {
     background-color: #169CD6;
 }
-
 .no-account {
     text-align: center;
     margin-left: -50px;
@@ -390,33 +386,101 @@ button {
     margin-top: 15px;
 }
 
-
-/* Responsive */
-@media (max-width: 1920px) {
-    
-}
 @media (max-width: 1200px) {
 	.container {
 		max-width: 960px;
+        margin: 0px auto;
 	}
+    .top-menu {
+        margin-left: -100px;
+        max-width: 200px;
+    }
+    .section {
+        max-width: 960px;
+        flex-wrap: wrap;
+    }
+    .footer-inner {
+        margin-left: 0px;
+    }
+    .footer {
+        margin-top: 893px;
+    }
 }
 @media (max-width: 991px) {
 	.container {
 		max-width: 720px;
 	}
+    .top-menu {
+        margin-left: 0px;
+    }
+    .offer {
+        max-width: 426px;
+    }
+    .arrow-down {
+        margin-top: 170px;
+    }
 }
 @media (max-width: 767px) {
 	.container {
 		max-width: 540px;
 	}
+    .top-logo {
+        height: 106px;
+    }
+    .top-menu {
+        display: none;
+    }
+    .offer {
+        margin: 100px auto 0px;
+    }
+    .arrow-down {
+        margin-top: 336px;
+    }
+    .offer__title {
+        font-size: 36px;
+    }
+    .mobile-menu {
+        top: 115px;
+    }
 }
 @media (max-width: 575px) {
 	.container {
 		padding: 0 15px;
 	}
+    .arrow-down {
+        margin-right: 50px;
+    }
+}
+@media (max-width: 530px) {
+	.container {
+		padding: 0 15px;
+	}
+    .abs-section, .chest-section, .arms-section, .legs-section {
+        margin: 50px auto 0px;
+    }
+    .offer {
+        max-width: 300px;
+    }
+    .arrow-down {
+        margin-top: 293px;
+    }
+    .bottom-menu {
+        margin-left: 50px;
+    }
+    .footer {
+        margin-top: 1656px;
+    }
 }
 @media (max-width: 420px) {
-	
+	.icons__acc {
+        display: none;
+    }
+    .bottom-menu {
+        display: none;
+    }
+    .copyright {
+        margin-top: 20px;
+    }
 }
 
 
