@@ -1,7 +1,8 @@
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
-require "../systems/Calorie calculator/BMICalaculator.php";
+//require "../systems/Recommendation System/RecoSystem.php";
+$Userdata =  $_SESSION['name'];
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
 header('Location: index.php');
@@ -17,14 +18,34 @@ if (mysqli_connect_errno()) {
 exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-$stmt = $con->prepare('SELECT password, email,height,weight FROM records WHERE id = ?');
+$stmt = $con->prepare("SELECT password,email,height,weight FROM records WHERE username =?" );
+$debug ="bind not working";
+if($stmt->bind_param('s', $_SESSION['name'])==false){
+    //Debugging
+}
+else{
+    //Debugging
+}
 
-$stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($password, $email,$height,$weight);
+if($stmt->bind_result($password, $email,$height,$weight)==false){
+    //Debugging
+}
+else{
+    //Debugging
+}
 $stmt->fetch();
 $stmt->close();
 ?>
+<?php
+$noData="No Data";
+$Data  ="Data";
+if(empty($password)){
+    //Debugging :echo $noData;
+}
+ else{
+     //Debugging
+ }?>
 <div class="content">
     <h2>Profile Page</h2>
     <div>
@@ -36,10 +57,12 @@ $stmt->close();
             </tr>
             <tr>
                 <td>Password:</td>
+
                 <td><?=$password?></td>
             </tr>
             <tr>
                 <td>Email:</td>
+
                 <td><?=$email?></td>
             </tr>
         </table>
@@ -47,6 +70,7 @@ $stmt->close();
 </div>
 <div class="d-flex justify-content-center form_container">
 
+    <?php require "../systems/Calorie calculator/BMICalaculator.php"; ?>
 
 
 
@@ -55,8 +79,10 @@ $stmt->close();
     <div class="input-group mb-3">
         <div class="input-group-append">
         </div>
-        <h5> Current Height : <?=$height?></h5>
-        <p>Update Height<input type="text" name="" class="form-control input_user" value="" placeholder="Weight"></p>
+        <h5> Current Height (Inches): <?=$height?></h5>
+        <p>Update Height<label>
+                <input type="text" name="" class="form-control input_user" value="" placeholder="Weight">
+            </label></p>
         <button type="button" name="button" class="btn login_btn">update</button>
     </div>
 
@@ -64,7 +90,7 @@ $stmt->close();
         <div class="input-group mb-3">
             <div class="input-group-append">
             </div>
-            <h5> Current Weight : <?=$weight?></h5>
+            <h5> Current Weight (Pounds): <?=$weight?></h5>
             <p>Update Weight<input type="text" name="" class="form-control input_user" value="" placeholder="Weight"></p>
         </div>
         <button type="button" name="button" class="btn login_btn">update</button>
@@ -88,6 +114,14 @@ $stmt->close();
     <img class="modal-content" id="img01">
     <div id="caption"></div>
 </div>
+
+
+
+<?php require "../systems/Recommendation System/RecoSystem.php"; ?>
+
+
+
+
 
 <script>
     // Get the modal

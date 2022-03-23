@@ -116,10 +116,10 @@ class model
         }
         return $data;
     }
-   //Fetching  Low Calories excises
-    public function getAbsLowCal(){
+   //Fetching Calories excises
+    public function getLowCal(){
         $data = null;
-        $query= "SELECT abs.calories FROM abs_data WHERE abs.calories BETWEEN 0.1 and 1.0";
+        $query= "SELECT abs_data.exercise,abs_data.calories FROM abs_data WHERE abs_data.calories BETWEEN 0.1 and 1.0 UNION SELECT arms_data.exercise,arms_data.calories FROM arms_data WHERE arms_data.calories BETWEEN 0.1 and 1.0 UNION SELECT chest_data.exercise,chest_data.calories FROM chest_data WHERE chest_data.calories BETWEEN 0.1 and 1.0 UNION SELECT legs_data.exercise,legs_data.calories FROM legs_data WHERE legs_data.calories BETWEEN 0.1 and 1.0 ORDER BY exercise";
            if ($sql = $this->conn->query($query)) {
                while ($row = mysqli_fetch_assoc($sql)) {
                    $data[] = $row;
@@ -127,6 +127,53 @@ class model
            }
          return $data;
     }
+    public function getNormalCal(){
+        $data = null;
+        $query= "SELECT abs_data.exercise,abs_data.calories FROM abs_data WHERE abs_data.calories BETWEEN 1.0 and 1.5 UNION SELECT arms_data.exercise,arms_data.calories FROM arms_data WHERE arms_data.calories BETWEEN 1.0 and 1.5 UNION SELECT chest_data.exercise,chest_data.calories FROM chest_data WHERE chest_data.calories BETWEEN 1.0 and 1.5 UNION SELECT legs_data.exercise,legs_data.calories FROM legs_data WHERE legs_data.calories BETWEEN 1.0 and 1.5 ORDER BY exercise";
+        if ($sql = $this->conn->query($query)) {
+            while ($row = mysqli_fetch_assoc($sql)) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+    public function getOverCal(){
+        $data = null;
+        $query= "SELECT abs_data.exercise,abs_data.calories FROM abs_data WHERE abs_data.calories BETWEEN 1.5 and 2.0 UNION SELECT arms_data.exercise,arms_data.calories FROM arms_data WHERE arms_data.calories BETWEEN 1.5 and 2.0 UNION SELECT chest_data.exercise,chest_data.calories FROM chest_data WHERE chest_data.calories BETWEEN 1.5 and 2.0 UNION SELECT legs_data.exercise,legs_data.calories FROM legs_data WHERE legs_data.calories BETWEEN 1.5 and 2.0 ORDER BY exercise";
+        if ($sql = $this->conn->query($query)) {
+            while ($row = mysqli_fetch_assoc($sql)) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+    public function getObeseCal(){
+        $data = null;
+        $query= "SELECT abs_data.exercise,abs_data.calories FROM abs_data WHERE abs_data.calories BETWEEN 2.0 and 3.0 UNION SELECT arms_data.exercise,arms_data.calories FROM arms_data WHERE arms_data.calories BETWEEN 2.0 and 3.0 UNION SELECT chest_data.exercise,chest_data.calories FROM chest_data WHERE chest_data.calories BETWEEN 2.0 and 3.0 UNION SELECT legs_data.exercise,legs_data.calories FROM legs_data WHERE legs_data.calories BETWEEN 2.0 and 3.0 ORDER BY exercise";
+        if ($sql = $this->conn->query($query)) {
+            while ($row = mysqli_fetch_assoc($sql)) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public function delete($id){
