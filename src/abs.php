@@ -40,7 +40,7 @@
     ?>
 
         <div class="excrise-section">
-            <iframe width="80" height="80" src=<?php echo $row['Videolink']; ?> title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <img src="<?php echo $row['Videolink'];?>">
             <div class="excises-section-inner">
                 <h2 class="exercise-title"><?php echo $row['exercise'];?></h2>
                 <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
