@@ -9,15 +9,5 @@ $(function(){
 
 /* Play Sound when Start button clicked */
 var audio = new Audio("../sounds/jumping-jacks-sound.m4a");
-var startBTN = document.getElementsByClassName("start-btn");
-
-console.log(audio);
-
-$(function(){
-  $('.start-btn').click(function(){
-      audio.play();
-  });
-});
-
-
+audio.play();
 
