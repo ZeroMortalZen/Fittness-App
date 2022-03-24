@@ -29,6 +29,7 @@
     </div>
     <section class="legs-section-page">
         <h1 class="main-section-title">Legs</h1>
+        <a href="" class="start-btn">Start</a>
         <?php
         include '../lib/model.php';
         $model = new Model();
@@ -42,7 +43,7 @@
 
 
                 <div class="excrise-section">
-                    <img src="<?php echo $row['Videolink'];?>">
+                    <img src="<?php echo $row['Videolink'];?>" class="gif">
                     <div class="excises-section-inner">
                         <h2 class="exercise-title"><?php echo $row['exercise'];?></h2>
                         <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
@@ -64,8 +65,6 @@
         }
 
         ?>
-
-        <a href="" class="start-btn">Start</a>
     </section>
     <?php 
         require "../layout/footer.php";

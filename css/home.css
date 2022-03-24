@@ -385,6 +385,13 @@ button {
     text-align: center;
     margin-top: 15px;
 }
+.excrise-section {
+    margin-left: 135px;
+}
+.gif {
+    width: 350px;
+    height: 200px;
+}
 
 @media (max-width: 1200px) {
 	.container {

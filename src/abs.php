@@ -27,8 +27,10 @@
         </nav>
         </header>
     </div>
+    
 <section class="abs-section-page">
     <h1 class="main-section-title">Abs</h1>
+    <a href="" class="start-btn">Start</a>
     <?php
     include '../lib/model.php';
     $model = new Model();
@@ -38,17 +40,17 @@
     if(!empty($rows)){
         foreach($rows as $row){
     ?>
-
         <div class="excrise-section">
-            <img src="<?php echo $row['Videolink'];?>">
+            <img src="<?php echo $row['Videolink'];?>" class="gif">
             <div class="excises-section-inner">
                 <h2 class="exercise-title"><?php echo $row['exercise'];?></h2>
                 <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
                 <div class="admin-panel-btn">
                 <a href="../pages/AdminPanel.php" class="btn">Admin Panel</a>
-             </div>
-         </div>
-         
+            </div>
+        </div>
+        
+        
         </div>
 
             <?php
@@ -57,7 +59,6 @@
         echo "no data";
     }
     ?>
-    <a href="" class="start-btn">Start</a>
 </section>
 <?php 
     require "../layout/footer.php";
