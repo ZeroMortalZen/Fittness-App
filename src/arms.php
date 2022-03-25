@@ -40,19 +40,14 @@
             foreach($rows as $row){
                 ?>
 
-
-
-                <div class="excrise-section">
-                    <img src="<?php echo $row['Videolink'];?>" class="gif">
-                    <div class="excises-section-inner">
-                        <h2 class="exercise-title"><?php echo $row['exercise'];?></h2>
-                        <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
-                        <div class="admin-panel-btn">
-                            <a href="../pages/AdminPanel.php" class="btn">Admin Panel</a>
-                        </div>
-                    </div>
+            <div class="excrise-section">
+                <img src="<?php echo $row['Videolink'];?>" class="gif">
+                <div class="excises-section-inner">
+                    <h2 class="exercise-title"><?php echo $row['exercise'];?></h2>
+                    <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
+                    <a href="../pages/AdminPanel.php" class="btn admin-btn">Admin Panel</a>
                 </div>
-                </div>
+            </div>
 
 
 

@@ -8,6 +8,14 @@ $(function(){
 
 
 /* Play Sound when Start button clicked */
-var audio = new Audio("../sounds/jumping-jacks-sound.m4a");
-audio.play();
+var audio = new Audio("../sounds/audio-abs-section.wav");
 
+
+function playAudio() {
+  audio.play();
+}
+
+
+
+
+// TIMER

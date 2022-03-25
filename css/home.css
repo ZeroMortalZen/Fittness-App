@@ -278,6 +278,7 @@ button {
     margin-top: 5px;
 }
 .start-btn {
+    cursor: pointer;
     display: block;
     max-width: 180px;
     width: 100%;
@@ -387,11 +388,21 @@ button {
 }
 .excrise-section {
     margin-left: 135px;
+    justify-content: center;
+    margin-left: -150px;
 }
 .gif {
     width: 350px;
     height: 200px;
 }
+.admin-btn {
+    margin-left: 15px;
+}
+
+/* Timer CSS */
+
+
+  /* End Timer CSS */
 
 @media (max-width: 1200px) {
 	.container {
