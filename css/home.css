@@ -314,6 +314,25 @@ button {
     margin-left: 5px;
 }
 
+/* FORM CSS  - DATA SEND TO DATABASE */
+.amount-reps {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+}
+.ex-form {
+    border: 1px solid black;
+    margin: 30px auto 0px;
+    text-align: center;
+    max-width: 500px;
+}
+.exSection {
+    margin-top: 15px;
+}
+.exInput {
+    margin-top: 5px;
+}
+
 
 /* Tami CSS */
 .login-title, .register-title {

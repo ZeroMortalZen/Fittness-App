@@ -58,6 +58,35 @@
         echo "no data";
     }
     ?>
+
+    <h1 class="amount-reps">Please Enter Amount of Repetition Done per Exercise</h1>
+    <form name="exercises-form" class="ex-form" method="post">
+        <div class="jj-section exSection">
+            <h2 class="jj">Jumping Jacks:</h2>
+            <input class="jjInput exInput" type="text" name="jj" id="jj" required/>
+        </div>
+        <div class="ac-section exSection">
+            <h2 class="ac">Abdominal Crunches:</h2>
+            <input class="acInput exInput" type="text" name="ac" id="ac" required/>
+        </div>
+        <div class="mc-section exSection">
+            <h2 class="mc">Mountain Climber:</h2>
+            <input class="mcInput exInput" type="text" name="mc" id="mc" required/>
+        </div>
+        <div class="lr-section exSection">
+            <h2 class="lr">Leg Raises:</h2>
+            <input class="lrInput exInput" type="text" name="lr" id="lr" required/>
+        </div>
+        <div class="p-section exSection">
+            <h2 class="p">Plank:</h2>
+            <input class="pInput exInput" type="text" name="p" id="p" required/>
+        </div>
+        <div class="ht-section exSection">
+            <h2 class="ht">Heel Touch:</h2>
+            <input class="htInput exInput" type="text" name="ht" id="ht" required/>
+        </div>
+        <button type="submit" name="submit" class="btn center-btn">Send</button>
+    </form>
 </section>
 <?php 
     require "../layout/footer.php";

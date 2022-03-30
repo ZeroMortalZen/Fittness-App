@@ -60,8 +60,37 @@
         }else{
             echo "no data";
         }
-
         ?>
+
+
+        <h1 class="amount-reps">Please Enter Amount of Repetition Done per Exercise</h1>
+        <form name="exercises-form" class="ex-form" method="post">
+            <div class="ipu-section exSection">
+                <h2 class="ipu">Incline Push-Ups:</h2>
+                <input class="ipuInput exInput" type="text" name="ipu" id="ipu" required/>
+            </div>
+            <div class="kpu-section exSection">
+                <h2 class="kpu">Knee Push-Ups:</h2>
+                <input class="kpuInput exInput" type="text" name="kpu" id="kpu" required/>
+            </div>
+            <div class="pu-section exSection">
+                <h2 class="pu">Push-Ups:</h2>
+                <input class="puInput exInput" type="text" name="pu" id="pu" required/>
+            </div>
+            <div class="wapu-section exSection">
+                <h2 class="wapu">Wide Arms Push-Ups:</h2>
+                <input class="wapuInput exInput" type="text" name="wapu" id="wapu" required/>
+            </div>
+            <div class="cs-section exSection">
+                <h2 class="cos">Cobra Strech:</h2>
+                <input class="cosInput exInput" type="text" name="cos" id="cos" required/>
+            </div>
+            <div class="ces-section exSection">
+                <h2 class="ces">Chest Strech:</h2>
+                <input class="cesInput exInput" type="text" name="ces" id="ces" required/>
+            </div>
+            <button type="submit" name="submit" class="btn center-btn">Send</button>
+        </form>
     </section>
     <?php 
         require "../layout/footer.php";
