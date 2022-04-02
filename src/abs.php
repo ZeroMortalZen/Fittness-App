@@ -58,7 +58,11 @@
         echo "no data";
     }
     ?>
+   <?php
+      $modelCal = new model();
+      $modelCal->MondayTotalBurnedCalories();
 
+   ?>
     <h1 class="amount-reps">Please Enter Amount of Repetition Done per Exercise</h1>
     <form name="exercises-form" class="ex-form" method="post">
         <div class="jj-section exSection">

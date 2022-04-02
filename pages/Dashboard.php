@@ -100,6 +100,7 @@ if(empty($password)){
     <h5>Current weight Status:<?php
         echo $bmi
         ?></h5>
+
     <table>
         <tr>
             <td>Calories Burned Monday</td>

@@ -50,15 +50,22 @@ class model
     public function MondayTotalBurnedCalories(){
 
         if (isset($_POST['submit'])) {
-            if (isset($_POST['TotalBurnedCalories'])) {
-                if (!empty($_POST['TotalBurnedCalories'])  ) {
+            if (isset($_POST['jj']) && isset ($_POST['ac'])&& isset ($_POST['mc'])&& isset ($_POST['lr'])&& isset ($_POST['p'])&& isset ($_POST['ht'])) {
+                if (!empty($_POST['jc'])&& !empty($_POST['ac']) && !empty($_POST['mc']) && !empty($_POST['lr']) && !empty($_POST['p']) && !empty($_POST['ht'])) {
+                    $jj =$_POST['jj'];
+                    $ac =$_POST['ac'];
+                    $mc =$_POST['mc'];
+                    $lr =$_POST['lr'];
+                    $p =$_POST['p'];
+                    $ht =$_POST['ht'];
+                    $TotalBurnedCalories= $jj +$ac+$mc+$lr+$p+$ht;
 
-                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
 
 
                     $query = "INSERT INTO records (BurnedCalMonday) VALUES ('$TotalBurnedCalories')";
                     if ($sql = $this->conn->query($query)) {
                            echo "Calories Burned has been stored";
+                           return true;
                     }else{
                           echo  "Failed to store";
                     }
@@ -81,6 +88,7 @@ class model
                     $query = "INSERT INTO records (BurnedCalTuesday) VALUES ('$TotalBurnedCalories')";
                     if ($sql = $this->conn->query($query)) {
                         echo "Calories Burned has been stored";
+                        return true;
                     }else{
                         echo  "Failed to store";
                     }
