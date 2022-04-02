@@ -46,6 +46,165 @@ class model
             }
         }
     }
+    //Post Burned calories All
+    public function MondayTotalBurnedCalories(){
+
+        if (isset($_POST['submit'])) {
+            if (isset($_POST['TotalBurnedCalories'])) {
+                if (!empty($_POST['TotalBurnedCalories'])  ) {
+
+                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
+
+
+                    $query = "INSERT INTO records (BurnedCalMonday) VALUES ('$TotalBurnedCalories')";
+                    if ($sql = $this->conn->query($query)) {
+                           echo "Calories Burned has been stored";
+                    }else{
+                          echo  "Failed to store";
+                    }
+
+                }
+            }
+        }
+    }
+
+     //Tuesday
+    public function TuesdayTotalBurnedCalories(){
+
+        if (isset($_POST['submit'])) {
+            if (isset($_POST['TotalBurnedCalories'])) {
+                if (!empty($_POST['TotalBurnedCalories'])  ) {
+
+                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
+
+
+                    $query = "INSERT INTO records (BurnedCalTuesday) VALUES ('$TotalBurnedCalories')";
+                    if ($sql = $this->conn->query($query)) {
+                        echo "Calories Burned has been stored";
+                    }else{
+                        echo  "Failed to store";
+                    }
+
+                }
+            }
+        }
+    }
+
+    //Wednesday
+    public function WednesdayTotalBurnedCalories(){
+
+        if (isset($_POST['submit'])) {
+            if (isset($_POST['TotalBurnedCalories'])) {
+                if (!empty($_POST['TotalBurnedCalories'])  ) {
+
+                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
+
+
+                    $query = "INSERT INTO records (BurnedCalWednesday) VALUES ('$TotalBurnedCalories')";
+                    if ($sql = $this->conn->query($query)) {
+                        echo "Calories Burned has been stored";
+                    }else{
+                        echo  "Failed to store";
+                    }
+
+                }
+            }
+        }
+    }
+
+    //Thursday
+
+    public function ThursdayTotalBurnedCalories(){
+
+        if (isset($_POST['submit'])) {
+            if (isset($_POST['TotalBurnedCalories'])) {
+                if (!empty($_POST['TotalBurnedCalories'])  ) {
+
+                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
+
+
+                    $query = "INSERT INTO records (BurnedCalThurday) VALUES ('$TotalBurnedCalories')";
+                    if ($sql = $this->conn->query($query)) {
+                        echo "Calories Burned has been stored";
+                    }else{
+                        echo  "Failed to store";
+                    }
+
+                }
+            }
+        }
+    }
+
+    //Friday
+
+    public function FridayTotalBurnedCalories(){
+
+        if (isset($_POST['submit'])) {
+            if (isset($_POST['TotalBurnedCalories'])) {
+                if (!empty($_POST['TotalBurnedCalories'])  ) {
+
+                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
+
+
+                    $query = "INSERT INTO records (BurnedCalFriday) VALUES ('$TotalBurnedCalories')";
+                    if ($sql = $this->conn->query($query)) {
+                        echo "Calories Burned has been stored";
+                    }else{
+                        echo  "Failed to store";
+                    }
+
+                }
+            }
+        }
+    }
+
+    //Saturday
+
+    public function SaturdayTotalBurnedCalories(){
+
+        if (isset($_POST['submit'])) {
+            if (isset($_POST['TotalBurnedCalories'])) {
+                if (!empty($_POST['TotalBurnedCalories'])  ) {
+
+                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
+
+
+                    $query = "INSERT INTO records (BurnedCalSaturday) VALUES ('$TotalBurnedCalories')";
+                    if ($sql = $this->conn->query($query)) {
+                        echo "Calories Burned has been stored";
+                    }else{
+                        echo  "Failed to store";
+                    }
+
+                }
+            }
+        }
+    }
+
+    //Sunday
+
+    public function SundayTotalBurnedCalories(){
+
+        if (isset($_POST['submit'])) {
+            if (isset($_POST['TotalBurnedCalories'])) {
+                if (!empty($_POST['TotalBurnedCalories'])  ) {
+
+                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
+
+
+                    $query = "INSERT INTO records (BurnedCalSunday) VALUES ('$TotalBurnedCalories')";
+                    if ($sql = $this->conn->query($query)) {
+                        echo "Calories Burned has been stored";
+                    }else{
+                        echo  "Failed to store";
+                    }
+
+                }
+            }
+        }
+    }
+
+
 
 
     //CRUD For AdminPanel

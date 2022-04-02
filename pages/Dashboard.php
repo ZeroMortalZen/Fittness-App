@@ -100,7 +100,49 @@ if(empty($password)){
     <h5>Current weight Status:<?php
         echo $bmi
         ?></h5>
-                     <h5>Calories Burned:</h5>
+    <table>
+        <tr>
+            <td>Calories Burned Monday</td>
+            <td> no data</td>
+        </tr>
+        <tr>
+            <td>Calories Burned Tuesday</td>
+
+            <td>no data</td>
+        </tr>
+        <tr>
+            <td>Calories Burned Wednesday</td>
+
+            <td>no data</td>
+        </tr>
+
+        <tr>
+            <td>Calories Burned Thursday</td>
+
+            <td>no data</td>
+        </tr>
+
+        <tr>
+            <td>Calories Burned Friday</td>
+
+            <td>no data</td>
+        </tr>
+
+        <tr>
+            <td>Calories Burned Saturday</td>
+
+            <td>no data</td>
+        </tr>
+
+        <tr>
+            <td>Calories Burned Sunday</td>
+
+            <td>no data</td>
+        </tr>
+    </table>
+
+    <button type="button" name="button" class="btn login_btn">Submit all Calories burned for that day</button>
+
 
 
 </div>

@@ -20,14 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92776477-17d9-4595-9f22-79ee2a21954d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/systems/Calorie calculator/Calorieburned.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/layout/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/Calorie calculator/BMICalaculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/systems/Calorie calculator/BMICalaculator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/Recommendation System/RecoSystem.php" beforeDir="false" afterPath="$PROJECT_DIR$/systems/Recommendation System/RecoSystem.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +73,10 @@
       <workItem from="1647698520308" duration="4347000" />
       <workItem from="1647881277965" duration="769000" />
       <workItem from="1647882056663" duration="18103000" />
-      <workItem from="1648052553884" duration="16410000" />
+      <workItem from="1648052553884" duration="16625000" />
+      <workItem from="1648123025789" duration="1902000" />
+      <workItem from="1648727317162" duration="1255000" />
+      <workItem from="1648905400234" duration="6744000" />
     </task>
     <servers />
   </component>
@@ -109,10 +108,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1647527514974" />
-    <state x="510" y="135" key="NewPhpClassDialog" timestamp="1647899055601">
+    <state x="510" y="135" key="NewPhpClassDialog" timestamp="1648906277010">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="510" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1647899055601" />
+    <state x="510" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1648906277010" />
     <state x="863" y="377" key="run.anything.popup" timestamp="1647891241600">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
