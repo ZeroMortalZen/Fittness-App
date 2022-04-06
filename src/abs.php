@@ -59,8 +59,33 @@
     }
     ?>
    <?php
-      $modelCal = new model();
-      $modelCal->MondayTotalBurnedCalories();
+   $id = $_REQUEST['id'];
+   $row = $model->edit($id);
+
+   if (isset($_POST['submit'])) {
+
+       if (isset($_POST['jj']) && isset($_POST['email']) && isset($_POST['mobile']) && isset($_POST['address'])) {
+           if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['mobile']) && !empty($_POST['address']) ) {
+
+
+               $data['address'] = $_POST['address'];
+
+               $update = $model->update($data);
+
+               if($update){
+                   echo "<script>alert('record update successfully');</script>";
+                   echo "<script>window.location.href = 'records.php';</script>";
+               }else{
+                   echo "<script>alert('record update failed');</script>";
+                   echo "<script>window.location.href = 'records.php';</script>";
+               }
+
+           }else{
+               echo "<script>alert('empty');</script>";
+               header("Location: edit.php?id=$id");
+           }
+       }
+   }
 
    ?>
     <h1 class="amount-reps">Please Enter Amount of Repetition Done per Exercise</h1>

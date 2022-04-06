@@ -10,14 +10,32 @@
       session_start();
       $_SESSION['user_id'] = $id;
       $firstname = $modelObj->getFirstName($id);
+      //Debugging
+      if(empty($firstname)){
+          echo "Error";
+      }
+      else{
+          echo "working";
+      }
       $message = "You are logged in as $firstname.";
       $messageType = "success_msg";
-      
+      $url = "login.php";
       if(isset($submit) && !empty(($id))){
           session_destroy();
-          header("Location: login.php");
+          //unset($_SESSION);
+          echo "LOGGING OUT";
+          header("Refresh:3,URL='$url'");
+
+
+          if (session_destroy()==true){
+
+             //Debugging
+          };
+
+          //header("Location: login.php");
       }
-  }else{
+  }
+  else{
        $message = "You are not logged in. Please <a href='login.php'>login</a>";
         $messageType = "error_msg";
   }
@@ -53,7 +71,7 @@
         <?php } 
         if(!empty($id)){
         ?>
-            <form name="logout" action="?id=<?php echo $id; ?>" method ="get"> 
+            <form name="logout" action="?id=<?php echo $id; ?>" method ="POST">
                 <input type="submit" name="submit" value="Logout" />
             </form>
         <?php } ?>

@@ -3,9 +3,11 @@
 session_start();
 //require "../systems/Recommendation System/RecoSystem.php";
 $Userdata =  $_SESSION['name'];
+$url ="login.php";
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-header('Location: index.php');
+header("Refresh:3,URL='$url'");
+echo "YOU MUST LOGIN FIRST!!";
 exit;
 }
 //DB Connection
@@ -18,7 +20,7 @@ if (mysqli_connect_errno()) {
 exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-$stmt = $con->prepare("SELECT password,email,height,weight FROM records WHERE username =?" );
+$stmt = $con->prepare("SELECT password,email,height,weight,BurnedCalMonday,BurnedCalTuesday,BurnedCalWednesday,BurnedCalThrusday,BurnedCalFriday,BurnedCalSaturday,BurnedCalSunday FROM records WHERE username =?" );
 $debug ="bind not working";
 if($stmt->bind_param('s', $_SESSION['name'])==false){
     //Debugging
@@ -28,7 +30,7 @@ else{
 }
 
 $stmt->execute();
-if($stmt->bind_result($password, $email,$height,$weight)==false){
+if($stmt->bind_result($password, $email,$height,$weight,$BurnedCalMonday,$BurnedCalTuesday,$BurnedCalWednesday,$BurnedCalThrusday,$BurnedCalFriday,$BurnedCalSaturday,$BurnedCalSunday)==false){
     //Debugging
 }
 else{
@@ -70,7 +72,7 @@ if(empty($password)){
 </div>
 <div class="d-flex justify-content-center form_container">
 
-    <?php require "../systems/Calorie calculator/BMICalaculator.php"; ?>
+
 
 
 
@@ -94,55 +96,62 @@ if(empty($password)){
             <p>Update Weight<input type="text" name="" class="form-control input_user" value="" placeholder="Weight"></p>
         </div>
         <button type="button" name="button" class="btn login_btn">update</button>
-
+    
                      <div class="input-group-append">
                      </div>
+    <?php
+    include  "../systems/Calorie calculator/BMICalaculator.php";
+
+
+    ?>
     <h5>Current weight Status:<?php
         echo $bmi
         ?></h5>
-
+    
     <table>
         <tr>
             <td>Calories Burned Monday</td>
-            <td> no data</td>
+            <td><?=$BurnedCalMonday?> </td>
+            
+            <td><button type="button" name="buttonDay1" class="btn login_btn">Submit Calories</button></td>
         </tr>
         <tr>
             <td>Calories Burned Tuesday</td>
-
             <td>no data</td>
+            <td><button type="button" name="buttonDay2" class="btn login_btn">Submit Calories</button></td>
         </tr>
         <tr>
             <td>Calories Burned Wednesday</td>
-
             <td>no data</td>
+            <td><button type="button" name="buttonDay3" class="btn login_btn">Submit Calories</button></td>
         </tr>
 
         <tr>
             <td>Calories Burned Thursday</td>
-
             <td>no data</td>
+            <td><button type="button" name="buttonDay4" class="btn login_btn">Submit Calories</button></td>
         </tr>
 
         <tr>
             <td>Calories Burned Friday</td>
-
             <td>no data</td>
+            <td><button type="button" name="buttonDay5" class="btn login_btn">Submit Calories</button></td>
         </tr>
 
         <tr>
             <td>Calories Burned Saturday</td>
-
             <td>no data</td>
+            <td><button type="button" name="buttonDay6" class="btn login_btn">Submit Calories</button></td>
         </tr>
 
         <tr>
             <td>Calories Burned Sunday</td>
-
             <td>no data</td>
+            <td><button type="button" name="buttonDay7" class="btn login_btn">Submit Calories</button></td>
         </tr>
     </table>
 
-    <button type="button" name="button" class="btn login_btn">Submit all Calories burned for that day</button>
+
 
 
 

@@ -48,8 +48,9 @@ class model
     }
     //Post Burned calories All
     public function MondayTotalBurnedCalories(){
-
+        echo "working here";
         if (isset($_POST['submit'])) {
+            echo "Submit worked";
             if (isset($_POST['jj']) && isset ($_POST['ac'])&& isset ($_POST['mc'])&& isset ($_POST['lr'])&& isset ($_POST['p'])&& isset ($_POST['ht'])) {
                 if (!empty($_POST['jc'])&& !empty($_POST['ac']) && !empty($_POST['mc']) && !empty($_POST['lr']) && !empty($_POST['p']) && !empty($_POST['ht'])) {
                     $jj =$_POST['jj'];
@@ -65,7 +66,7 @@ class model
                     $query = "INSERT INTO records (BurnedCalMonday) VALUES ('$TotalBurnedCalories')";
                     if ($sql = $this->conn->query($query)) {
                            echo "Calories Burned has been stored";
-                           return true;
+
                     }else{
                           echo  "Failed to store";
                     }
@@ -131,7 +132,7 @@ class model
                     $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
 
 
-                    $query = "INSERT INTO records (BurnedCalThurday) VALUES ('$TotalBurnedCalories')";
+                    $query = "INSERT INTO records (BurnedCalThursday) VALUES ('$TotalBurnedCalories')";
                     if ($sql = $this->conn->query($query)) {
                         echo "Calories Burned has been stored";
                     }else{
@@ -219,6 +220,17 @@ class model
 
 
     //User Data
+
+    public function fetchAllUserData(){
+        $data = null;
+        $query ="SELECT * FROM records";
+        if($sql = $this->conn->query($query)){
+            while (($row = mysqli_fetch_assoc($sql))) {
+                $data[] = $row;
+            }
+        }
+        return $data;
+    }
     public function fetchUserData(){
         $data = null;
 
@@ -370,7 +382,7 @@ class model
 
         $data = null;
 
-        $query = "SELECT * FROM recordsAdmin WHERE id = '$id'";
+        $query = "SELECT * FROM records WHERE id = '$id'";
         if ($sql = $this->conn->query($query)) {
             while($row = $sql->fetch_assoc()){
                 $data = $row;
@@ -416,14 +428,14 @@ class model
     function getFirstName($id){
         $query = "select firstname from records where id = $id";
 
-        $first_name = "";
+        $firstname = "";
         if($stmt = $this->conn->prepare($query)){
             $stmt->execute();
-            $stmt->bind_result($first_name);
+            $stmt->bind_result($firstname);
             $stmt->fetch();
             $stmt->close();
         }
-        return $first_name;
+        return $firstname;
     }
 
     function validate_login($username, $password){
