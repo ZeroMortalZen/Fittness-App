@@ -1,11 +1,12 @@
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
 ob_start();
+session_start();
 //require "../systems/Recommendation System/RecoSystem.php";
 //$Userdata =  $_SESSION['name'];
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-    //echo  "Not Logged IN";
+    echo  "Not Logged IN";
     //header("location:login.php");
    // exit();
 
@@ -69,20 +70,30 @@ else{
                 </li>
             </ul>
         </div>
+        <?php if(empty($_SESSION['name'])){
+            $getLogged = "Error ";
+        }
+        else{
+            $getLogged = $_SESSION['name'];
+        }
+        ?>
+
+
         <?php
           if(empty($_SESSION['name'])){
-              echo $_SESSION['name'];
+
         ?>
 
 
         <div class="top-reg-log-buttons">
             <a href="../pages/register.php" class="top-register-btn">Register</a>
-            <a href="../pages/login.php" class="top-login-btn">Login</a>
+            <a href="../pages/login.php" class="top-login-btn">login</a>
 
         </div>
         <?php
         }else{
         ?>
+              <a>Welcome:<?php echo $getLogged  ?></a>
         <a href="../pages/logout.php" class="top-login-btn">Logout</a>
         <?php
         }

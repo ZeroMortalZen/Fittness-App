@@ -1,4 +1,5 @@
  <?php
+ $url = "login.php";
   include '../lib/model.php';
  require "../layout/header.php";
  $modelObj = new model();
@@ -6,9 +7,18 @@
   $messageType = "";
   $id = filter_input(INPUT_GET, 'id');
   $submit =  filter_input(INPUT_POST, 'submit');
+  if(isset($submit)){
+      session_destroy();
+      //unset($_SESSION);
+      echo "LOGGING OUT";
+      header("Refresh:3,URL='$url'");
+
+
+  }
   if(!empty($id)){
       session_start();
       $_SESSION['user_id'] = $id;
+      echo "Debugging";
       $firstname = $modelObj->getFirstName($id);
       //Debugging
       if(empty($firstname)){
@@ -36,7 +46,8 @@
       }
   }
   else{
-       $message = "You are not logged in. Please <a href='login.php'>login</a>";
+
+       //$message = "You are not logged in. Please <a href='login.php'>login</a>";
         $messageType = "error_msg";
   }
 
@@ -69,7 +80,7 @@
         </div>
 
         <?php } 
-        if(!empty($id)){
+        if(session_start()==true){
         ?>
             <form name="logout" action="?id=<?php echo $id; ?>" method ="POST">
                 <input type="submit" name="submit" value="Logout" />
