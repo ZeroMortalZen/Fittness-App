@@ -48,27 +48,25 @@ class model
     }
     //Post Burned calories All
     public function MondayTotalBurnedCalories(){
-        echo "working here";
+
         if (isset($_POST['submit'])) {
-            echo "Submit worked";
+            echo  "1";
             if (isset($_POST['jj']) && isset ($_POST['ac'])&& isset ($_POST['mc'])&& isset ($_POST['lr'])&& isset ($_POST['p'])&& isset ($_POST['ht'])) {
-                if (!empty($_POST['jc'])&& !empty($_POST['ac']) && !empty($_POST['mc']) && !empty($_POST['lr']) && !empty($_POST['p']) && !empty($_POST['ht'])) {
-                    $jj =$_POST['jj'];
-                    $ac =$_POST['ac'];
-                    $mc =$_POST['mc'];
-                    $lr =$_POST['lr'];
-                    $p =$_POST['p'];
-                    $ht =$_POST['ht'];
-                    $TotalBurnedCalories= $jj +$ac+$mc+$lr+$p+$ht;
+                if (!empty($_POST['jj'])&& !empty($_POST['ac']) && !empty($_POST['mc']) && !empty($_POST['lr']) && !empty($_POST['p']) && !empty($_POST['ht'])) {
+                    echo "Working on this line";
+                    $Jumping_jacks =$_POST['jj'];
+                    $Adominal_Crunch =$_POST['ac'];
+                    $Mountain_Climber =$_POST['mc'];
+                    $Leg_Raises =$_POST['lr'];
+                    $Plank =$_POST['p'];
+                    $Heel_Touch =$_POST['ht'];
 
-
-
-                    $query = "INSERT INTO records (BurnedCalMonday) VALUES ('$TotalBurnedCalories')";
+                    $query = "INSERT INTO reps_monday(Jumping_jacks,Adominal_Cruch,Mountain_Climber,Leg_Raises,Plank,Heel_Touch) VALUES ('$Jumping_jacks','$Adominal_Crunch','$Mountain_Climber','$Leg_Raises','$Plank','$Heel_Touch')";
                     if ($sql = $this->conn->query($query)) {
-                           echo "Calories Burned has been stored";
+                        echo "Calories Burned has been stored";
 
                     }else{
-                          echo  "Failed to store";
+                        echo  "Failed to store";
                     }
 
                 }

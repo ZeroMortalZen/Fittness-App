@@ -33,8 +33,10 @@
     <a class="start-btn" onclick="playAudio()">Start</a>
     <?php
     include '../lib/model.php';
+
     $model = new Model();
     $rows = $model->fetch();
+    $insert=$model->MondayTotalBurnedCalories();
     $i = 1;
 
     if(!empty($rows)){
@@ -58,36 +60,8 @@
         echo "no data";
     }
     ?>
-   <?php
-   $id = $_REQUEST['id'];
-   $row = $model->edit($id);
-
-   if (isset($_POST['submit'])) {
-
-       if (isset($_POST['jj']) && isset($_POST['email']) && isset($_POST['mobile']) && isset($_POST['address'])) {
-           if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['mobile']) && !empty($_POST['address']) ) {
 
 
-               $data['address'] = $_POST['address'];
-
-               $update = $model->update($data);
-
-               if($update){
-                   echo "<script>alert('record update successfully');</script>";
-                   echo "<script>window.location.href = 'records.php';</script>";
-               }else{
-                   echo "<script>alert('record update failed');</script>";
-                   echo "<script>window.location.href = 'records.php';</script>";
-               }
-
-           }else{
-               echo "<script>alert('empty');</script>";
-               header("Location: edit.php?id=$id");
-           }
-       }
-   }
-
-   ?>
     <h1 class="amount-reps">Please Enter Amount of Repetition Done per Exercise</h1>
     <form name="exercises-form" class="ex-form" method="post">
         <div class="jj-section exSection">
@@ -114,8 +88,27 @@
             <h2 class="ht">Heel Touch:</h2>
             <input class="htInput exInput" type="text" name="ht" id="ht" required/>
         </div>
+        <select name="Weekdays" >
+            <option value="">--- Choose a Day ---</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+
+
+        </select>
+
         <button type="submit" name="submit" class="btn center-btn">Send</button>
     </form>
+    <?php
+    $Weekdays = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
+       if($Weekdays){
+
+       }
+    ?>
 </section>
 <?php 
     require "../layout/footer.php";

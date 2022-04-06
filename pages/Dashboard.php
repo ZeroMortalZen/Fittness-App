@@ -111,9 +111,22 @@ if(empty($password)){
     <table>
         <tr>
             <td>Calories Burned Monday</td>
-            <td><?=$BurnedCalMonday?> </td>
+            <?php
+              if($BurnedCalMonday <=0){
+                  $BurnedCalMonday ="No Data (0) ";
+              }else
+              {
+
+              }
+
+            ?>
+            <form method="POST">
+                <td><input type ="text" name="BurnedCalMonday"value="<?=$BurnedCalMonday?>" readonly></td>
+                <td><button type="button" name="buttonDay1" class="btn login_btn">Submit Calories</button></td>
+            </form>
+
             
-            <td><button type="button" name="buttonDay1" class="btn login_btn">Submit Calories</button></td>
+
         </tr>
         <tr>
             <td>Calories Burned Tuesday</td>
