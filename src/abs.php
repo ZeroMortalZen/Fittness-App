@@ -88,22 +88,24 @@
             <h2 class="ht">Heel Touch:</h2>
             <input class="htInput exInput" type="text" name="ht" id="ht" required/>
         </div>
+
         <select name="Weekdays" >
             <option value="">--- Choose a Day ---</option>
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednesday">Wednesday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-
-
+            <option value="AbsReps_Monday">Monday</option>
+            <option value="AbsReps_Tuesday">Tuesday</option>
+            <option value="AbsReps_Wednesday">Wednesday</option>
+            <option value="AbsReps_Thursday">Thursday</option>
+            <option value="AbsReps_Friday">Friday</option>
+            <option value="AbsReps_Saturday">Saturday</option>
+            <option value="AbsReps_Sunday">Sunday</option>
         </select>
-
         <button type="submit" name="submit" class="btn center-btn">Send</button>
+
     </form>
     <?php
+     $Weekday = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
+     global $Weekday;
+     //echo $Weekday;
 
      if($id>=0){
          return true;

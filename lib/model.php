@@ -65,25 +65,105 @@ class model
                     $Plank =$_POST['p'];
                     $Heel_Touch =$_POST['ht'];
                     $TotalAbsRep=$Jumping_jacks+$Adominal_Crunch+$Mountain_Climber+$Leg_Raises+$Plank+$Heel_Touch;
+                    $Weekday = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
+                    echo  $Weekday;
                     global  $getLogged;
                     echo  $getLogged;
                     global  $id;
                     echo  $id;
+                  
 
-                    if($id>=1){
+                    if($id>=1 && $Weekday =="AbsReps_Monday"){
                         echo "User Found";
                         $query ="UPDATE reps_abs SET AbsReps_Monday ='$TotalAbsRep' WHERE id = '$id'";
+                        if ($sql = $this->conn->query($query)) {
+                            echo "Calories Burned has been stored";
+
+                        }
+                        else{
+                            echo  "Failed to store";
+                        }
+                    }
+                    //Tuesday
+                    elseif ($id>=1 && $Weekday =="AbsReps_Tuesday"){
+                        echo "User Found";
+                        $query ="UPDATE reps_abs SET AbsReps_Tuesday ='$TotalAbsRep' WHERE id = '$id'";
+                        if ($sql = $this->conn->query($query)) {
+                            echo "Calories Burned has been stored";
+
+                        }else{
+                            echo  "Failed to store";
+                        }
+
+
+                    }
+                    //Wednesday
+                    elseif ($id>=1 && $Weekday =="AbsReps_Wednesday"){
+                        echo "User Found";
+                        $query ="UPDATE reps_abs SET AbsReps_Wednesday ='$Weekday' ='$TotalAbsRep' WHERE id = '$id'";
+                        if ($sql = $this->conn->query($query)) {
+                            echo "Calories Burned has been stored";
+
+                        }else{
+                            echo  "Failed to store";
+                        }
+
+
+                    }
+                    //Thursday
+                    elseif ($id>=1 && $Weekday =="AbsReps_Thursday"){
+                        echo "User Found";
+                        $query ="UPDATE reps_abs SET AbsReps_Thursday='$Weekday' ='$TotalAbsRep' WHERE id = '$id'";
+                        if ($sql = $this->conn->query($query)) {
+                            echo "Calories Burned has been stored";
+
+                        }else{
+                            echo  "Failed to store";
+                        }
+
+
+                    }
+                    //Friday
+                    elseif ($id>=1 && $Weekday =="AbsReps_Friday"){
+                        echo "User Found";
+                        $query ="UPDATE reps_abs SET AbsReps_Friday ='$TotalAbsRep' WHERE id = '$id'";
+                        if ($sql = $this->conn->query($query)) {
+                            echo "Calories Burned has been stored";
+
+                        }else{
+                            echo  "Failed to store";
+                        }
+
+
+                    }
+                    //Saturday
+                    elseif ($id>=1 && $Weekday =="AbsReps_Saturday"){
+                        echo "User Found";
+                        $query ="UPDATE reps_abs SET AbsReps_Saturday ='$TotalAbsRep' WHERE id = '$id'";
+                        if ($sql = $this->conn->query($query)) {
+                            echo "Calories Burned has been stored";
+
+                        }else{
+                            echo  "Failed to store";
+                        }
+
+
+                    }
+                    //Sunday
+                    elseif ($id>=1 && $Weekday =="AbsReps_Sunday"){
+                        echo "User Found";
+                        $query ="UPDATE reps_abs SET AbsReps_Sunday ='$TotalAbsRep' WHERE id = '$id'";
+                        if ($sql = $this->conn->query($query)) {
+                            echo "Calories Burned has been stored";
+
+                        }else{
+                            echo  "Failed to store";
+                        }
+
                     }
                     else{
                         echo  "No User Found";
                         //$query = "INSERT INTO reps_abs(AbsReps_Monday) VALUES ('$TotalAbsRep')";
-                    }
-
-                    if ($sql = $this->conn->query($query)) {
-                        echo "Calories Burned has been stored";
-
-                    }else{
-                        echo  "Failed to store";
                     }
 
                 }
