@@ -22,7 +22,7 @@ if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-$stmt = $con->prepare("SELECT password,email,height,weight,BurnedCalMonday,BurnedCalTuesday,BurnedCalWednesday,BurnedCalThrusday,BurnedCalFriday,BurnedCalSaturday,BurnedCalSunday FROM records WHERE username =?" );
+$stmt = $con->prepare("SELECT id,password,email,height,weight,BurnedCalMonday,BurnedCalTuesday,BurnedCalWednesday,BurnedCalThrusday,BurnedCalFriday,BurnedCalSaturday,BurnedCalSunday FROM records WHERE username =?" );
 $debug ="bind not working";
 if($stmt->bind_param('s', $_SESSION['name'])==false){
     //Debugging
@@ -32,7 +32,7 @@ else{
 }
 
 $stmt->execute();
-if($stmt->bind_result($password, $email,$height,$weight,$BurnedCalMonday,$BurnedCalTuesday,$BurnedCalWednesday,$BurnedCalThrusday,$BurnedCalFriday,$BurnedCalSaturday,$BurnedCalSunday)==false){
+if($stmt->bind_result($id,$password,$email,$height,$weight,$BurnedCalMonday,$BurnedCalTuesday,$BurnedCalWednesday,$BurnedCalThrusday,$BurnedCalFriday,$BurnedCalSaturday,$BurnedCalSunday)==false){
     //Debugging
 }
 else{
@@ -44,6 +44,7 @@ $stmt->close();
 <?php
 $noData="No Data";
 $Data  ="Data";
+
 if(empty($password)){
     //Debugging :echo $noData;
 }
@@ -75,14 +76,18 @@ else{
         }
         else{
             $getLogged = $_SESSION['name'];
+            global  $getLogged;
+            global   $id;
         }
         ?>
 
 
         <?php
+
           if(empty($_SESSION['name'])){
 
         ?>
+
 
 
         <div class="top-reg-log-buttons">
@@ -105,3 +110,10 @@ else{
             <div class="lines line_three"></div>
         </div>
     </section>
+
+<?php
+
+
+
+
+?>

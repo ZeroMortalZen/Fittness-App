@@ -35,7 +35,11 @@ class model
 
                     $query = "INSERT INTO records (firstname,lastname,username,password,email) VALUES ('$firstname','$lastname','$username','$password','$email')";
                     if ($sql = $this->conn->query($query)) {
-                        header("location: ../pages/login.php"); 
+                        header("location: ../pages/login.php");
+                        $query = "INSERT INTO reps_abs(AbsReps_Monday) VALUES (0)";
+                        if($sql = $this->conn->query(($query))){
+                            echo  "Debugging created rep_abs database";
+                        }
                     }else{
                         echo "<script>alert('failed');</script>";
                     }
@@ -60,8 +64,21 @@ class model
                     $Leg_Raises =$_POST['lr'];
                     $Plank =$_POST['p'];
                     $Heel_Touch =$_POST['ht'];
+                    $TotalAbsRep=$Jumping_jacks+$Adominal_Crunch+$Mountain_Climber+$Leg_Raises+$Plank+$Heel_Touch;
+                    global  $getLogged;
+                    echo  $getLogged;
+                    global  $id;
+                    echo  $id;
 
-                    $query = "INSERT INTO reps_monday(Jumping_jacks,Adominal_Cruch,Mountain_Climber,Leg_Raises,Plank,Heel_Touch) VALUES ('$Jumping_jacks','$Adominal_Crunch','$Mountain_Climber','$Leg_Raises','$Plank','$Heel_Touch')";
+                    if($id>=1){
+                        echo "User Found";
+                        $query ="UPDATE reps_abs SET AbsReps_Monday ='$TotalAbsRep' WHERE id = '$id'";
+                    }
+                    else{
+                        echo  "No User Found";
+                        //$query = "INSERT INTO reps_abs(AbsReps_Monday) VALUES ('$TotalAbsRep')";
+                    }
+
                     if ($sql = $this->conn->query($query)) {
                         echo "Calories Burned has been stored";
 
@@ -74,142 +91,10 @@ class model
         }
     }
 
-     //Tuesday
-    public function TuesdayTotalBurnedCalories(){
 
-        if (isset($_POST['submit'])) {
-            if (isset($_POST['TotalBurnedCalories'])) {
-                if (!empty($_POST['TotalBurnedCalories'])  ) {
-
-                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
-
-
-                    $query = "INSERT INTO records (BurnedCalTuesday) VALUES ('$TotalBurnedCalories')";
-                    if ($sql = $this->conn->query($query)) {
-                        echo "Calories Burned has been stored";
-                        return true;
-                    }else{
-                        echo  "Failed to store";
-                    }
-
-                }
-            }
-        }
-    }
-
-    //Wednesday
-    public function WednesdayTotalBurnedCalories(){
-
-        if (isset($_POST['submit'])) {
-            if (isset($_POST['TotalBurnedCalories'])) {
-                if (!empty($_POST['TotalBurnedCalories'])  ) {
-
-                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
-
-
-                    $query = "INSERT INTO records (BurnedCalWednesday) VALUES ('$TotalBurnedCalories')";
-                    if ($sql = $this->conn->query($query)) {
-                        echo "Calories Burned has been stored";
-                    }else{
-                        echo  "Failed to store";
-                    }
-
-                }
-            }
-        }
-    }
 
     //Thursday
 
-    public function ThursdayTotalBurnedCalories(){
-
-        if (isset($_POST['submit'])) {
-            if (isset($_POST['TotalBurnedCalories'])) {
-                if (!empty($_POST['TotalBurnedCalories'])  ) {
-
-                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
-
-
-                    $query = "INSERT INTO records (BurnedCalThursday) VALUES ('$TotalBurnedCalories')";
-                    if ($sql = $this->conn->query($query)) {
-                        echo "Calories Burned has been stored";
-                    }else{
-                        echo  "Failed to store";
-                    }
-
-                }
-            }
-        }
-    }
-
-    //Friday
-
-    public function FridayTotalBurnedCalories(){
-
-        if (isset($_POST['submit'])) {
-            if (isset($_POST['TotalBurnedCalories'])) {
-                if (!empty($_POST['TotalBurnedCalories'])  ) {
-
-                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
-
-
-                    $query = "INSERT INTO records (BurnedCalFriday) VALUES ('$TotalBurnedCalories')";
-                    if ($sql = $this->conn->query($query)) {
-                        echo "Calories Burned has been stored";
-                    }else{
-                        echo  "Failed to store";
-                    }
-
-                }
-            }
-        }
-    }
-
-    //Saturday
-
-    public function SaturdayTotalBurnedCalories(){
-
-        if (isset($_POST['submit'])) {
-            if (isset($_POST['TotalBurnedCalories'])) {
-                if (!empty($_POST['TotalBurnedCalories'])  ) {
-
-                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
-
-
-                    $query = "INSERT INTO records (BurnedCalSaturday) VALUES ('$TotalBurnedCalories')";
-                    if ($sql = $this->conn->query($query)) {
-                        echo "Calories Burned has been stored";
-                    }else{
-                        echo  "Failed to store";
-                    }
-
-                }
-            }
-        }
-    }
-
-    //Sunday
-
-    public function SundayTotalBurnedCalories(){
-
-        if (isset($_POST['submit'])) {
-            if (isset($_POST['TotalBurnedCalories'])) {
-                if (!empty($_POST['TotalBurnedCalories'])  ) {
-
-                    $TotalBurnedCalories = $_POST['TotalBurnedCalories'];
-
-
-                    $query = "INSERT INTO records (BurnedCalSunday) VALUES ('$TotalBurnedCalories')";
-                    if ($sql = $this->conn->query($query)) {
-                        echo "Calories Burned has been stored";
-                    }else{
-                        echo  "Failed to store";
-                    }
-
-                }
-            }
-        }
-    }
 
 
 
@@ -336,23 +221,6 @@ class model
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public function delete($id){
 
         $query = "DELETE FROM records where id = '$id'";
@@ -410,8 +278,8 @@ class model
         }
     }
 
-    function check_user($username){
-        $query = "select id from records where username = '$username'";
+    function check_user($id){
+        $query = "select id from records where id = '$id'";
 
         $id = 0;
         if($stmt = $this->conn->prepare($query)){
@@ -419,6 +287,7 @@ class model
             $stmt->bind_result($id);
             $stmt->fetch();
             $stmt->close();
+
         }
         return $id;
     }
