@@ -102,6 +102,9 @@
         <button type="submit" name="submit" class="btn center-btn">Send</button>
 
     </form>
+    <?php 
+        require "../layout/footer.php";
+    ?>
     <?php
      $Weekday = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
      global $Weekday;
@@ -115,12 +118,9 @@
      }
     echo $id;
 
-
+    
     ?>
 </section>
-<?php 
-    require "../layout/footer.php";
-?>
 </body>
 <script src="../src/scripts.js"></script>
 </html>
