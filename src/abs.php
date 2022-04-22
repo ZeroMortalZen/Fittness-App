@@ -120,7 +120,6 @@
 </section>
 <?php 
     require "../layout/footer.php";
-
 ?>
 </body>
 <script src="../src/scripts.js"></script>
