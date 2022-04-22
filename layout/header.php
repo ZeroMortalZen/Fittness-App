@@ -98,7 +98,7 @@ else{
         <?php
         }else{
         ?>
-              <a>Welcome:<?php echo $getLogged  ?></a>
+              <p>Welcome:<?php echo $getLogged  ?></p>
         <a href="../pages/logout.php" class="top-login-btn">Logout</a>
         <?php
         }
