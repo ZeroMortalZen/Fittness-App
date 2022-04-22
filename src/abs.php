@@ -105,6 +105,7 @@
     <?php 
         require "../layout/footer.php";
     ?>
+    <script src="../src/scripts.js"></script>
     <?php
      $Weekday = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
      global $Weekday;
@@ -122,5 +123,4 @@
     ?>
 </section>
 </body>
-<script src="../src/scripts.js"></script>
 </html>

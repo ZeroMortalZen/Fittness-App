@@ -149,7 +149,6 @@ if(empty($password)){
             <button type="button" name="buttonDay7" class="btn calories-burned_btn">Sent</button>
         </div>
     </div>
-
     <!-- <table>
         <tr>
             <td>Calories Burned Monday</td>
@@ -203,7 +202,6 @@ if(empty($password)){
 </div>
 
 <?php require "../systems/Recommendation System/RecoSystem.php"; ?>
-
 
 <script>
     // Get the modal
