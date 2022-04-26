@@ -9,8 +9,9 @@ if (!isset($_SESSION['loggedin'])) {
     echo  "Not Logged IN";
     //header("location:login.php");
    // exit();
-}
 
+
+}
 //DB Connection
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
@@ -21,7 +22,7 @@ if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-$stmt = $con->prepare("SELECT id,password,email,height,weight,BurnedCalMonday,BurnedCalTuesday,BurnedCalWednesday,BurnedCalThursday,BurnedCalFriday,BurnedCalSaturday,BurnedCalSunday FROM records WHERE username =?" );
+$stmt = $con->prepare("SELECT id,password,email,height,weight,BurnedCalMonday,BurnedCalTuesday,BurnedCalWednesday,BurnedCalThrusday,BurnedCalFriday,BurnedCalSaturday,BurnedCalSunday FROM records WHERE username =?" );
 $debug ="bind not working";
 if($stmt->bind_param('s', $_SESSION['name'])==false){
     //Debugging
@@ -31,7 +32,7 @@ else{
 }
 
 $stmt->execute();
-if($stmt->bind_result($id,$password,$email,$height,$weight,$BurnedCalMonday,$BurnedCalTuesday,$BurnedCalWednesday,$BurnedCalThursday,$BurnedCalFriday,$BurnedCalSaturday,$BurnedCalSunday)==false){
+if($stmt->bind_result($id,$password,$email,$height,$weight,$BurnedCalMonday,$BurnedCalTuesday,$BurnedCalWednesday,$BurnedCalThrusday,$BurnedCalFriday,$BurnedCalSaturday,$BurnedCalSunday)==false){
     //Debugging
 }
 else{
@@ -91,13 +92,13 @@ else{
 
         <div class="top-reg-log-buttons">
             <a href="../pages/register.php" class="top-register-btn">Register</a>
-            <a href="../pages/login.php" class="top-login-btn">Login</a>
+            <a href="../pages/login.php" class="top-login-btn">login</a>
 
         </div>
         <?php
         }else{
         ?>
-              <p>Welcome:<?php echo $getLogged  ?></p>
+              <a>Welcome:<?php echo $getLogged  ?></a>
         <a href="../pages/logout.php" class="top-login-btn">Logout</a>
         <?php
         }
