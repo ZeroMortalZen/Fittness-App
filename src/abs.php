@@ -88,6 +88,8 @@
             <h2 class="ht">Heel Touch:</h2>
             <input class="htInput exInput" type="text" name="ht" id="ht" required/>
         </div>
+        <!-- Script For Top Burger -->
+        <script src="../src/scripts.js"></script>
 
         <select name="Weekdays" >
             <option value="">--- Choose a Day ---</option>
@@ -102,6 +104,10 @@
         <button type="submit" name="submit" class="btn center-btn">Send</button>
 
     </form>
+    <?php 
+        require "../layout/footer.php";
+    ?>
+
     <?php
      $Weekday = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
      global $Weekday;
@@ -118,10 +124,5 @@
 
     ?>
 </section>
-<?php 
-    require "../layout/footer.php";
-
-?>
 </body>
-<script src="../src/scripts.js"></script>
 </html>

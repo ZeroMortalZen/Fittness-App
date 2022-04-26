@@ -92,7 +92,7 @@ else{
 
         <div class="top-reg-log-buttons">
             <a href="../pages/register.php" class="top-register-btn">Register</a>
-            <a href="../pages/login.php" class="top-login-btn">login</a>
+            <a href="../pages/login.php" class="top-login-btn">Login</a>
 
         </div>
         <?php

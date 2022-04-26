@@ -169,7 +169,7 @@ button {
     right: 0px;
     width: 30%;
     z-index: 11;
-    top: 130px;
+    top: 145px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -371,6 +371,8 @@ button {
 }
 .buttons {
     display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 .login-btn, .reset-btn, .submit-btn {
     display: block;
@@ -379,7 +381,7 @@ button {
     height: 30px;
     padding: 7px 20px;
     background-color: #21A9E3;
-    margin: 20px auto 0px;
+    margin: 0px 20px;
     text-align: center;
     transition: 0.5s ease-in;
 }
@@ -416,6 +418,103 @@ button {
 }
 .admin-btn {
     margin-left: 15px;
+}
+
+
+/* DASHBOARD CSS */
+
+/* Profile Information Section */
+.profile-title {
+    text-align: center;
+    font-size: 24px;
+}
+.profile-details-title {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.profile-table {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto 0px;
+}
+.profile-table-row {
+    display: flex;
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+.profile-username-value, .profile-password-value, .profile-email-value {
+    color: #000;
+    margin-left: 5px;
+}
+
+
+
+/*  User-Input Section */
+.user-inputs {
+    margin-top: 80px;
+    font-size: 24px;
+    text-align: center;
+}
+.input-group {
+    text-align: center;
+}
+.current-value {
+    color: #000;
+}
+.user-inputs-height {
+    font-size: 18px;
+    margin-top: 20px;
+}
+.user-inputs-height-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.user-inputs-update-height {
+    font-size: 18px;  
+}
+.user-inputs-update-height-input {
+    margin-left: 10px;
+}
+.update-btn {
+    margin-left: 10px;
+}
+.user-inputs-update-height-input-mod {
+    margin-left: 5px;
+}
+.current-weight-status {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/* Calories Burned Section */
+.calories-burned {
+    max-width: 600px;
+    width: 100%;
+    margin: 50px auto 0px;
+}
+.calories-burned_title {
+    text-align: center;
+    font-size: 24px;
+}
+.calories-burned_rows {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.calories-burned_days {
+    font-size: 18px;
+    max-width: 230px;
+    width: 100%;
+}
+.calories-burned_input {
+    margin-left: 10px;
+}
+.calories-burned_btn {
+    margin-left: 10px;
 }
 
 /* Timer CSS */

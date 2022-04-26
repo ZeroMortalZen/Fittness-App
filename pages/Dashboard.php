@@ -48,28 +48,48 @@ if(empty($password)){
  else{
      //Debugging
  }?>
-<div class="content">
+<!-- <div class="content">
     <h2>Profile Page</h2>
     <div>
         <p>Your account details are below:</p>
         <table>
             <tr>
                 <td>Username:</td>
-                <td><?=$_SESSION['name']?></td>
+                <td> <//?=$_SESSION['name']?></td>
             </tr>
             <tr>
                 <td>Password:</td>
-
-                <td><?=$password?></td>
+                <td> <//?=$password?></td>
             </tr>
             <tr>
                 <td>Email:</td>
-
-                <td><?=$email?></td>
+                <td> <//?=$email?></td>
             </tr>
         </table>
     </div>
+</div> -->
+
+<div class="content">
+    <h2 class="profile-title">Profile Page</h2>
+    <div class="">
+        <p class="profile-details-title">Your account details are below:</p>
+        <div class="profile-table">
+            <div class="profile-table-row">
+                <h3>Username:</h3>
+                <h3 class="profile-username-value"><?=$_SESSION['name']?></h3>
+            </div>
+            <div class="profile-table-row">
+                <h3>Password:</h3>
+                <h3 class="profile-password-value"><?=$password?></h3>
+            </div>
+            <div class="profile-table-row">
+                <h3>Email:</h3>
+                <h3 class="profile-email-value"><?=$email?></h3>
+            </div>
+        </div>
+    </div>
 </div>
+
 <div class="d-flex justify-content-center form_container">
 
 
