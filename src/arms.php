@@ -34,6 +34,7 @@
         include '../lib/model.php';
         $model = new Model();
         $rows = $model->fetchArms();
+        $insert=$model->ArmsTotalBurnedCalories();
         $i = 1;
 
         if(!empty($rows)){
@@ -87,23 +88,35 @@
             </div>
             <select name="Weekdays" >
                 <option value="">--- Choose a Day ---</option>
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
-                <option value="Thursday">Thursday</option>
-                <option value="Friday">Friday</option>
-                <option value="Saturday">Saturday</option>
-                <option value="Sunday">Sunday</option>
-
-
+                <option value="ArmsReps_Monday">Monday</option>
+                <option value="ArmsReps_Tuesday">Tuesday</option>
+                <option value="ArmsReps_Wednesday">Wednesday</option>
+                <option value="ArmsReps_Thursday">Thursday</option>
+                <option value="ArmsReps_Friday">Friday</option>
+                <option value="ArmsReps_Saturday">Saturday</option>
+                <option value="ArmsReps_Sunday">Sunday</option>
             </select>
-
 
             <button type="submit" name="submit" class="btn center-btn">Send</button>
         </form>
     </section>
     <?php 
         require "../layout/footer.php";
+    ?>
+    <?php
+    $Weekday = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
+    global $Weekday;
+    //echo $Weekday;
+
+    if($id>=0){
+        return true;
+    }
+    else{
+        $Update = false;
+    }
+    echo $id;
+
+
     ?>
 </body>
 

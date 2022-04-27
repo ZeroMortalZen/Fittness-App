@@ -34,6 +34,7 @@
         include '../lib/model.php';
         $model = new Model();
         $rows = $model->fetchLegs();
+        $insert=$model->LegsTotalBurnedCalories();
         $i = 1;
 
         if(!empty($rows)){
@@ -89,22 +90,39 @@
                 <h2 class="wkr">Wall Calf Raises:</h2>
                 <input class="wkrInput exInput" type="text" name="wkr" id="wkr" required/>
             </div>
-            <button type="submit" name="submit" class="btn center-btn">Send</button>
+
             <select name="Weekdays" >
                 <option value="">--- Choose a Day ---</option>
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
-                <option value="Thursday">Thursday</option>
-                <option value="Friday">Friday</option>
-                <option value="Saturday">Saturday</option>
-                <option value="Sunday">Sunday</option>
+                <option value="LegsReps_Monday">Monday</option>
+                <option value="LegsReps_Tuesday">Tuesday</option>
+                <option value="LegsReps_Wednesday">Wednesday</option>
+                <option value="LegsReps_Thursday">Thursday</option>
+                <option value="LegsReps_Friday">Friday</option>
+                <option value="LegsReps_Saturday">Saturday</option>
+                <option value="LegsReps_Sunday">Sunday</option>
             </select>
+            <button type="submit" name="submit" class="btn center-btn">Send</button>
 
         </form>
     </section>
     <?php 
         require "../layout/footer.php";
+    ?>
+
+    <?php
+    $Weekday = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
+    global $Weekday;
+    //echo $Weekday;
+
+    if($id>=0){
+        return true;
+    }
+    else{
+        $Update = false;
+    }
+    echo $id;
+
+
     ?>
 </body>
 
