@@ -33,12 +33,12 @@ class model
                     $email = $_POST['email'];
 
 
-                    $query = "INSERT INTO records (firstname,lastname,username,password,email) VALUES ('$firstname','$lastname','$username','$password','$email')";
+                    $query = "INSERT INTO records (firstname,lastname,username,password,email,height,weight,BurnedCalMonday,BurnedCalTuesday,BurnedCalWednesday,BurnedCalThrusday,BurnedCalFriday,BurnedCalSaturday,BurnedCalSunday) VALUES ('$firstname','$lastname','$username','$password','$email',0,0,0,0,0,0,0,0,0)";
                     if ($sql = $this->conn->query($query)) {
                         header("location: ../pages/login.php");
-                        $query = "INSERT INTO totalcal_abs(TotalCalAbs_Monday) VALUES (0)";
+                        $query = "INSERT INTO totalcal_abs(TotalCalAbs_Monday,TotalCalAbs_Tuesday,TotalCalAbs_Wednesday,TotalCalAbs_Thursday,TotalCalAbs_Friday,TotalCalAbs_Saturday,TotalCalAbs_Sunday) VALUES (0,0,0,0,0,0,0)";
                         if($sql = $this->conn->query(($query))){
-                            echo  "Debugging created rep_abs database";
+                            echo  "Debugging created totalcal_abs database";
 
                         }
                     }else{
