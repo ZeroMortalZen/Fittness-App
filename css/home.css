@@ -567,6 +567,19 @@ button {
 
 /* Recommandation */
 
+/* Logout Section */
+.youSureQuestion {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+}
+.logoutBTN {
+    margin: 20px auto 0px;
+    cursor: pointer;
+}
+
+/* Logout Section */
+
 /* Timer CSS */
 
 

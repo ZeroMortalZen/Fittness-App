@@ -54,38 +54,27 @@
         ?>
 
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Login</title>
-        <link rel="stylesheet" href="css.css" type="text/css">
-    </head>
     <body>
+
     </body>
     
     <div class="main_body">
-        
-        <div class="logo">
-            Logo
-        </div>
+        <!-- <div class="frm">
+            <//?php if (!empty($message)){ ?>
+            <div class="msg <//?php echo $messageType; ?> ">
+            <//?php echo $message; ?>
+        </div> -->
 
-                <div class="title">
-                      Logout
-                </div>
-
-        <div class="frm">
-
-         <?php if (!empty($message)){ ?>
-        <div class="msg <?php echo $messageType; ?> ">
-            <?php echo $message; ?>
-        </div>
-
-        <?php } 
-        if(session_start()==true){
+        <?php //} 
+            if(session_start()==true){
         ?>
+            <p class="youSureQuestion">Are you sure you want to Logout?</p>
             <form name="logout" action="?id=<?php echo $id; ?>" method ="POST">
-                <input type="submit" name="submit" value="Logout" />
+                <input class="btn logoutBTN" type="submit" name="submit" value="Logout"/>
             </form>
-        <?php } ?>
+        <?php 
+            } 
+        ?>
         </div>
     </div>
 </html>
