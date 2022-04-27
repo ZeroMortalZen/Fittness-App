@@ -48,27 +48,11 @@ if(empty($password)){
  else{
      //Debugging
  }?>
-<!-- <div class="content">
-    <h2>Profile Page</h2>
-    <div>
-        <p>Your account details are below:</p>
-        <table>
-            <tr>
-                <td>Username:</td>
-                <td> <//?=$_SESSION['name']?></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td> <//?=$password?></td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td> <//?=$email?></td>
-            </tr>
-        </table>
-    </div>
-</div> -->
-
+<!-- Calling Header Page -->
+<?php 
+    require "../layout/header.php";
+?>
+<!-- Start of Dashboard Page -->
 <div class="content">
     <h2 class="profile-title">Profile Page</h2>
     <div class="">
@@ -90,47 +74,40 @@ if(empty($password)){
     </div>
 </div>
 
-<div class="d-flex justify-content-center form_container">
-
-
-
-
-
-
-             <h4>User Inputs</h4>
+<div class="form_container">
+    <h2 class="user-inputs">User Inputs</h2>
     <div class="input-group mb-3">
-        <div class="input-group-append">
+        <!-- <div class="input-group-append"></div> -->
+        <h5 class="user-inputs-height"> Current Height (Inches): <span class="current-value"><?=$height?></span></h5>
+        <div class="user-inputs-height-btn">
+            <p class="user-inputs-update-height">Update Height<label><input class="user-inputs-update-height-input" type="text" name="" class="form-control input_user" value="" placeholder="Height"></label></p>
+            <button type="button" name="button" class="btn update-btn">Update</button>
         </div>
-        <h5> Current Height (Inches): <?=$height?></h5>
-        <p>Update Height<label>
-                <input type="text" name="" class="form-control input_user" value="" placeholder="Weight">
-            </label></p>
-        <button type="button" name="button" class="btn login_btn">update</button>
+        
     </div>
 
-
-        <div class="input-group mb-3">
-            <div class="input-group-append">
-            </div>
-            <h5> Current Weight (Pounds): <?=$weight?></h5>
-            <p>Update Weight<input type="text" name="" class="form-control input_user" value="" placeholder="Weight"></p>
+    <div class="input-group mb-3">
+        <!-- <div class="input-group-append"></div> -->
+        <h5 class="user-inputs-height"> Current Weight (Pounds): <span class="current-value"><?=$weight?></h5>
+        <div class="user-inputs-height-btn">
+            <p class="user-inputs-update-height">Update Weight <label><input class="user-inputs-update-height-input-mod" type="text" name="" class="form-control input_user" value="" placeholder="Weight"></label></p>
+            <button type="button" name="button" class="btn update-btn">Update</button>
         </div>
-        <button type="button" name="button" class="btn login_btn">update</button>
+    </div>
     
-                     <div class="input-group-append">
-                     </div>
+    
+    
+    <!-- <div class="input-group-append"></div> -->
     <?php
-    include  "../systems/Calorie calculator/BMICalaculator.php";
-
-
+        include  "../systems/Calorie calculator/BMICalaculator.php";
     ?>
-    <h5>Current weight Status:<?php
-        echo $bmi
-        ?></h5>
+    <h5 class="current-weight-status">Current weight Status:<?php echo $bmi?></h5>
     
-    <table>
-        <tr>
-            <td>Calories Burned Monday</td>
+
+    <div class="calories-burned">
+        <h2 class="calories-burned_title">Calories Burned</h2>
+        <div class="calories-burned_rows">
+            <h3 class="calories-burned_days">Calories Burned Monday:</h3>
             <?php
               if($BurnedCalMonday <=0){
                   $BurnedCalMonday ="No Data (0) ";
@@ -138,77 +115,106 @@ if(empty($password)){
               {
 
               }
-
             ?>
-            <form method="POST">
-                <td><input type ="text" name="BurnedCalMonday"value="<?=$BurnedCalMonday?>" readonly></td>
-                <td><button type="button" name="buttonDay1" class="btn login_btn">Submit Calories</button></td>
+            <form class="CaloriesForm" method="POST">
+                <input class="calories-burned_input" type ="text" name="BurnedCalMonday"value="<?=$BurnedCalMonday?>">
+                <button type="button" name="buttonDay1" class="btn calories-burned_btn">Sent</button>
             </form>
+        </div>
 
-            
-
-        </tr>
-        <tr>
-            <td>Calories Burned Tuesday</td>
-            <td>no data</td>
-            <td><button type="button" name="buttonDay2" class="btn login_btn">Submit Calories</button></td>
-        </tr>
-        <tr>
-            <td>Calories Burned Wednesday</td>
-            <td>no data</td>
-            <td><button type="button" name="buttonDay3" class="btn login_btn">Submit Calories</button></td>
-        </tr>
-
-        <tr>
-            <td>Calories Burned Thursday</td>
-            <td>no data</td>
-            <td><button type="button" name="buttonDay4" class="btn login_btn">Submit Calories</button></td>
-        </tr>
-
-        <tr>
-            <td>Calories Burned Friday</td>
-            <td>no data</td>
-            <td><button type="button" name="buttonDay5" class="btn login_btn">Submit Calories</button></td>
-        </tr>
-
-        <tr>
-            <td>Calories Burned Saturday</td>
-            <td>no data</td>
-            <td><button type="button" name="buttonDay6" class="btn login_btn">Submit Calories</button></td>
-        </tr>
-
-        <tr>
-            <td>Calories Burned Sunday</td>
-            <td>no data</td>
-            <td><button type="button" name="buttonDay7" class="btn login_btn">Submit Calories</button></td>
-        </tr>
-    </table>
-
-
-
-
-
+        <div class="calories-burned_rows">
+            <h3 class="calories-burned_days">Calories Burned Tuesday:</h3>
+            <form class="CaloriesForm" method="POST">
+                <input class="calories-burned_input" type ="text" name="BurnedCalTuesday"value="<?=$BurnedCalTuesday?>">
+                <button type="button" name="buttonDay2" class="btn calories-burned_btn">Sent</button>
+            </form>
+        </div>
+        <div class="calories-burned_rows">
+            <h3 class="calories-burned_days">Calories Burned Wednesday:</h3>
+            <form class="CaloriesForm" method="POST">
+                <input class="calories-burned_input" type ="text" name="BurnedCalWednesday"value="<?=$BurnedCalWednesday?>">
+                <button type="button" name="buttonDay3" class="btn calories-burned_btn">Sent</button>
+            </form>
+        </div>
+        <div class="calories-burned_rows">
+            <h3 class="calories-burned_days">Calories Burned Thursday:</h3>
+            <form class="CaloriesForm" method="POST">
+                <input class="calories-burned_input" type ="text" name="BurnedCalThursday"value="<?=$BurnedCalThrusday?>">
+                <button type="button" name="buttonDay4" class="btn calories-burned_btn">Sent</button>
+            </form>
+        </div>
+        <div class="calories-burned_rows">
+            <h3 class="calories-burned_days">Calories Burned Friday:</h3>
+            <form class="CaloriesForm" method="POST">
+                <input class="calories-burned_input" type ="text" name="BurnedCalFriday"value="<?=$BurnedCalFriday?>">
+                <button type="button" name="buttonDay5" class="btn calories-burned_btn">Sent</button>
+            </form>
+        </div>
+        <div class="calories-burned_rows">
+            <h3 class="calories-burned_days">Calories Burned Saturday:</h3>
+            <form class="CaloriesForm" method="POST">
+                <input class="calories-burned_input" type ="text" name="BurnedCalSaturday"value="<?=$BurnedCalSaturday?>">
+                <button type="button" name="buttonDay6" class="btn calories-burned_btn">Sent</button>
+            </form>
+        </div>
+        <div class="calories-burned_rows">
+            <h3 class="calories-burned_days">Calories Burned Sunday:</h3>
+            <form class="CaloriesForm" method="POST">
+                <input class="calories-burned_input" type ="text" name="BurnedCalSunday"value="<?=$BurnedCalSunday?>">
+                <button type="button" name="buttonDay7" class="btn calories-burned_btn">Sent</button>
+            </form>
+        </div>
+    </div>
 </div>
 
 
-<img id="myImg" src="../css/images/graph.png" alt="Snow" style="width:100%;max-width:300px">
+<!-- <img id="myImg" src="../css/images/graph.png" alt="Snow" style="width:100%;max-width:300px"> -->
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
-</div>
+<?php
+    $dataPoints = array(
+        array("y" => 25, "label" => "Sunday"),
+        array("y" => 15, "label" => "Monday"),
+        array("y" => 25, "label" => "Tuesday"),
+        array("y" => 5, "label" => "Wednesday"),
+        array("y" => 10, "label" => "Thursday"),
+        array("y" => 0, "label" => "Friday"),
+        array("y" => 20, "label" => "Saturday")
+    );
+?>
+
+<script>
+    window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", {
+        title: {
+            text: "Calories Burned Over a Week"
+        },
+        axisY: {
+            title: "Number of Calories Burned"
+        },
+        data: [{
+            type: "line",
+            dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+        }]
+    });
+    chart.render();
+    }
+</script>
+
+<!-- Graph -->
+<div class="graph-image" id="chartContainer"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 
 
 <?php require "../systems/Recommendation System/RecoSystem.php"; ?>
 
+<!-- Footer -->
+<?php 
+    require "../layout/footer.php";
+?>
 
 
-
-
-<script>
+<!-- <script>
     // Get the modal
     var modal = document.getElementById("myModal");
 
@@ -229,4 +235,4 @@ if(empty($password)){
     span.onclick = function() {
         modal.style.display = "none";
     }
-</script>
+</script> -->

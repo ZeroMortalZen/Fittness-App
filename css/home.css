@@ -516,6 +516,56 @@ button {
 .calories-burned_btn {
     margin-left: 10px;
 }
+.CaloriesForm {
+    display: flex;
+    margin: auto 0px;
+}
+/* Graph-Image */
+.graph-image {
+    max-width: 600px;
+    width: 100%;
+    margin: 50px auto 0px;
+}
+/* Graph-Image */
+
+/* Recommandation */
+.recommandation-section {
+    margin-top: 500px;
+}
+.recommandation-title {
+    text-align: center;
+    font-size: 24px;
+}
+.table {
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto 0px;
+}
+.exerciseANDcalories {
+    display: flex;
+    font-size: 24px;
+    text-align: center;
+    text-align: center;
+}
+.exercise-calories-title {
+    margin-left: 110px;
+}
+.exercise-name-row {
+    display: flex;
+}
+.exercise-name {
+    max-width: 250px;
+    width: 100%;
+    font-size: 18px;
+}
+.exercise-calories {
+    max-width: 100px;
+    width: 100%;
+    font-size: 18px;
+    color: #a3ed3b;
+}
+
+/* Recommandation */
 
 /* Timer CSS */
 
