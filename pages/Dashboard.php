@@ -178,27 +178,201 @@ if(empty($password)){
 <?php
 include '../systems/Calorie calculator/Calorieburned.php';
 $Calorieburned= new Calorieburned();
-$rows = $Calorieburned->fetchTotalBurnedCalMonday();
-if(!empty($rows)) {
+$rowsMonday = $Calorieburned->fetchTotalBurnedCalMonday();
+$rowsTuesday = $Calorieburned->fetchTotalBurnedCalTuesday();
+$rowsWednesday = $Calorieburned->fetchTotalBurnedCalWednesday();
+$rowsThursday = $Calorieburned->fetchTotalBurnedCalThursday();
+$rowsFriday = $Calorieburned->fetchTotalBurnedCalFriday();
+$rowsSaturday = $Calorieburned->fetchTotalBurnedCalSaturday();
+$rowsSunday = $Calorieburned->fetchTotalBurnedCalSunday();
+
+//Monday
+if(!empty($rowsMonday)) {
 
 
-    foreach ($rows as $row) {
+    foreach ($rowsMonday as $rowMonday) {
 
-         $json = json_encode($row);
-         echo($json);
+        echo implode(" ", $rowMonday) . " ";
+        $storeArrayMonday =implode(" ", $rowMonday);
+        $MondayArray[] =$storeArrayMonday;
+         //
+         $json = json_encode($MondayArray);
+         echo ($json);
+         $sumMonday=array_sum($MondayArray);
+         echo $sumMonday;
+
+
+
+
+
+
+
     }
 
+
 }
+//Tuesday
+if(!empty($rowsTuesday)) {
+
+
+    foreach ($rowsTuesday as $rowTuesday) {
+
+        echo implode(" ", $rowTuesday) . " ";
+        $storeArrayTuesday =implode(" ", $rowTuesday);
+        $TuesdayArray[] =$storeArrayTuesday;
+        //
+        $json = json_encode($TuesdayArray);
+        echo ($json);
+        $sumTuesday=array_sum($TuesdayArray);
+        echo $sumTuesday;
+
+
+
+
+
+
+
+    }
+
+
+}
+
+//Wednesday
+if(!empty($rowsWednesday)) {
+
+
+    foreach ($rowsWednesday as $rowWednesday) {
+
+        echo implode(" ", $rowWednesday) . " ";
+        $storeArrayWednesday =implode(" ", $rowWednesday);
+        $WednesdayArray[] =$storeArrayWednesday;
+        //
+        $json = json_encode($WednesdayArray);
+        echo ($json);
+        $sumWednesday=array_sum($WednesdayArray);
+        echo $sumWednesday;
+
+
+
+
+
+
+
+    }
+
+
+}
+//Thursday
+if(!empty($rowsThursday)) {
+
+
+    foreach ($rowsThursday as $rowThursday) {
+
+        echo implode(" ", $rowThursday) . " ";
+        $storeArrayThursday =implode(" ", $rowThursday);
+        $ThursdayArray[] =$storeArrayThursday;
+        //
+        $json = json_encode($ThursdayArray);
+        echo ($json);
+        $sumThursday=array_sum($ThursdayArray);
+        echo $sumThursday;
+
+
+
+
+
+
+
+    }
+
+
+}
+//Friday
+if(!empty($rowsFriday)) {
+
+
+    foreach ($rowsFriday as $rowFriday) {
+
+        echo implode(" ", $rowFriday) . " ";
+        $storeArrayFriday =implode(" ", $rowFriday);
+        $FridayArray[] =$storeArrayFriday;
+        //
+        $json = json_encode($FridayArray);
+        echo ($json);
+        $sumFriday=array_sum($FridayArray);
+        echo $sumFriday;
+
+
+
+
+
+
+
+    }
+
+
+}
+//Saturday
+if(!empty($rowsSaturday)) {
+
+
+    foreach ($rowsSaturday as $rowSaturday) {
+
+        echo implode(" ", $rowSaturday) . " ";
+        $storeArraySaturday =implode(" ", $rowSaturday);
+        $SaturdayArray[] =$storeArraySaturday;
+        //
+        $json = json_encode($SaturdayArray);
+        echo ($json);
+        $sumSaturday=array_sum($SaturdayArray);
+        echo $sumSaturday;
+
+
+
+
+
+
+
+    }
+
+
+}
+//Sunday
+if(!empty($rowsSunday)) {
+
+
+    foreach ($rowsSunday as $rowSunday) {
+
+        echo implode(" ", $rowSunday) . " ";
+        $storeArraySunday =implode(" ", $rowSaturday);
+        $SundayArray[] =$storeArraySunday;
+        //
+        $json = json_encode($SundayArray);
+        echo ($json);
+        $sumSunday=array_sum($SundayArray);
+        echo $sumSunday;
+
+
+
+
+
+
+
+    }
+
+
+}
+
 ?>
 <?php
     $dataPoints = array(
-        array("y" => 25, "label" => "Sunday"),
-        array("y" => 15, "label" => "Monday"),
-        array("y" => 25, "label" => "Tuesday"),
-        array("y" => 5, "label" => "Wednesday"),
-        array("y" => 10, "label" => "Thursday"),
-        array("y" => 0, "label" => "Friday"),
-        array("y" => 20, "label" => "Saturday")
+        array("y" => $sumMonday, "label" => "Monday"),
+        array("y" => $sumTuesday, "label" => "Tuesday"),
+        array("y" => $sumWednesday, "label" => "Wednesday"),
+        array("y" => $sumThursday, "label" => "Thursday"),
+        array("y" => $sumFriday, "label" => "Friday"),
+        array("y" => $sumSaturday, "label" => "Saturday"),
+        array("y" => $sumSunday, "label" => "Sunday")
     );
 ?>
 

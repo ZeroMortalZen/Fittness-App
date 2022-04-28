@@ -126,7 +126,7 @@ class model
                     //Wednesday
                     elseif ($id>=1 && $Weekday =="AbsReps_Wednesday"){
                         echo "User Found";
-                        $query ="UPDATE totalcal_abs SET TotalCalAbs_Wednesday ='$Weekday' ='$TotalCalAbs' WHERE id = '$id'";
+                        $query ="UPDATE totalcal_abs SET TotalCalAbs_Wednesday ='$TotalCalAbs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
 
@@ -139,7 +139,7 @@ class model
                     //Thursday
                     elseif ($id>=1 && $Weekday =="AbsReps_Thursday"){
                         echo "User Found";
-                        $query ="UPDATE totalcal_abs SET TotalCalAbs_Thursday='$Weekday' ='$TotalCalAbs' WHERE id = '$id'";
+                        $query ="UPDATE totalcal_abs SET TotalCalAbs_Thursday ='$TotalCalAbs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
 
@@ -261,7 +261,7 @@ class model
                     //Wednesday
                     elseif ($id>=1 && $Weekday =="ArmsReps_Wednesday"){
                         echo "User Found";
-                        $query ="UPDATE totalcal_arms SET TotalCalArms_Wednesday ='$Weekday' ='$TotalCalArms' WHERE id = '$id'";
+                        $query ="UPDATE totalcal_arms SET TotalCalArms_Wednesday ='$TotalCalArms' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
 
@@ -274,7 +274,7 @@ class model
                     //Thursday
                     elseif ($id>=1 && $Weekday =="ArmsReps_Thursday"){
                         echo "User Found";
-                        $query ="UPDATE totalcal_arms SET TotalCalArms_Thursday='$Weekday' ='$TotalCalArms' WHERE id = '$id'";
+                        $query ="UPDATE totalcal_arms SET TotalCalArms_Thursday ='$TotalCalArms' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
 
@@ -392,7 +392,7 @@ class model
                     //Wednesday
                     elseif ($id>=1 && $Weekday =="ChestReps_Wednesday"){
                         echo "User Found";
-                        $query ="UPDATE totalcal_chest SET TotalCalChest_Wednesday ='$Weekday' ='$TotalCalChest' WHERE id = '$id'";
+                        $query ="UPDATE totalcal_chest SET TotalCalChest_Wednesday  ='$TotalCalChest' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
 
@@ -405,7 +405,7 @@ class model
                     //Thursday
                     elseif ($id>=1 && $Weekday =="ChestReps_Thursday"){
                         echo "User Found";
-                        $query ="UPDATE totalcal_chest SET TotalCalChest_Thursday='$Weekday' ='$TotalCalChest' WHERE id = '$id'";
+                        $query ="UPDATE totalcal_chest SET TotalCalChest_Thursday ='$TotalCalChest' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
 
@@ -522,7 +522,7 @@ class model
                     //Wednesday
                     elseif ($id>=1 && $Weekday =="LegsReps_Wednesday"){
                         echo "User Found";
-                        $query ="UPDATE totalcal_legs SET TotalCalLegs_Wednesday ='$Weekday' ='$TotalCalLegs' WHERE id = '$id'";
+                        $query ="UPDATE totalcal_legs SET TotalCalLegs_Wednesday ='$TotalCalLegs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
 
@@ -535,7 +535,7 @@ class model
                     //Thursday
                     elseif ($id>=1 && $Weekday =="LegsReps_Thursday"){
                         echo "User Found";
-                        $query ="UPDATE totalcal_legs SET TotalCalLegs_Thursday='$Weekday' ='$TotalCalLegs' WHERE id = '$id'";
+                        $query ="UPDATE totalcal_legs SET TotalCalLegs_Thursday ='$TotalCalLegs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
 
