@@ -39,6 +39,20 @@ class model
                         $query = "INSERT INTO totalcal_abs(TotalCalAbs_Monday,TotalCalAbs_Tuesday,TotalCalAbs_Wednesday,TotalCalAbs_Thursday,TotalCalAbs_Friday,TotalCalAbs_Saturday,TotalCalAbs_Sunday) VALUES (0,0,0,0,0,0,0)";
                         if($sql = $this->conn->query(($query))){
                             echo  "Debugging created totalcal_abs database";
+                            $query = "INSERT INTO totalcal_arms(TotalCalArms_Monday,TotalCalArms_Tuesday,TotalCalArms_Wednesday,TotalCalArms_Thursday,TotalCalArms_Friday,TotalCalArms_Saturday,TotalCalArms_Sunday) VALUES (0,0,0,0,0,0,0)";
+                            if($sql = $this->conn->query(($query))){
+                                echo  "Debugging created totalcal_arms database";
+                                $query = "INSERT INTO totalcal_chest(TotalCalChest_Monday,TotalCalChest_Tuesday,TotalCalChest_Wednesday,TotalCalChest_Thursday,TotalCalChest_Friday,TotalCalChest_Saturday,TotalCalChest_Sunday) VALUES (0,0,0,0,0,0,0)";
+                                if($sql = $this->conn->query(($query))){
+                                    echo  "Debugging created totalcal_chest database";
+                                    $query = "INSERT INTO totalcal_legs(TotalCalLegs_Monday,TotalCalLegs_Tuesday,TotalCalLegs_Wednesday,TotalCalLegs_Thursday,TotalCalLegs_Friday,TotalCalLegs_Saturday,TotalCalLegs_Sunday) VALUES (0,0,0,0,0,0,0)";
+                                    if($sql = $this->conn->query(($query))){
+                                        echo  "Debugging created totalcal_chest database";
+                                        echo  "all created database";
+                                    }
+                                }
+
+                            }
 
                         }
                     }else{
@@ -89,6 +103,7 @@ class model
                         $query ="UPDATE totalcal_abs SET TotalCalAbs_Monday ='$TotalCalAbs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
+
 
                         }
                         else{
@@ -223,7 +238,8 @@ class model
                         $query ="UPDATE totalcal_arms SET TotalCalArms_Monday ='$TotalCalArms' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
-
+                            global $TotalCalArmsMonday;
+                            $TotalCalArmsMonday =$TotalCalArms;
                         }
                         else{
                             echo  "Failed to store";
@@ -353,7 +369,8 @@ class model
                         $query ="UPDATE totalcal_chest SET TotalCalChest_Monday ='$TotalCalChest' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
                             echo "Calories Burned has been stored";
-
+                            global $TotalCalChestMonday;
+                            $TotalCalChestMonday =$TotalCalChest;
                         }
                         else{
                             echo  "Failed to store";
@@ -487,6 +504,7 @@ class model
                         else{
                             echo  "Failed to store";
                         }
+
                     }
                     //Tuesday
                     elseif ($id>=1 && $Weekday =="LegsReps_Tuesday"){
@@ -659,6 +677,9 @@ class model
         }
         return $data;
     }
+
+
+
    //Fetching Calories excises
     public function getLowCal(){
         $data = null;

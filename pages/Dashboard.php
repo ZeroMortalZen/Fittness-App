@@ -48,6 +48,12 @@ if(empty($password)){
  else{
      //Debugging
  }?>
+
+
+
+
+
+
 <!-- Calling Header Page -->
 <?php 
     require "../layout/header.php";
@@ -169,7 +175,21 @@ if(empty($password)){
 
 
 <!-- <img id="myImg" src="../css/images/graph.png" alt="Snow" style="width:100%;max-width:300px"> -->
+<?php
+include '../systems/Calorie calculator/Calorieburned.php';
+$Calorieburned= new Calorieburned();
+$rows = $Calorieburned->fetchTotalBurnedCalMonday();
+if(!empty($rows)) {
 
+
+    foreach ($rows as $row) {
+
+         $json = json_encode($row);
+         echo($json);
+    }
+
+}
+?>
 <?php
     $dataPoints = array(
         array("y" => 25, "label" => "Sunday"),
