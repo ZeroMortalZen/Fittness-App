@@ -29,7 +29,7 @@
     </div>
     <section class="chest-section-page">
         <h1 class="main-section-title">Chest</h1>
-        <a href="" class="start-btn">Start</a>
+        <a class="start-btn" onclick="playChestAudio()">Start</a>
         <?php
         include '../lib/model.php';
         $model = new Model();
@@ -90,6 +90,9 @@
                 <h2 class="ces">Chest Strech:</h2>
                 <input class="cesInput exInput" type="text" name="ces" id="ces" required/>
             </div>
+            <!-- Script For Top Burger -->
+            <script src="../src/scripts.js"></script>
+
             <select name="Weekdays" >
                 <option value="">--- Choose a Day ---</option>
                 <option value="ChestReps_Monday">Monday</option>

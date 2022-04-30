@@ -30,7 +30,7 @@
     
 <section class="abs-section-page">
     <h1 class="main-section-title">Abs</h1>
-    <a class="start-btn" onclick="playAudio()">Start</a>
+    <a class="start-btn" onclick="playAbsAudio()">Start</a>
     <?php
     include '../lib/model.php';
 

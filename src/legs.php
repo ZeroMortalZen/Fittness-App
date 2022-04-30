@@ -29,7 +29,7 @@
     </div>
     <section class="legs-section-page">
         <h1 class="main-section-title">Legs</h1>
-        <a href="" class="start-btn">Start</a>
+        <a class="start-btn" onclick="playLegsAudio()">Start</a>
         <?php
         include '../lib/model.php';
         $model = new Model();
@@ -90,6 +90,9 @@
                 <h2 class="wkr">Wall Calf Raises:</h2>
                 <input class="wkrInput exInput" type="text" name="wkr" id="wkr" required/>
             </div>
+            
+            <!-- Script For Top Burger -->
+            <script src="../src/scripts.js"></script>
 
             <select name="Weekdays" >
                 <option value="">--- Choose a Day ---</option>

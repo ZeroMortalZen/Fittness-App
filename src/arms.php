@@ -29,7 +29,7 @@
     </div>
     <section class="arms-section-page">
         <h1 class="main-section-title">Arms</h1>
-        <a href="" class="start-btn">Start</a>
+        <a class="start-btn" onclick="playArmsAudio()">Start</a>
         <?php
         include '../lib/model.php';
         $model = new Model();
@@ -86,6 +86,10 @@
                 <h2 class="wpu">Wall Push-Ups:</h2>
                 <input class="wpuInput exInput" type="text" name="wpu" id="wpu" required/>
             </div>
+            
+            <!-- Script For Top Burger -->
+            <script src="../src/scripts.js"></script>
+
             <select name="Weekdays" >
                 <option value="">--- Choose a Day ---</option>
                 <option value="ArmsReps_Monday">Monday</option>
