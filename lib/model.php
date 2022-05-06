@@ -31,9 +31,10 @@ class model
                     $username = $_POST['username'];
                     $password = $_POST['password'];
                     $email = $_POST['email'];
+                    global $hashed_password;
+                    $hashed_password = password_hash($password,PASSWORD_DEFAULT);
 
-
-                    $query = "INSERT INTO records (firstname,lastname,username,password,email,height,weight,BurnedCalMonday,BurnedCalTuesday,BurnedCalWednesday,BurnedCalThrusday,BurnedCalFriday,BurnedCalSaturday,BurnedCalSunday) VALUES ('$firstname','$lastname','$username','$password','$email',0,0,0,0,0,0,0,0,0)";
+                    $query = "INSERT INTO records (firstname,lastname,username,password,email,height,weight,BurnedCalMonday,BurnedCalTuesday,BurnedCalWednesday,BurnedCalThrusday,BurnedCalFriday,BurnedCalSaturday,BurnedCalSunday) VALUES ('$firstname','$lastname','$username','$hashed_password','$email',0,0,0,0,0,0,0,0,0)";
                     if ($sql = $this->conn->query($query)) {
                         header("location: ../pages/login.php");
                         $query = "INSERT INTO totalcal_abs(TotalCalAbs_Monday,TotalCalAbs_Tuesday,TotalCalAbs_Wednesday,TotalCalAbs_Thursday,TotalCalAbs_Friday,TotalCalAbs_Saturday,TotalCalAbs_Sunday) VALUES (0,0,0,0,0,0,0)";
@@ -64,6 +65,7 @@ class model
                 }
             }
         }
+
     }
     //Post Burned calories All
 
@@ -807,15 +809,17 @@ class model
         return $firstname;
     }
 
-    function validate_login($username, $password){
-        $query = "Select id from records where username=? and password=?";
-
+    function validate_login($username){
+        $query = "Select id ,username,password from records where username=?";
+        $password = $_POST ['password'];
         $id = 0;
         if($stmt = $this->conn->prepare($query)){
-            $stmt->bind_param("ss", $username, $password);
+            $stmt->bind_param("s", $username);
             $stmt->execute();
-            $stmt->bind_result($id);
+            $stmt->store_result();
+            $stmt->bind_result($id,$username,$hashed_password);
             $stmt->fetch();
+            password_verify($password,$hashed_password);
             $stmt->close();
         }
         return $id;
