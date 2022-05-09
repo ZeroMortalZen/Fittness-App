@@ -1,6 +1,4 @@
 <?php
-ini_set('error_reporting', 0);
-ini_set('display_errors', 0);
 // We need to use sessions, so you should always start sessions using the below code.
 ob_start();
 session_start();

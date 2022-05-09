@@ -10,12 +10,10 @@
  $submit =  filter_input(INPUT_POST, 'submit');
 
  if (isset($submit)){
-     global $hashed_password;
      $username = filter_input(INPUT_POST, 'username');
      $password= filter_input(INPUT_POST, 'password');
-     password_verify($password,$hashed_password);
 
-     $id = $model->validate_login($username ,$password);
+     $id = $model->validate_login($username, $password);
      if($id){
          session_start();
          session_regenerate_id();

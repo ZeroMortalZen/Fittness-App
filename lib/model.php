@@ -65,7 +65,6 @@ class model
                 }
             }
         }
-
     }
     //Post Burned calories All
 
@@ -809,17 +808,15 @@ class model
         return $firstname;
     }
 
-    function validate_login($username){
-        $query = "Select id ,username,password from records where username=?";
-        $password = $_POST ['password'];
+    function validate_login($username, $password){
+        $query = "Select id from records where username=? and password=?";
+
         $id = 0;
         if($stmt = $this->conn->prepare($query)){
-            $stmt->bind_param("s", $username);
+            $stmt->bind_param("ss", $username, $password);
             $stmt->execute();
-            $stmt->store_result();
-            $stmt->bind_result($id,$username,$hashed_password);
+            $stmt->bind_result($id);
             $stmt->fetch();
-            password_verify($password,$hashed_password);
             $stmt->close();
         }
         return $id;
