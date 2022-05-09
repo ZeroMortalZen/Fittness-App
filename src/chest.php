@@ -68,27 +68,27 @@
         <form name="exercises-form" class="ex-form" method="post">
             <div class="ipu-section exSection">
                 <h2 class="ipu">Incline Push-Ups:</h2>
-                <input class="ipuInput exInput" type="text" name="ipu" id="ipu" required/>
+                <input class="ipuInput exInput" type="number" name="ipu" id="ipu" required/>
             </div>
             <div class="kpu-section exSection">
                 <h2 class="kpu">Knee Push-Ups:</h2>
-                <input class="kpuInput exInput" type="text" name="kpu" id="kpu" required/>
+                <input class="kpuInput exInput" type="number" name="kpu" id="kpu" required/>
             </div>
             <div class="pu-section exSection">
                 <h2 class="pu">Push-Ups:</h2>
-                <input class="puInput exInput" type="text" name="pu" id="pu" required/>
+                <input class="puInput exInput" type="number" name="pu" id="pu" required/>
             </div>
             <div class="wapu-section exSection">
                 <h2 class="wapu">Wide Arms Push-Ups:</h2>
-                <input class="wapuInput exInput" type="text" name="wapu" id="wapu" required/>
+                <input class="wapuInput exInput" type="number" name="wapu" id="wapu" required/>
             </div>
             <div class="cs-section exSection">
                 <h2 class="cos">Cobra Strech:</h2>
-                <input class="cosInput exInput" type="text" name="cos" id="cos" required/>
+                <input class="cosInput exInput" type="number" name="cos" id="cos" required/>
             </div>
             <div class="ces-section exSection">
                 <h2 class="ces">Chest Strech:</h2>
-                <input class="cesInput exInput" type="text" name="ces" id="ces" required/>
+                <input class="cesInput exInput" type="number" name="ces" id="ces" required/>
             </div>
             <!-- Script For Top Burger -->
             <script src="../src/scripts.js"></script>

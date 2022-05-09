@@ -68,27 +68,28 @@
         <form name="exercises-form" class="ex-form" method="post">
             <div class="sd-section exSection">
                 <h2 class="sd">Side Hop:</h2>
-                <input class="sdInput exInput" type="text" name="sd" id="sd" required/>
+                <input class="sdInput exInput" type="number" name="sd" id="sd" required/>
             </div>
             <div class="s-section exSection">
                 <h2 class="s">Squats:</h2>
-                <input class="sInput exInput" type="text" name="s" id="s" required/>
+                <input class="sInput exInput" type="number" name="s" id="s" required/>
             </div>
             <div class="bl-section exSection">
                 <h2 class="bl">Backward Lunge:</h2>
-                <input class="blInput exInput" type="text" name="bl" id="bl" required/>
+                <input class="blInput exInput" type="number" name="bl" id="bl" required/>
             </div>
             <div class="dkl-section exSection">
                 <h2 class="dkl">Donkey Kicks Left:</h2>
-                <input class="dklInput exInput" type="text" name="dkl" id="dkl" required/>
+                <input class="dklInput exInput" type="number" name="dkl" id="dkl" required/>
             </div>
             <div class="dkr-section exSection">
                 <h2 class="dkr">Donkey Kicks Right:</h2>
-                <input class="dkrInput exInput" type="text" name="dkr" id="dkr" required/>
+                <input class="dkrInput exInput" type="number" name="dkr" id="dkr" required/>
+            </div>
             </div>
             <div class="wkr-section exSection">
                 <h2 class="wkr">Wall Calf Raises:</h2>
-                <input class="wkrInput exInput" type="text" name="wkr" id="wkr" required/>
+                <input class="wkrInput exInput" type="number" name="wkr" id="wkr" required/>
             </div>
             
             <!-- Script For Top Burger -->

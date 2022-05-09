@@ -64,27 +64,27 @@
         <form name="exercises-form" class="ex-form" method="post">
             <div class="td-section exSection">
                 <h2 class="td">Triceps Dips:</h2>
-                <input class="tdInput exInput" type="text" name="td" id="td" required/>
+                <input class="tdInput exInput" type="number" name="td" id="td" required/>
             </div>
             <div class="dpu-section exSection">
                 <h2 class="dpu">Diamond Push-Ups:</h2>
-                <input class="dpuInput exInput" type="text" name="dpu" id="dpu" required/>
+                <input class="dpuInput exInput" type="number" name="dpu" id="dpu" required/>
             </div>
             <div class="dp-section exSection">
                 <h2 class="dp">Diagonal Plank:</h2>
-                <input class="dpInput exInput" type="text" name="dp" id="dp" required/>
+                <input class="dpInput exInput" type="number" name="dp" id="dp" required/>
             </div>
             <div class="iw-section exSection">
                 <h2 class="iw">Inch-Worms:</h2>
-                <input class="iwInput exInput" type="text" name="iw" id="iw" required/>
+                <input class="iwInput exInput" type="number" name="iw" id="iw" required/>
             </div>
             <div class="pu-section exSection">
                 <h2 class="pu">Push-Ups:</h2>
-                <input class="puInput exInput" type="text" name="pu" id="pu" required/>
+                <input class="puInput exInput" type="number" name="pu" id="pu" required/>
             </div>
             <div class="wpu-section exSection">
                 <h2 class="wpu">Wall Push-Ups:</h2>
-                <input class="wpuInput exInput" type="text" name="wpu" id="wpu" required/>
+                <input class="wpuInput exInput" type="number" name="wpu" id="wpu" required/>
             </div>
             
             <!-- Script For Top Burger -->

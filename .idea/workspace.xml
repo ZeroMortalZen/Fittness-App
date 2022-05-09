@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="92776477-17d9-4595-9f22-79ee2a21954d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/Calorie calculator/Calorieburned.php" beforeDir="false" afterPath="$PROJECT_DIR$/systems/Calorie calculator/Calorieburned.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - Technological University Dublin/Year 3/Semester 2/Web FrameWork/Temp--Agency" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
@@ -86,6 +84,7 @@
       <workItem from="1649352033304" duration="8100000" />
       <workItem from="1651083222021" duration="16593000" />
       <workItem from="1651145962836" duration="6495000" />
+      <workItem from="1652062974781" duration="931000" />
     </task>
     <servers />
   </component>
