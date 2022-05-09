@@ -31,10 +31,9 @@ class model
                     $username = $_POST['username'];
                     $password = $_POST['password'];
                     $email = $_POST['email'];
-                    global $hashed_password;
-                    $hashed_password = password_hash($password,PASSWORD_DEFAULT);
 
-                    $query = "INSERT INTO records (firstname,lastname,username,password,email,height,weight,BurnedCalMonday,BurnedCalTuesday,BurnedCalWednesday,BurnedCalThrusday,BurnedCalFriday,BurnedCalSaturday,BurnedCalSunday) VALUES ('$firstname','$lastname','$username','$hashed_password','$email',0,0,0,0,0,0,0,0,0)";
+
+                    $query = "INSERT INTO records (firstname,lastname,username,password,email,height,weight,BurnedCalMonday,BurnedCalTuesday,BurnedCalWednesday,BurnedCalThrusday,BurnedCalFriday,BurnedCalSaturday,BurnedCalSunday) VALUES ('$firstname','$lastname','$username','$password','$email',0,0,0,0,0,0,0,0,0)";
                     if ($sql = $this->conn->query($query)) {
                         header("location: ../pages/login.php");
                         $query = "INSERT INTO totalcal_abs(TotalCalAbs_Monday,TotalCalAbs_Tuesday,TotalCalAbs_Wednesday,TotalCalAbs_Thursday,TotalCalAbs_Friday,TotalCalAbs_Saturday,TotalCalAbs_Sunday) VALUES (0,0,0,0,0,0,0)";
