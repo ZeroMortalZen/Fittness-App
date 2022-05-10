@@ -75,7 +75,7 @@ if ($bmi== "underweight" ||$bmi =="normal"||$bmi =="overweight"||$bmi =="obese")
         //if your in abs page do this
         include '../lib/model.php';
         $model = new Model();
-        $rows = $model->getLowCal(); //Return a table of Low Calories excricse & Checks for Calories between 0.1 - 1.0
+        $rows = $model->getOverCal(); //Return a table of Low Calories excricse & Checks for Calories between 0.1 - 1.0
         $i=1;
     ?>
         <div class="recommandation-section">
@@ -110,7 +110,7 @@ if ($bmi== "underweight" ||$bmi =="normal"||$bmi =="overweight"||$bmi =="obese")
         //if your in abs page do this
         include '../lib/model.php';
         $model = new Model();
-        $rows = $model->getLowCal(); //Return a table of Low Calories excricse & Checks for Calories between 0.1 - 1.0
+        $rows = $model->getObeseCal(); //Return a table of Low Calories excricse & Checks for Calories between 0.1 - 1.0
         $i=1;
     ?>
         <div class="recommandation-section">

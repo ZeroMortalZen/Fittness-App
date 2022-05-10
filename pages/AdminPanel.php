@@ -19,7 +19,7 @@
         <div class="col-md-12 mt-5">
             <h1 class="text-center"> FitnessDB- RECORDS</h1>
             <hr style="height: 1px;color: black;background-color: black;">
-
+            <a class="btn btn-primary" href="../home.php" role="button">Back To Home</a>
         </div>
     </div>
     <div class="row">

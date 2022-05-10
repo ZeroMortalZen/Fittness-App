@@ -110,67 +110,7 @@ if(empty($password)){
     <h5 class="current-weight-status">Current weight Status:<?php echo $bmi?></h5>
     
 
-    <div class="calories-burned">
-        <h2 class="calories-burned_title">Calories Burned</h2>
-        <div class="calories-burned_rows">
-            <h3 class="calories-burned_days">Calories Burned Monday:</h3>
-            <?php
-              if($BurnedCalMonday <=0){
-                  $BurnedCalMonday ="No Data (0) ";
-              }else
-              {
 
-              }
-            ?>
-            <form class="CaloriesForm" method="POST">
-                <input class="calories-burned_input" type ="text" name="BurnedCalMonday"value="<?=$BurnedCalMonday?>">
-                <button type="button" name="buttonDay1" class="btn calories-burned_btn">Sent</button>
-            </form>
-        </div>
-
-        <div class="calories-burned_rows">
-            <h3 class="calories-burned_days">Calories Burned Tuesday:</h3>
-            <form class="CaloriesForm" method="POST">
-                <input class="calories-burned_input" type ="text" name="BurnedCalTuesday"value="<?=$BurnedCalTuesday?>">
-                <button type="button" name="buttonDay2" class="btn calories-burned_btn">Sent</button>
-            </form>
-        </div>
-        <div class="calories-burned_rows">
-            <h3 class="calories-burned_days">Calories Burned Wednesday:</h3>
-            <form class="CaloriesForm" method="POST">
-                <input class="calories-burned_input" type ="text" name="BurnedCalWednesday"value="<?=$BurnedCalWednesday?>">
-                <button type="button" name="buttonDay3" class="btn calories-burned_btn">Sent</button>
-            </form>
-        </div>
-        <div class="calories-burned_rows">
-            <h3 class="calories-burned_days">Calories Burned Thursday:</h3>
-            <form class="CaloriesForm" method="POST">
-                <input class="calories-burned_input" type ="text" name="BurnedCalThursday"value="<?=$BurnedCalThrusday?>">
-                <button type="button" name="buttonDay4" class="btn calories-burned_btn">Sent</button>
-            </form>
-        </div>
-        <div class="calories-burned_rows">
-            <h3 class="calories-burned_days">Calories Burned Friday:</h3>
-            <form class="CaloriesForm" method="POST">
-                <input class="calories-burned_input" type ="text" name="BurnedCalFriday"value="<?=$BurnedCalFriday?>">
-                <button type="button" name="buttonDay5" class="btn calories-burned_btn">Sent</button>
-            </form>
-        </div>
-        <div class="calories-burned_rows">
-            <h3 class="calories-burned_days">Calories Burned Saturday:</h3>
-            <form class="CaloriesForm" method="POST">
-                <input class="calories-burned_input" type ="text" name="BurnedCalSaturday"value="<?=$BurnedCalSaturday?>">
-                <button type="button" name="buttonDay6" class="btn calories-burned_btn">Sent</button>
-            </form>
-        </div>
-        <div class="calories-burned_rows">
-            <h3 class="calories-burned_days">Calories Burned Sunday:</h3>
-            <form class="CaloriesForm" method="POST">
-                <input class="calories-burned_input" type ="text" name="BurnedCalSunday"value="<?=$BurnedCalSunday?>">
-                <button type="button" name="buttonDay7" class="btn calories-burned_btn">Sent</button>
-            </form>
-        </div>
-    </div>
 </div>
 
 
