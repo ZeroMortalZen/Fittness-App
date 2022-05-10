@@ -48,7 +48,14 @@
                 <div class="excises-section-inner">
                     <h2 class="exercise-title"><?php echo $row['exercise'];?></h2>
                     <h2 class="exercise-cal">1 rep = <?php echo $row['calories']; ?> calories</h2>
-                    <a href="../pages/AdminPanel.php" class="btn admin-btn">Admin Panel</a>
+                    <?php
+                    global $getLogged;
+                    if( $getLogged == "Admin"){
+                        ?>
+                        <a href="../pages/AdminPanel.php" class="btn admin-btn">Admin Panel</a>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
 

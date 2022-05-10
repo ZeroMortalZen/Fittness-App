@@ -749,8 +749,19 @@ class model
     public function edit($id){
 
         $data = null;
+        if($id>=1 && $id <=7){
+            $query = "SELECT * FROM abs_data WHERE id = '$id'";
+        }
+        elseif ($id>=7 && $id<=12){
+            $query = "SELECT * FROM arms_data WHERE id = '$id'";
+        }
+        elseif ($id>=13 && $id<=18){
+            $query = "SELECT * FROM chest_data WHERE id = '$id'";
+        }
+        else{
+            $query = "SELECT * FROM legs_data WHERE id = '$id'";
+        }
 
-        $query = "SELECT * FROM records WHERE id = '$id'";
         if ($sql = $this->conn->query($query)) {
             while($row = $sql->fetch_assoc()){
                 $data = $row;
@@ -759,9 +770,39 @@ class model
         return $data;
     }
 
-    public function update($data){
+    public function updateAbs($data){
+        $query = "UPDATE abs_data SET Videolink='$data[Videolink]', exercise='$data[exercise]', calories='$data[calories]'WHERE id='$data[id]'";
 
-        $query = "UPDATE records SET name='$data[name]', email='$data[email]', mobile='$data[mobile]', address='$data[address]' WHERE id='$data[id] '";
+        if ($sql = $this->conn->query($query)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function updateArms($data){
+        $query = "UPDATE arms_data SET Videolink='$data[Videolink]', exercise='$data[exercise]', calories='$data[calories]'WHERE id='$data[id]'";
+
+        if ($sql = $this->conn->query($query)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function updateChest($data){
+        $query = "UPDATE chest_data SET Videolink='$data[Videolink]', exercise='$data[exercise]', calories='$data[calories]'WHERE id='$data[id]'";
+
+        if ($sql = $this->conn->query($query)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    public function updateLegs($data){
+        $query = "UPDATE legs_data SET Videolink='$data[Videolink]', exercise='$data[exercise]', calories='$data[calories]'WHERE id='$data[id]'";
 
         if ($sql = $this->conn->query($query)) {
             return true;

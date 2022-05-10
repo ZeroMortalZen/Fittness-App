@@ -86,7 +86,7 @@ if(empty($password)){
         <!-- <div class="input-group-append"></div> -->
         <h5 class="user-inputs-height"> Current Height (Inches): <span class="current-value"><?=$height?></span></h5>
         <div class="user-inputs-height-btn">
-            <p class="user-inputs-update-height">Update Height<label><input class="user-inputs-update-height-input" type="text" name="" class="form-control input_user" value="" placeholder="Height"></label></p>
+            <p class="user-inputs-update-height">Update Height<label><input class="user-inputs-update-height-input" type="number" name="" class="form-control input_user" value="" placeholder="Height"></label></p>
             <button type="button" name="button" class="btn update-btn">Update</button>
         </div>
         
@@ -96,7 +96,7 @@ if(empty($password)){
         <!-- <div class="input-group-append"></div> -->
         <h5 class="user-inputs-height"> Current Weight (Pounds): <span class="current-value"><?=$weight?></h5>
         <div class="user-inputs-height-btn">
-            <p class="user-inputs-update-height">Update Weight <label><input class="user-inputs-update-height-input-mod" type="text" name="" class="form-control input_user" value="" placeholder="Weight"></label></p>
+            <p class="user-inputs-update-height">Update Weight <label><input class="user-inputs-update-height-input-mod" type="number" name="" class="form-control input_user" value="" placeholder="Weight"></label></p>
             <button type="button" name="button" class="btn update-btn">Update</button>
         </div>
     </div>
