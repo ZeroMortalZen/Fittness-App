@@ -78,7 +78,7 @@ class model
     public function MondayTotalBurnedCalories(){
 
         if (isset($_POST['submit'])) {
-            echo  "1";
+            //echo  "1";
             if (isset($_POST['jj']) && isset ($_POST['ac'])&& isset ($_POST['mc'])&& isset ($_POST['lr'])&& isset ($_POST['p'])&& isset ($_POST['ht'])) {
                 if (!empty($_POST['jj'])&& !empty($_POST['ac']) && !empty($_POST['mc']) && !empty($_POST['lr']) && !empty($_POST['p']) && !empty($_POST['ht'])) {
                     echo "Working on this line";
@@ -98,18 +98,19 @@ class model
 
                     $TotalCalAbs=$Jumping_jacks+$Adominal_Crunch+$Mountain_Climber+$Leg_Raises+$Plank+$Heel_Touch;
                     $Weekday = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
-                    echo  $Weekday;
+                    //echo  $Weekday;
                     global  $getLogged;
-                    echo  $getLogged;
+                    //echo  $getLogged;
                     global  $id;
-                    echo  $id;
+                    //echo  $id;
 
 
                     if($id>=1 && $Weekday =="AbsReps_Monday"){
                         echo "User Found";
                         $query ="UPDATE totalcal_abs SET TotalCalAbs_Monday ='$TotalCalAbs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
+
 
 
                         }
@@ -122,7 +123,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_abs SET TotalCalAbs_Tuesday ='$TotalCalAbs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -135,7 +136,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_abs SET TotalCalAbs_Wednesday ='$TotalCalAbs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -148,7 +149,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_abs SET TotalCalAbs_Thursday ='$TotalCalAbs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -161,7 +162,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_abs SET TotalCalAbs_Friday ='$TotalCalAbs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -174,7 +175,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_abs SET TotalCalAbs_Saturday ='$TotalCalAbs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -187,7 +188,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_abs SET TotalCalAbs_Sunday ='$TotalCalAbs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -244,7 +245,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_arms SET TotalCalArms_Monday ='$TotalCalArms' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
                             global $TotalCalArmsMonday;
                             $TotalCalArmsMonday =$TotalCalArms;
                         }
@@ -257,7 +258,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_arms SET TotalCalArms_Tuesday ='$TotalCalArms' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -270,7 +271,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_arms SET TotalCalArms_Wednesday ='$TotalCalArms' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -283,7 +284,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_arms SET TotalCalArms_Thursday ='$TotalCalArms' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -296,7 +297,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_arms SET TotalCalArms_Friday ='$TotalCalArms' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -309,7 +310,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_arms SET TotalCalArms_Saturday ='$TotalCalArms' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -322,7 +323,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_arms SET TotalCalArms_Sunday ='$TotalCalArms' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -401,7 +402,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_chest SET TotalCalChest_Wednesday  ='$TotalCalChest' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -414,7 +415,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_chest SET TotalCalChest_Thursday ='$TotalCalChest' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -427,7 +428,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_chest SET TotalCalChest_Friday ='$TotalCalChest' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -440,7 +441,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_chest SET TotalCalChest_Saturday ='$TotalCalChest' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -453,7 +454,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_chest SET TotalCalChest_Sunday ='$TotalCalChest' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -505,7 +506,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_legs SET TotalCalLegs_Monday ='$TotalCalLegs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }
                         else{
@@ -518,7 +519,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_legs SET TotalCalLegs_Tuesday ='$TotalCalLegs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -531,7 +532,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_legs SET TotalCalLegs_Wednesday ='$TotalCalLegs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -544,7 +545,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_legs SET TotalCalLegs_Thursday ='$TotalCalLegs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -557,7 +558,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_legs SET TotalCalLegs_Friday ='$TotalCalLegs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -570,7 +571,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_legs SET TotalCalLegs_Saturday ='$TotalCalLegs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";
@@ -583,7 +584,7 @@ class model
                         echo "User Found";
                         $query ="UPDATE totalcal_legs SET TotalCalLegs_Sunday ='$TotalCalLegs' WHERE id = '$id'";
                         if ($sql = $this->conn->query($query)) {
-                            echo "Calories Burned has been stored";
+                            echo "<script>alert('Calories Burned has been stored');</script>";
 
                         }else{
                             echo  "Failed to store";

@@ -1,5 +1,6 @@
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
+ini_set('display_errors', 0);
 ob_start();
 session_start();
 //require "../systems/Recommendation System/RecoSystem.php";
