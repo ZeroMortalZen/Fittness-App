@@ -42,6 +42,46 @@ $stmt->close();
 <?php
 $noData="No Data";
 $Data  ="Data";
+//Update Height
+if(isset($_POST['buttonHeight'])) {
+
+    if (isset($_POST['height'])) {
+        if (!empty($_POST['height'])) {
+            $heightUpd = $_POST['height'];
+            //echo $heightUpd;
+            $query = "UPDATE records SET height='$heightUpd' WHERE username ='$_SESSION[name]'";
+            if ($stmt = $con->prepare($query)) {
+                if($stmt->execute()){
+                    echo "<script>alert('Height has been Update');</script>";
+                }
+
+
+            } else {
+                echo "<script>alert('Error');</script>";
+            }
+        }
+    }
+}
+//Update Weight
+if(isset($_POST['buttonWeight'])) {
+    if (isset($_POST['weight'])) {
+        if (!empty($_POST['weight'])) {
+            $weightUpd = $_POST['weight'];
+            //echo $heightUpd;
+            $query = "UPDATE records SET weight='$weightUpd' WHERE username ='$_SESSION[name]'";
+            if ($stmt = $con->prepare($query)) {
+                if($stmt->execute()){
+                    echo "<script>alert('Weight has been Update');</script>";
+                }
+
+
+            } else {
+                echo "<script>alert('Error');</script>";
+            }
+        }
+    }
+}
+
 if(empty($password)){
     //Debugging :echo $noData;
 }
@@ -81,26 +121,29 @@ if(empty($password)){
 </div>
 
 <div class="form_container">
+    <form method="post">
     <h2 class="user-inputs">User Inputs</h2>
     <div class="input-group mb-3">
         <!-- <div class="input-group-append"></div> -->
         <h5 class="user-inputs-height"> Current Height (Inches): <span class="current-value"><?=$height?></span></h5>
         <div class="user-inputs-height-btn">
-            <p class="user-inputs-update-height">Update Height<label><input class="user-inputs-update-height-input" type="number" name="" class="form-control input_user" value="" placeholder="Height"></label></p>
-            <button type="button" name="button" class="btn update-btn">Update</button>
+            <p class="user-inputs-update-height">Update Height<label><input class="user-inputs-update-height-input" type="number" name="height" class="form-control input_user" value="height" placeholder="Height"></label></p>
+            <button type="submit" name="buttonHeight" class="btn update-btn">Update</button>
         </div>
-        
-    </div>
 
+    </div>
+</form>
+    <form method="post">
     <div class="input-group mb-3">
         <!-- <div class="input-group-append"></div> -->
         <h5 class="user-inputs-height"> Current Weight (Pounds): <span class="current-value"><?=$weight?></h5>
         <div class="user-inputs-height-btn">
-            <p class="user-inputs-update-height">Update Weight <label><input class="user-inputs-update-height-input-mod" type="number" name="" class="form-control input_user" value="" placeholder="Weight"></label></p>
-            <button type="button" name="button" class="btn update-btn">Update</button>
+            <p class="user-inputs-update-height">Update Weight <label><input class="user-inputs-update-height-input-mod" type="number" name="weight" class="form-control input_user" value="weight" placeholder="Weight"></label></p>
+            <button type="submit" name="buttonWeight" class="btn update-btn">Update</button>
         </div>
     </div>
-    
+    </form>
+</div>
     
     
     <!-- <div class="input-group-append"></div> -->
@@ -132,14 +175,14 @@ if(!empty($rowsMonday)) {
 
     foreach ($rowsMonday as $rowMonday) {
 
-        echo implode(" ", $rowMonday) . " ";
+        //echo implode(" ", $rowMonday) . " ";
         $storeArrayMonday =implode(" ", $rowMonday);
         $MondayArray[] =$storeArrayMonday;
          //
          $json = json_encode($MondayArray);
-         echo ($json);
+         //echo ($json);
          $sumMonday=array_sum($MondayArray);
-         echo $sumMonday;
+         //echo $sumMonday;
 
 
 
@@ -157,14 +200,14 @@ if(!empty($rowsTuesday)) {
 
     foreach ($rowsTuesday as $rowTuesday) {
 
-        echo implode(" ", $rowTuesday) . " ";
+        //echo implode(" ", $rowTuesday) . " ";
         $storeArrayTuesday =implode(" ", $rowTuesday);
         $TuesdayArray[] =$storeArrayTuesday;
         //
         $json = json_encode($TuesdayArray);
-        echo ($json);
+        //echo ($json);
         $sumTuesday=array_sum($TuesdayArray);
-        echo $sumTuesday;
+        //echo $sumTuesday;
 
 
 
@@ -183,14 +226,14 @@ if(!empty($rowsWednesday)) {
 
     foreach ($rowsWednesday as $rowWednesday) {
 
-        echo implode(" ", $rowWednesday) . " ";
+        //echo implode(" ", $rowWednesday) . " ";
         $storeArrayWednesday =implode(" ", $rowWednesday);
         $WednesdayArray[] =$storeArrayWednesday;
         //
         $json = json_encode($WednesdayArray);
-        echo ($json);
+        //echo ($json);
         $sumWednesday=array_sum($WednesdayArray);
-        echo $sumWednesday;
+        //echo $sumWednesday;
 
 
 
@@ -208,14 +251,14 @@ if(!empty($rowsThursday)) {
 
     foreach ($rowsThursday as $rowThursday) {
 
-        echo implode(" ", $rowThursday) . " ";
+        //echo implode(" ", $rowThursday) . " ";
         $storeArrayThursday =implode(" ", $rowThursday);
         $ThursdayArray[] =$storeArrayThursday;
         //
         $json = json_encode($ThursdayArray);
-        echo ($json);
+        //echo ($json);
         $sumThursday=array_sum($ThursdayArray);
-        echo $sumThursday;
+        //echo $sumThursday;
 
 
 
@@ -233,14 +276,14 @@ if(!empty($rowsFriday)) {
 
     foreach ($rowsFriday as $rowFriday) {
 
-        echo implode(" ", $rowFriday) . " ";
+        //echo implode(" ", $rowFriday) . " ";
         $storeArrayFriday =implode(" ", $rowFriday);
         $FridayArray[] =$storeArrayFriday;
         //
         $json = json_encode($FridayArray);
-        echo ($json);
+        //echo ($json);
         $sumFriday=array_sum($FridayArray);
-        echo $sumFriday;
+        //echo $sumFriday;
 
 
 
@@ -258,14 +301,14 @@ if(!empty($rowsSaturday)) {
 
     foreach ($rowsSaturday as $rowSaturday) {
 
-        echo implode(" ", $rowSaturday) . " ";
+        //echo implode(" ", $rowSaturday) . " ";
         $storeArraySaturday =implode(" ", $rowSaturday);
         $SaturdayArray[] =$storeArraySaturday;
         //
         $json = json_encode($SaturdayArray);
-        echo ($json);
+        //echo ($json);
         $sumSaturday=array_sum($SaturdayArray);
-        echo $sumSaturday;
+        //echo $sumSaturday;
 
 
 
@@ -283,14 +326,14 @@ if(!empty($rowsSunday)) {
 
     foreach ($rowsSunday as $rowSunday) {
 
-        echo implode(" ", $rowSunday) . " ";
+        //echo implode(" ", $rowSunday) . " ";
         $storeArraySunday =implode(" ", $rowSaturday);
         $SundayArray[] =$storeArraySunday;
         //
         $json = json_encode($SundayArray);
-        echo ($json);
+        //echo ($json);
         $sumSunday=array_sum($SundayArray);
-        echo $sumSunday;
+        //echo $sumSunday;
 
 
 
