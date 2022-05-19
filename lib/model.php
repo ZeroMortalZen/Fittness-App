@@ -365,11 +365,11 @@ class model
 
                     $TotalCalChest=$Incline_Pushup+$Knee_Pushups+$Push_Ups+$WideArms_Pushups+$Cobra_Strech+$Chest_streach;
                     $Weekday = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
-                    echo  $Weekday;
+                    //echo  $Weekday;
                     global  $getLogged;
-                    echo  $getLogged;
+                    //echo  $getLogged;
                     global  $id;
-                    echo  $id;
+                    //echo  $id;
 
 
                     if($id>=1 && $Weekday =="ChestReps_Monday"){
@@ -495,11 +495,11 @@ class model
 
                     $TotalCalLegs=$SideHops+$Squats+$Backward_Lunge+$DonkeyKicks_Left+$DonkeyKicks_Right+$WallCalf_Raises;
                     $Weekday = filter_input(INPUT_POST, 'Weekdays', FILTER_SANITIZE_STRING);
-                    echo  $Weekday;
+                    //echo  $Weekday;
                     global  $getLogged;
-                    echo  $getLogged;
+                   // echo  $getLogged;
                     global  $id;
-                    echo  $id;
+                    //echo  $id;
 
 
                     if($id>=1 && $Weekday =="LegsReps_Monday"){

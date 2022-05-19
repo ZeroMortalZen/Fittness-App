@@ -1,5 +1,15 @@
 <?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
 
+$Userdata =  $_SESSION['name'];
+$url ="login.php";
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+    header("Refresh:3,URL='$url'");
+    echo "YOU MUST BE AN ADMIN!!";
+    exit;
+}
 ?>
 <!doctype html>
 <html lang="en">
