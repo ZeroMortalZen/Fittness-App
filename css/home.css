@@ -125,6 +125,8 @@ button {
 }
 .top-login-btn {
     margin-left: 30px;
+    font-size: 15px;
+    font-weight: 400;
 }
 .icons__acc {
     width: 50px;
